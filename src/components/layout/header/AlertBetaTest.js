@@ -35,11 +35,11 @@ const AlertBetaTest = () => {
   return (
     <STYAlertBetaContainer>
       <NotificationCaution className="mobile-none" />
-      <Label inverted fontFamily="medium" fontSize={13} >
-      This wallet extension is currently under
-        <Label inverted fontSize={18} labelStyle={{margin:'0 4px'}}>
+      <Label inverted fontFamily="medium" fontSize={13} labelStyle={{ display: 'inline-block'}}>
+      This wallet extension is currently under{' '}
+        <Label inverted fontSize={18} labelStyle={{ display: 'inline-block'}}>
           BETA
-        </Label>
+        </Label>{' '}
         testing      
         </Label>
     </STYAlertBetaContainer>

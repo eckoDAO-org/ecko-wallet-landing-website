@@ -98,6 +98,8 @@ const Link = styled.a`
 
 const IntroductionSection = () => {
   const [isHover, setIsHover] = useState(false);
+  console.log(window.location)
+
 
   return (
     <Container id='intro'>
@@ -109,7 +111,9 @@ const IntroductionSection = () => {
           <CustomButton background={theme.colors.white} color={theme.colors.primary}>
             Download Wallet
           </CustomButton>
-          <CustomButton>
+          <CustomButton  onClick={() =>
+                    window.open(`${window.location.origin}/how-to-install`, '_self', 'noopener,noreferrer')
+                  }>
             How to install
           </CustomButton>
         </STYButtonContainer>

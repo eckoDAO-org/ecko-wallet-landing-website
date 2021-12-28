@@ -27,7 +27,7 @@ const XWalletFooterList = () => {
         disabledHover
         textRegular
         shadowHover
-        onClick={() => window.open('', '_blank', 'noopener,noreferrer')}
+        href='/how-to-install'
       >
         How to install
       </HeaderItem>
