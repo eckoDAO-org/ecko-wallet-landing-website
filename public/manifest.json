@@ -1,0 +1,25 @@
+{
+  "short_name": "X-Wallet by Kaddex",
+  "name": "X-Wallet Home Page",
+  "icons": [
+    {
+      "src": "X-Wallet.svg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "Kaddex_icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "Kaddex_icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#240b2f",
+  "background_color": "#240b2f"
+}
