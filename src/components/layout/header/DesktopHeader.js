@@ -53,13 +53,13 @@ const DesktopHeader = ({ className, menuWithMarginBottom }) => {
         onClick={() => history.push(ROUTE_INDEX)}
       />
         }
-            {/* <HeaderItem
+            <HeaderItem
         style={{ marginRight: 24 }}
         className='mobile-none'
         href='/how-to-install'
       >
         How to install
-      </HeaderItem> */}
+      </HeaderItem>
       </LeftContainer>
       <RightContainer>
         <RightHeaderItems
