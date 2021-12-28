@@ -28,7 +28,7 @@ export default () => {
         <Container>
           <Switch>
             <Route exact path={ROUTE_INDEX} component={MainContainer} />
-            {/* <Route exact path={ROUTE_HOW_TO_INSTALL} component={HowToInstallContainer} /> */}
+            <Route exact path={ROUTE_HOW_TO_INSTALL} component={HowToInstallContainer} />
             <Redirect to={ROUTE_INDEX} />
           </Switch>
         </Container>

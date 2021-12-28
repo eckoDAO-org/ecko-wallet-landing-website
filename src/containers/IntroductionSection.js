@@ -110,7 +110,7 @@ const IntroductionSection = () => {
             Download Wallet
           </CustomButton>
           <CustomButton>
-            Download Tutorial
+            How to install
           </CustomButton>
         </STYButtonContainer>
       </TextContainer>
