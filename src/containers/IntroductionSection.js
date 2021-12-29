@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import styled from 'styled-components/macro';
-import { ArrowDownIcon, XWalletLogo } from '../assets';
-import { STYButtonContainer } from '../components/layout/Containers';
-import CustomButton from '../shared/CustomButton';
-import theme from '../styles/theme';
+import React, { useState } from "react";
+import styled from "styled-components/macro";
+import { ArrowDownIcon, XWalletLogo } from "../assets";
+import { STYButtonContainer } from "../components/layout/Containers";
+import CustomButton from "../shared/CustomButton";
+import theme from "../styles/theme";
+import { downloadFile } from "../utils";
 
 const Container = styled.div`
   display: flex;
@@ -28,7 +29,7 @@ const Title = styled.span`
   text-align: center;
   font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
   font-size: 48px;
-    letter-spacing: 0px;
+  letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
   @media (max-width: ${({ theme: { mediaQueries } }) =>
@@ -43,7 +44,7 @@ const SubTitle = styled.span`
   padding: 0px;
   text-align: center;
   font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
-  font-size: 32px;  
+  font-size: 32px;
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
@@ -66,7 +67,7 @@ const BottomTitle = styled.div`
   margin-bottom: 24px;
 
   .underline {
-    width: ${({ isHover }) => (isHover ? '100%' : 0)};
+    width: ${({ isHover }) => (isHover ? "100%" : 0)};
     transition: width 0.3s;
     background: #ffffff;
     height: 3px;
@@ -111,34 +112,44 @@ const IntroductionSection = () => {
   const [isHover, setIsHover] = useState(false);
 
   return (
-    <Container id='intro'>
-      <XWalletLogo style={{marginBottom:32}}/>
+    <Container id="intro">
+      <XWalletLogo style={{ marginBottom: 32 }} />
       <TextContainer>
         <Title>X-Wallet <BetaSup>BETA</BetaSup> is live!</Title>
         <SubTitle>powered by Kaddex</SubTitle>
         <STYButtonContainer>
-          <CustomButton background={theme.colors.white} color={theme.colors.primary}>
+          <CustomButton
+            background={theme.colors.white}
+            color={theme.colors.primary}
+            onClick={downloadFile}
+          >
             Download Wallet
           </CustomButton>
-          <CustomButton  onClick={() =>
-                    window.open(`${window.location.origin}/how-to-install`, '_self', 'noopener,noreferrer')
-                  }>
+          <CustomButton
+            onClick={() =>
+              window.open(
+                `${window.location.origin}/how-to-install`,
+                "_self",
+                "noopener,noreferrer"
+              )
+            }
+          >
             Installation Instructions
           </CustomButton>
         </STYButtonContainer>
       </TextContainer>
       <BottomTitle isHover={isHover}>
-        Built on{' '}
+        Built on{" "}
         <Link
           onMouseOver={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
-          href='https://kadena.io/'
-          target='_blank'
+          href="https://kadena.io/"
+          target="_blank"
         >
-          Kadena <div className='underline'></div>
+          Kadena <div className="underline"></div>
         </Link>
       </BottomTitle>
-      <a href='#ux'>
+      <a href="#ux">
         <ArrowDownIcon />
       </a>
     </Container>

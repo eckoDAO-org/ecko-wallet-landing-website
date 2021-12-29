@@ -1,6 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import HeaderItem from '../../../shared/HeaderItem';
+import React from "react";
+import styled from "styled-components";
+import HeaderItem from "../../../shared/HeaderItem";
+import { XWALLET_FILENAME } from "../../../constants/itemLinks";
 
 const ListContainer = styled.div`
   display: flex;
@@ -19,16 +20,11 @@ const XWalletFooterList = () => {
         disabledHover
         textRegular
         shadowHover
-        onClick={() => window.open('', '_blank', 'noopener,noreferrer')}
+        href={`${process.env.REACT_APP_BASE_URL}/${XWALLET_FILENAME}`}
       >
-      Download      
+        Download
       </HeaderItem>
-      <HeaderItem
-        disabledHover
-        textRegular
-        shadowHover
-        href='/how-to-install'
-      >
+      <HeaderItem disabledHover textRegular shadowHover href="/how-to-install">
         How to install
       </HeaderItem>
     </ListContainer>

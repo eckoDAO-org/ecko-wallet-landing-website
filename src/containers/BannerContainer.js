@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { XWALLET_FILENAME } from "../constants/itemLinks";
 
 const Container = styled.div`
   width: 100%;
@@ -25,7 +26,7 @@ const TitleContainer = styled.div`
   align-items: center;
 
   .underline {
-    width: ${({ isHover }) => (isHover ? '100%' : 0)};
+    width: ${({ isHover }) => (isHover ? "100%" : 0)};
     transition: width 0.3s;
     background: ${({ theme: { colors } }) => colors.purpleKDX};
     height: 6px;
@@ -76,12 +77,12 @@ const BannerContainer = () => {
           <Link
             onMouseOver={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}
-            href='/'
-            target='_blank'
+            href={`${process.env.REACT_APP_BASE_URL}/${XWALLET_FILENAME}`}
+            target="_self"
           >
-           Download X-Wallet
-            <div className='underline'></div>
-          </Link>{' '}
+            Download X-Wallet
+            <div className="underline"></div>
+          </Link>{" "}
         </Title>
       </TitleContainer>
     </Container>

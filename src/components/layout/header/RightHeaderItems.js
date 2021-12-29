@@ -1,20 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import CustomButton from '../../../shared/CustomButton';
+import CustomButton from "../../../shared/CustomButton";
+
+import { downloadFile } from "../../../utils";
 
 const RightContainerHeader = styled.div`
   display: flex;
   align-items: center;
-
 `;
 const RightHeaderItems = ({ pact, menuWithMarginBottom }) => {
   return (
     <RightContainerHeader>
-
-        <CustomButton>
-          Download
-        </CustomButton>
+      <CustomButton onClick={downloadFile}>Download</CustomButton>
       {/* <HeaderItem
         style={{
           marginLeft: '32px',
