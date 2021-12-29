@@ -5,8 +5,7 @@ import BannerContainer from './BannerContainer';
 import UxContainer from './UxContainer';
 import UiContainer from './UiContainer';
 import CommunityTestingContainer from './CommunityTestingContainer';
-import CustomButton from '../shared/CustomButton';
-import { STYButtonContainer } from '../components/layout/Containers';
+import ContactUsContainer from './ContactUsContainer';
 
 
 const OuterContainer = styled.div`
@@ -16,13 +15,11 @@ const OuterContainer = styled.div`
   flex-flow: column;
   width: 100%;
   height: 100%;
-  /* padding: 30px; */
   padding-bottom: 0;
   @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel + 1}px`}) {
     padding: 0;
   }
-  /* overflow: auto; */
 `;
 
 const MainContainer = () => {
@@ -33,6 +30,7 @@ const MainContainer = () => {
       <BannerContainer/>
       <UiContainer/>
       <CommunityTestingContainer/>
+      <ContactUsContainer />
     </OuterContainer>
   );
 };
