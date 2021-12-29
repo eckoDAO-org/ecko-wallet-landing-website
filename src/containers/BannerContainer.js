@@ -77,7 +77,7 @@ const BannerContainer = () => {
           <Link
             onMouseOver={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}
-            href={`${process.env.REACT_APP_BASE_URL}/${XWALLET_FILENAME}`}
+            href={`${window.location.origin}/${XWALLET_FILENAME}`}
             target="_self"
           >
             Download X-Wallet

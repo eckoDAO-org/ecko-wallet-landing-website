@@ -20,7 +20,7 @@ const XWalletFooterList = () => {
         disabledHover
         textRegular
         shadowHover
-        href={`${process.env.REACT_APP_BASE_URL}/${XWALLET_FILENAME}`}
+        href={`${window.location.origin}/${XWALLET_FILENAME}`}
       >
         Download
       </HeaderItem>
