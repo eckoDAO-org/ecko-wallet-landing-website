@@ -105,7 +105,7 @@ const IntroductionSection = () => {
     <Container id='intro'>
       <XWalletLogo style={{marginBottom:32}}/>
       <TextContainer>
-        <Title>X-Wallet <sup style={{fontSize:24,marginLeft:-10}}>BETA</sup> is <PlayIcon style={{cursor:'pointer'}}/> live!</Title>
+        <Title>X-Wallet <sup style={{fontSize:24,marginLeft:-10}}>BETA</sup> is live!</Title>
         <SubTitle>powered by Kaddex</SubTitle>
         <STYButtonContainer>
           <CustomButton background={theme.colors.white} color={theme.colors.primary}>
@@ -114,7 +114,7 @@ const IntroductionSection = () => {
           <CustomButton  onClick={() =>
                     window.open(`${window.location.origin}/how-to-install`, '_self', 'noopener,noreferrer')
                   }>
-            How to install
+            Installation Instructions
           </CustomButton>
         </STYButtonContainer>
       </TextContainer>

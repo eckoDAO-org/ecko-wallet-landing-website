@@ -43,7 +43,7 @@ const UiContainer = () => {
         <UiMainContainer id='ui' className='image-render'>
             <TextContainer>
                 <Label fontSize={32} labelStyle={{marginBottom:16}}>
-                Improved User Interface                
+                X-Wallet Functionality              
                 </Label>
                 <Label fontFamily='regular'>
                 Within X-Wallet users will be able to send and receive assets, execute cross-chain transfers, view transactions, interact with Dapps, and more. X-Wallet will provide everything a user needs to interact with Dapps, with more features being added as Kadena evolves.                </Label>
@@ -51,10 +51,10 @@ const UiContainer = () => {
             <Image src={UiImage} alt='ux' size='small'/>
             <TextContainer>
                 <Label fontSize={32} labelStyle={{marginBottom:16}}>
-                Secure and compatible                
+                Secure and Compatible                
                 </Label>
                 <Label fontFamily='regular'>
-                By default, all accounts created within X-Wallet are k:accounts. When installing X-Wallet, users can either create a new account or import an existing one. X-Wallet is compatible with both Chrome and Brave.                </Label>
+                By default, all accounts created within X-Wallet are k:accounts.<br/> X-Wallet is compatible with both Chrome and Brave.<br/> X-Wallet generates secure keys and passwords that only YOU have access to. Your keys, your Crypto.                </Label>
             </TextContainer>
         </UiMainContainer>
     );

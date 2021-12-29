@@ -70,10 +70,10 @@ const UxContainer = () => {
         <UxMainContainer id='ux' >
             <TextContainer>
                 <Label fontSize={32} labelStyle={{marginBottom:16}}>
-                Improved User experience
+                Improved User Experience
                 </Label>
                 <Label fontFamily='regular'>
-                X-Wallet is a new user friendly and robust Kadena native wallet that will drastically improve the easiness of DeFi operations on Kaddex
+                X-Wallet is a user-friendly and robust Kadena-native wallet designed for seamless interaction with Dapps on the Kadena network
                 </Label>
             </TextContainer>
             <Image src={UxImage} alt='ux' size='small'/>

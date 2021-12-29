@@ -82,19 +82,15 @@ const CommunityTestingContainer = () => {
                 <TextContainer>
                 <Title>X-Wallet <sup style={{fontSize:24,marginLeft:-10}}>BETA</sup> is live!</Title>
                     <Label fontFamily='regular' labelStyle={{display:'inline-block'}}>
-                    in the coming weeks, Kaddex will deploy a series of incentives for discovering bugs. 
-                    Stay tuned to the {' '}
+                        We're beta testing for a reason. In the coming weeks, Kaddex will deploy a series of incentives for discovering bugs.
+                        Stay tuned to the {' '}
                         <Label fontFamily='bold' labelStyle={{display:'inline-block',cursor:'pointer'}} onClick={() => window.open(ITEM_LINKS.TWITTER_KADDEX.link, '_blank', 'noopener,noreferrer')}>
-                        @KaddeXofficial,
-                        </Label>{' '}
+                        @KaddeXofficial Twitter,
+                        </Label>{' '}or our{' '}
                         <Label fontFamily='bold' labelStyle={{display:'inline-block',cursor:'pointer'}} onClick={() => window.open(ITEM_LINKS.DISCORD.link, '_blank', 'noopener,noreferrer')}>
                         http://discord.gg/kaddex
                         </Label>
-                        {' '}for more details on this program,
-                    and be sure to follow {' '}
-                        <Label fontFamily='bold' labelStyle={{display:'inline-block',cursor:'pointer'}} onClick={() => window.open(ITEM_LINKS.TWITTER_X_WALLET.link, '_blank', 'noopener,noreferrer')}>
-                        @XWalletOfficial
-                        </Label>   
+                        {' '}for more details on the program. {' '}
                     </Label>
                 </TextContainer>
     </CommunityMainContainer>
