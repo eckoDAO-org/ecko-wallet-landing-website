@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
-import { ArrowDownIcon, PlayIcon, XWalletLogo } from '../assets';
+import { ArrowDownIcon, XWalletLogo } from '../assets';
 import { STYButtonContainer } from '../components/layout/Containers';
 import CustomButton from '../shared/CustomButton';
 import theme from '../styles/theme';

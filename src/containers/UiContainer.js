@@ -54,7 +54,7 @@ const UiContainer = () => {
                 Secure and Compatible                
                 </Label>
                 <Label fontFamily='regular'>
-                By default, all accounts created within X-Wallet are k:accounts.<br/> X-Wallet is compatible with both Chrome and Brave.<br/> X-Wallet generates secure keys and passwords that only YOU have access to. Your keys, your Crypto.                </Label>
+                By default, all accounts created within X-Wallet are k:accounts.<br/> X-Wallet is compatible with both Chrome and Brave.<br/> X-Wallet generates secure keys and passwords that only YOU have access to.<br/> Your keys, your Crypto.                </Label>
             </TextContainer>
         </UiMainContainer>
     );
