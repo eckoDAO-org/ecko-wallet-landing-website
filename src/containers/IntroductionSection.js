@@ -95,17 +95,26 @@ const Link = styled.a`
   }
 `;
 
+const BetaSup = styled.sup`
+font-size:24px;
+margin-left:-10px;
+@media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel}px`}) {
+    font-size: 16px;
+    margin-left:-5px;
+
+  }
+`
+
 
 const IntroductionSection = () => {
   const [isHover, setIsHover] = useState(false);
-  console.log(window.location)
-
 
   return (
     <Container id='intro'>
       <XWalletLogo style={{marginBottom:32}}/>
       <TextContainer>
-        <Title>X-Wallet <sup style={{fontSize:24,marginLeft:-10}}>BETA</sup> is live!</Title>
+        <Title>X-Wallet <BetaSup>BETA</BetaSup> is live!</Title>
         <SubTitle>powered by Kaddex</SubTitle>
         <STYButtonContainer>
           <CustomButton background={theme.colors.white} color={theme.colors.primary}>

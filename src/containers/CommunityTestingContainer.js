@@ -1,10 +1,11 @@
 import React from 'react';
 import { Image} from 'semantic-ui-react';
 import styled from 'styled-components';
-import { STYContainer } from '../components/layout/Containers';
+import { STYButtonContainer, STYContainer } from '../components/layout/Containers';
 import CommunityTestingImage from '../assets/images/png/community-test-image.png'
 import Label from '../shared/Label';
 import { ITEM_LINKS } from '../constants/itemLinks';
+import CustomButton from '../shared/CustomButton';
 
 const CommunityMainContainer = styled(STYContainer)`
     flex-direction:row;
@@ -75,12 +76,23 @@ const Title = styled.span`
   }
 `;
 
+const BetaSup = styled.sup`
+font-size:24px;
+margin-left:-10px;
+@media (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.mobilePixel}px`}) {
+    font-size: 16px;
+    margin-left:-5px;
+
+  }
+`
+
 const CommunityTestingContainer = () => {
     return (
         <CommunityMainContainer id='community'>
                 <Image src={CommunityTestingImage} alt='community' size='small'/>
                 <TextContainer>
-                <Title>X-Wallet <sup style={{fontSize:24,marginLeft:-10}}>BETA</sup> is live!</Title>
+                <Title>X-Wallet <BetaSup>BETA</BetaSup> is live!</Title>
                     <Label fontFamily='regular' labelStyle={{display:'inline-block'}}>
                         We're beta testing for a reason. In the coming weeks, Kaddex will deploy a series of incentives for discovering bugs.
                         Stay tuned to the {' '}

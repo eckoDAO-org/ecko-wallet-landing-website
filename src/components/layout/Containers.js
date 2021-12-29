@@ -26,6 +26,14 @@ export const STYButtonContainer = styled.div`
   & > *:not(:last-child) {
     margin-right:16px;
   }
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
+    flex-direction:column;
+    & > *:not(:last-child) {
+    margin-right:0px;
+    margin-bottom:16px;
+  }
+  }
 `;
 // -----
 export const STYResponsiveContainer = styled.div`

@@ -5,6 +5,8 @@ import BannerContainer from './BannerContainer';
 import UxContainer from './UxContainer';
 import UiContainer from './UiContainer';
 import CommunityTestingContainer from './CommunityTestingContainer';
+import CustomButton from '../shared/CustomButton';
+import { STYButtonContainer } from '../components/layout/Containers';
 
 
 const OuterContainer = styled.div`
