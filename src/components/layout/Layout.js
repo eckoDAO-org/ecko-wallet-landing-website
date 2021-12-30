@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components/macro';
-import DesktopHeader from './header/DesktopHeader';
-import FooterSection from '../../containers/FooterSection';
-import { TopUpIcon } from '../../assets';
-import AlertBetaTest from './header/AlertBetaTest';
+import React, { useEffect, useState } from "react";
+import styled from "styled-components/macro";
+import DesktopHeader from "./header/DesktopHeader";
+import FooterSection from "../../containers/FooterSection";
+import { TopUpIcon } from "../../assets";
+import AlertBetaTest from "./header/AlertBetaTest";
 
 const MainContainer = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ const PageContent = styled.div`
     position: fixed;
     background-color: rgba(7, 6, 16, 0.5);
     top: 56;
-    z-index:50;
+    z-index: 50;
     width: 100%;
 
     -webkit-backdrop-filter: blur(10px);
@@ -61,11 +61,9 @@ const MainContent = styled.div`
   width: 100%;
 `;
 
-
-
 const GoTopContainer = styled.div`
   display: ${({ topUpIconIsVisible }) =>
-    topUpIconIsVisible ? 'block' : 'none'};
+    topUpIconIsVisible ? "block" : "none"};
   position: fixed;
   bottom: 10px;
   right: 10px;
@@ -91,6 +89,15 @@ const GoTopContainer = styled.div`
   }
 `;
 
+const ButtonIcon = styled("button")`
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+`;
+
 const Layout = ({ children }) => {
   const [, setIsFooterVisible] = useState(false);
   const [IsHeaderVisible, setIsHeaderVisible] = useState(false);
@@ -103,12 +110,9 @@ const Layout = ({ children }) => {
 
     const updateScrollDir = () => {
       const scrollY = window.pageYOffset;
-      const ux = document
-        .getElementById('ux')
-        .getBoundingClientRect().top;
-      const features = document
-        .getElementById('ux')
-        .getBoundingClientRect().top;
+      const ux = document.getElementById("ux").getBoundingClientRect().top;
+      const features = document.getElementById("ux").getBoundingClientRect()
+        .top;
       if (Math.abs(scrollY - lastScrollY) < threshold) {
         ticking = false;
         return;
@@ -130,22 +134,22 @@ const Layout = ({ children }) => {
       }
     };
 
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll);
     // console.log(IsHeaderVisible);
 
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, [IsHeaderVisible]);
 
   useEffect(() => {
-    window.addEventListener('scroll', scrollHandler);
+    window.addEventListener("scroll", scrollHandler);
 
-    return () => window.removeEventListener('scroll', scrollHandler);
+    return () => window.removeEventListener("scroll", scrollHandler);
   }, []);
 
   const scrollHandler = () => {
     if (
       window.innerHeight >=
-      document.getElementById('footer').getBoundingClientRect().top
+      document.getElementById("footer").getBoundingClientRect().top
     ) {
       setIsFooterVisible(true);
     } else {
@@ -153,15 +157,22 @@ const Layout = ({ children }) => {
     }
   };
 
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <MainContainer id='main-container'>
+    <MainContainer id="main-container">
       {/* <CustomParticles /> */}
       <AlertBetaTest />
       <PageContent>
         {IsHeaderVisible && (
           <DesktopHeader
             // IsHeaderVisible={IsHeaderVisible}
-            className={IsHeaderVisible ? 'sticky' : 'out'}
+            className={IsHeaderVisible ? "sticky" : "out"}
             menuWithMarginBottom
           />
         )}
@@ -169,9 +180,9 @@ const Layout = ({ children }) => {
         <MainContent>{children}</MainContent>
       </PageContent>
       <GoTopContainer topUpIconIsVisible={topUpIconIsVisible}>
-        <a href='#header'>
+        <ButtonIcon onClick={goToTop}>
           <TopUpIcon />
-        </a>
+        </ButtonIcon>
       </GoTopContainer>
 
       <FooterSection />

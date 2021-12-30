@@ -1,14 +1,10 @@
 import React from "react";
 import { Image } from "semantic-ui-react";
 import styled from "styled-components";
-import {
-  STYButtonContainer,
-  STYContainer,
-} from "../components/layout/Containers";
+import { STYContainer } from "../components/layout/Containers";
 import CommunityTestingImage from "../assets/images/png/community-test-image.png";
 import Label from "../shared/Label";
 import { ITEM_LINKS } from "../constants/itemLinks";
-import CustomButton from "../shared/CustomButton";
 
 const CommunityMainContainer = styled(STYContainer)`
   flex-direction: row;
