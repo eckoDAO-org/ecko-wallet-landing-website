@@ -79,6 +79,7 @@ const BannerContainer = () => {
             onMouseLeave={() => setIsHover(false)}
             href={`${window.location.origin}/${XWALLET_FILENAME}`}
             target="_self"
+            className="analytics"
           >
             Download X-Wallet
             <div className="underline"></div>

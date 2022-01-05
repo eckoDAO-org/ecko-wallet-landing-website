@@ -21,6 +21,7 @@ const XWalletFooterList = () => {
         textRegular
         shadowHover
         href={`${window.location.origin}/${XWALLET_FILENAME}`}
+        className="analytics"
       >
         Download
       </HeaderItem>

@@ -97,16 +97,14 @@ const Link = styled.a`
 `;
 
 const BetaSup = styled.sup`
-font-size:24px;
-margin-left:-10px;
-@media (max-width: ${({ theme: { mediaQueries } }) =>
+  font-size: 24px;
+  margin-left: -10px;
+  @media (max-width: ${({ theme: { mediaQueries } }) =>
       `${mediaQueries.mobilePixel}px`}) {
     font-size: 16px;
-    margin-left:-5px;
-
+    margin-left: -5px;
   }
-`
-
+`;
 
 const IntroductionSection = () => {
   const [isHover, setIsHover] = useState(false);
@@ -115,13 +113,16 @@ const IntroductionSection = () => {
     <Container id="intro">
       <XWalletLogo style={{ marginBottom: 32 }} />
       <TextContainer>
-        <Title>X-Wallet <BetaSup>BETA</BetaSup> is live!</Title>
+        <Title>
+          X-Wallet <BetaSup>BETA</BetaSup> is live!
+        </Title>
         <SubTitle>powered by Kaddex</SubTitle>
         <STYButtonContainer>
           <CustomButton
             background={theme.colors.white}
             color={theme.colors.primary}
             onClick={downloadFile}
+            customClass="analytics"
           >
             Download Wallet
           </CustomButton>

@@ -12,7 +12,9 @@ const RightContainerHeader = styled.div`
 const RightHeaderItems = ({ pact, menuWithMarginBottom }) => {
   return (
     <RightContainerHeader>
-      <CustomButton onClick={downloadFile}>Download</CustomButton>
+      <CustomButton customClass="analytics" onClick={downloadFile}>
+        Download
+      </CustomButton>
       {/* <HeaderItem
         style={{
           marginLeft: '32px',
