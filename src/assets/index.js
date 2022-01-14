@@ -16,5 +16,8 @@ export { ReactComponent as NotificationCaution } from './images/shared/ic_cautio
 export { ReactComponent as PlayIcon } from './images/shared/ic_play.svg';
 export { ReactComponent as KaddexLetterLogo } from './images/header/kaddex-letter-logo.svg';
 export { ReactComponent as XWalletLogo } from './images/shared/X-Wallet.svg';
+export { ReactComponent as XWalletHeaderLogo } from './images/header/x-wallet-horizontal.svg';
+export { ReactComponent as XWalletLetterLogo } from './images/shared/x-wallet-letter.svg';
+
 
 

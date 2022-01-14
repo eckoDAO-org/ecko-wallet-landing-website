@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components/macro';
-import { KaddexLetterLogo, KaddexLogo } from '../../../assets';
+import { XWalletHeaderLogo, XWalletLetterLogo } from '../../../assets';
 import useWindowSize from '../../../hooks/useWindowSize';
 import { ROUTE_INDEX } from '../../../router/routes';
 import HeaderItem from '../../../shared/HeaderItem';
@@ -45,10 +45,10 @@ const DesktopHeader = ({ className, menuWithMarginBottom }) => {
       <LeftContainer>
         {
           width <= theme.mediaQueries.mobilePixel ?
-          <KaddexLetterLogo
+          <XWalletLetterLogo
           style={{ cursor: 'pointer' }}
           onClick={() => history.push(ROUTE_INDEX)}
-        /> :   <KaddexLogo
+        /> :   <XWalletHeaderLogo
         style={{ cursor: 'pointer' }}
         onClick={() => history.push(ROUTE_INDEX)}
       />
@@ -59,6 +59,13 @@ const DesktopHeader = ({ className, menuWithMarginBottom }) => {
         href='/how-to-install'
       >
         How to install
+      </HeaderItem>
+      <HeaderItem
+        style={{ marginRight: 24 }}
+        className='mobile-none'
+        href='https://kaddex.com/'
+      >
+        Kaddex
       </HeaderItem>
       </LeftContainer>
       <RightContainer>
