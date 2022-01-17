@@ -1,7 +1,7 @@
 import React from 'react';
 import { Divider, Grid } from 'semantic-ui-react';
 import styled from 'styled-components/macro';
-import { KaddexLogo, XWalletLogo } from '../assets';
+import { XWalletHeaderLogo, XWalletLogo } from '../assets';
 import XWalletFooterList from '../components/layout/footer/XWalletFooterList';
 import { ITEM_LINKS } from '../constants/itemLinks';
 
@@ -158,7 +158,7 @@ const FooterSection = () => {
             }}
           />
           <BottomContainer>
-            <KaddexLogo />
+            <XWalletHeaderLogo />
             <PrivacyElement>©2021, Privacy Policy</PrivacyElement>
           </BottomContainer>
         </FooterBottomContainer>
