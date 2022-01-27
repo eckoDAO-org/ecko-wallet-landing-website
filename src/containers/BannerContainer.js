@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { XWALLET_FILENAME } from "../constants/itemLinks";
+import { XWALLET_DOWNLOAD_LINK } from "../constants/itemLinks";
 
 const Container = styled.div`
   width: 100%;
@@ -77,8 +77,8 @@ const BannerContainer = () => {
           <Link
             onMouseOver={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}
-            href={`${window.location.origin}/${XWALLET_FILENAME}`}
-            target="_self"
+            href={XWALLET_DOWNLOAD_LINK}
+            target="_blank"
             className="analytics"
           >
             Download X-Wallet

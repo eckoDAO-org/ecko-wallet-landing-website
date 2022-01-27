@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import HeaderItem from "../../../shared/HeaderItem";
-import { XWALLET_FILENAME } from "../../../constants/itemLinks";
+import { XWALLET_DOWNLOAD_LINK } from "../../../constants/itemLinks";
 
 const ListContainer = styled.div`
   display: flex;
@@ -20,7 +20,8 @@ const XWalletFooterList = () => {
         disabledHover
         textRegular
         shadowHover
-        href={`${window.location.origin}/${XWALLET_FILENAME}`}
+        href={XWALLET_DOWNLOAD_LINK}
+        target="_blank"
         className="analytics"
       >
         Download

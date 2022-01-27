@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-
+import { XWALLET_DOWNLOAD_LINK } from "../../../constants/itemLinks";
 import CustomButton from "../../../shared/CustomButton";
 
-import { downloadFile } from "../../../utils";
 
 const RightContainerHeader = styled.div`
   display: flex;
@@ -12,7 +11,13 @@ const RightContainerHeader = styled.div`
 const RightHeaderItems = ({ pact, menuWithMarginBottom }) => {
   return (
     <RightContainerHeader>
-      <CustomButton customClass="analytics" onClick={downloadFile}>
+      <CustomButton customClass="analytics" onClick={() =>
+              window.open(
+                XWALLET_DOWNLOAD_LINK,
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }>
         Download
       </CustomButton>
       {/* <HeaderItem

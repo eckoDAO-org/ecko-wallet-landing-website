@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components/macro";
 import { ArrowDownIcon, XWalletLogo } from "../assets";
 import { STYButtonContainer } from "../components/layout/Containers";
+import { XWALLET_DOWNLOAD_LINK } from "../constants/itemLinks";
 import CustomButton from "../shared/CustomButton";
 import theme from "../styles/theme";
-import { downloadFile } from "../utils";
 
 const Container = styled.div`
   display: flex;
@@ -121,7 +121,13 @@ const IntroductionSection = () => {
           <CustomButton
             background={theme.colors.white}
             color={theme.colors.primary}
-            onClick={downloadFile}
+            onClick={() =>
+              window.open(
+                XWALLET_DOWNLOAD_LINK,
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
             customClass="analytics"
           >
             Download Wallet

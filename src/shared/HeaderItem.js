@@ -26,6 +26,7 @@ const HeaderItem = ({
   id,
   className,
   href,
+  target,
   children,
   disabledHover,
   style,
@@ -39,6 +40,7 @@ const HeaderItem = ({
       id={id}
       className={className}
       href={href}
+      target={target}
       isHover={disabledHover ? false : isHover}
       onMouseOver={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
