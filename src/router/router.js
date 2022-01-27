@@ -28,11 +28,11 @@ export const AppRouter = () => {
         <Container>
           <Switch>
             <Route exact path={ROUTE_INDEX} component={MainContainer} />
-            <Route
+            {/* <Route
               exact
               path={ROUTE_HOW_TO_INSTALL}
               component={HowToInstallContainer}
-            />
+            /> */}
             <Redirect to={ROUTE_INDEX} />
           </Switch>
         </Container>

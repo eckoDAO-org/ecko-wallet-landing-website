@@ -26,9 +26,9 @@ const XWalletFooterList = () => {
       >
         Download
       </HeaderItem>
-      <HeaderItem disabledHover textRegular shadowHover href="/how-to-install">
+      {/* <HeaderItem disabledHover textRegular shadowHover href="/how-to-install">
         How to install
-      </HeaderItem>
+      </HeaderItem> */}
     </ListContainer>
   );
 };

@@ -132,7 +132,7 @@ const IntroductionSection = () => {
           >
             Download Wallet
           </CustomButton>
-          <CustomButton
+          {/* <CustomButton
             onClick={() =>
               window.open(
                 `${window.location.origin}/how-to-install`,
@@ -142,7 +142,7 @@ const IntroductionSection = () => {
             }
           >
             Installation Instructions
-          </CustomButton>
+          </CustomButton> */}
         </STYButtonContainer>
       </TextContainer>
       <BottomTitle isHover={isHover}>
