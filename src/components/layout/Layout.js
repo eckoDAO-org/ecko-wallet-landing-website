@@ -3,7 +3,6 @@ import styled from "styled-components/macro";
 import DesktopHeader from "./header/DesktopHeader";
 import FooterSection from "../../containers/FooterSection";
 import { TopUpIcon } from "../../assets";
-import AlertBetaTest from "./header/AlertBetaTest";
 
 const MainContainer = styled.div`
   display: flex;
@@ -167,7 +166,6 @@ const Layout = ({ children }) => {
   return (
     <MainContainer id="main-container">
       {/* <CustomParticles /> */}
-      <AlertBetaTest />
       <PageContent>
         {IsHeaderVisible && (
           <DesktopHeader
