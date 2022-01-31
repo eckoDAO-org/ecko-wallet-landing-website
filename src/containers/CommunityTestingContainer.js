@@ -70,7 +70,7 @@ const Title = styled.span`
   }
 `;
 
-const BetaSup = styled.sup`
+const VersionSup = styled.sup`
   font-size: 24px;
   margin-left: -10px;
   @media (max-width: ${({ theme: { mediaQueries } }) =>
@@ -86,7 +86,7 @@ const CommunityTestingContainer = () => {
       <Image src={CommunityTestingImage} alt="community" size="small" />
       <TextContainer>
         <Title>
-          X-Wallet <BetaSup>BETA</BetaSup> is live!
+          X-Wallet <VersionSup>v1.0.0</VersionSup> is live!
         </Title>
         <Label fontFamily="regular" labelStyle={{ display: "inline-block" }}>
           We're beta testing for a reason. In the coming weeks, Kaddex will

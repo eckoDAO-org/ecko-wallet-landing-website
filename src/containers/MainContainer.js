@@ -6,6 +6,7 @@ import UxContainer from './UxContainer';
 import UiContainer from './UiContainer';
 import CommunityTestingContainer from './CommunityTestingContainer';
 import ContactUsContainer from './ContactUsContainer';
+import MultiTokenEcosystemContainer from './MultiTokenEcosystemContainer';
 
 
 const OuterContainer = styled.div`
@@ -30,6 +31,7 @@ const MainContainer = () => {
       <BannerContainer/>
       <UiContainer/>
       <CommunityTestingContainer/>
+      <MultiTokenEcosystemContainer/>
       <ContactUsContainer />
     </OuterContainer>
   );

@@ -96,7 +96,7 @@ const Link = styled.a`
   }
 `;
 
-const BetaSup = styled.sup`
+const VersionSup = styled.sup`
   font-size: 24px;
   margin-left: -10px;
   @media (max-width: ${({ theme: { mediaQueries } }) =>
@@ -114,7 +114,7 @@ const IntroductionSection = () => {
       <XWalletLogo style={{ marginBottom: 32 }} />
       <TextContainer>
         <Title>
-          X-Wallet <BetaSup>BETA</BetaSup> is live!
+          X-Wallet <VersionSup>v1.0.0</VersionSup> is live!
         </Title>
         <SubTitle>powered by Kaddex</SubTitle>
         <STYButtonContainer>
