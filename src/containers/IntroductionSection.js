@@ -114,7 +114,7 @@ const IntroductionSection = () => {
       <XWalletLogo style={{ marginBottom: 32 }} />
       <TextContainer>
         <Title>
-          X-Wallet <VersionSup>v1.0.0</VersionSup> is live!
+          X-Wallet <VersionSup>v1</VersionSup> is live!
         </Title>
         <SubTitle>powered by Kaddex</SubTitle>
         <STYButtonContainer>

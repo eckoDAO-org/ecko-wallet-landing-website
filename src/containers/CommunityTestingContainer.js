@@ -86,7 +86,7 @@ const CommunityTestingContainer = () => {
       <Image src={CommunityTestingImage} alt="community" size="small" />
       <TextContainer>
         <Title>
-          X-Wallet <VersionSup>v1.0.0</VersionSup> is live!
+          X-Wallet <VersionSup>v1</VersionSup> is live!
         </Title>
         <Label fontFamily="regular" labelStyle={{ display: "inline-block" }}>
           We're beta testing for a reason. In the coming weeks, Kaddex will
