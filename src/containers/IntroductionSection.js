@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-import styled from "styled-components/macro";
-import { ArrowDownIcon, XWalletLogo } from "../assets";
-import { STYButtonContainer } from "../components/layout/Containers";
-import { XWALLET_DOWNLOAD_LINK } from "../constants/itemLinks";
-import CustomButton from "../shared/CustomButton";
-import theme from "../styles/theme";
+import React, { useState } from 'react';
+import styled from 'styled-components/macro';
+import { ArrowDownIcon, XWalletLogo } from '../assets';
+import { STYButtonContainer } from '../components/layout/Containers';
+import { XWALLET_DOWNLOAD_LINK } from '../constants/itemLinks';
+import CustomButton from '../shared/CustomButton';
+import Label from '../shared/Label';
+import theme from '../styles/theme';
+import FlexContainer from './Container';
 
 const Container = styled.div`
   display: flex;
@@ -14,51 +16,12 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   padding: 30px;
-  /* overflow: auto; */
-`;
-
-const TextContainer = styled.div`
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-`;
-
-const Title = styled.span`
-  text-align: center;
-  font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
-  font-size: 48px;
-  letter-spacing: 0px;
-  color: #ffffff;
-  opacity: 1;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    font: normal normal bold 28px montserrat-bold;
-  }
-`;
-
-const SubTitle = styled.span`
-  margin-top: 16px;
-  margin-bottom: 32px;
-  padding: 0px;
-  text-align: center;
-  font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
-  font-size: 32px;
-  letter-spacing: 0px;
-  color: #ffffff;
-  opacity: 1;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    font: normal normal normal 18px montserrat-regular;
-  }
 `;
 
 const BottomTitle = styled.div`
-  font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
+  font-family: ${({ theme: { fontFamily } }) => fontFamily.basier};
   font-size: 16px;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel}px`}) {
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
     font-size: 16px !important;
   }
 
@@ -67,13 +30,12 @@ const BottomTitle = styled.div`
   margin-bottom: 24px;
 
   .underline {
-    width: ${({ isHover }) => (isHover ? "100%" : 0)};
+    width: ${({ isHover }) => (isHover ? '100%' : 0)};
     transition: width 0.3s;
     background: #ffffff;
     height: 3px;
 
-    @media (max-width: ${({ theme: { mediaQueries } }) =>
-        `${mediaQueries.mobilePixel}px`}) {
+    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
       width: 0;
     }
   }
@@ -89,8 +51,7 @@ const Link = styled.a`
   display: inline-block;
   cursor: pointer;
 
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel}px`}) {
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
     font-size: 16px !important;
     text-decoration: underline;
   }
@@ -98,11 +59,10 @@ const Link = styled.a`
 
 const VersionSup = styled.sup`
   font-size: 24px;
-  margin-left: -10px;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel}px`}) {
+  padding-bottom: 20px;
+  margin-right: 10px;
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
     font-size: 16px;
-    margin-left: -5px;
   }
 `;
 
@@ -112,47 +72,27 @@ const IntroductionSection = () => {
   return (
     <Container id="intro">
       <XWalletLogo style={{ marginBottom: 32 }} />
-      <TextContainer>
-        <Title>
+      <FlexContainer className="column align-ce">
+        <Label fontFamily="syncopate" style={{ fontSize: 48 }} mobileStyle={{ fontSize: 24 }}>
           X-Wallet <VersionSup>v1</VersionSup> is live!
-        </Title>
-        <SubTitle>powered by Kaddex</SubTitle>
+        </Label>
+        <Label style={{ fontSize: 32, marginTop: 16, marginBottom: 32 }} mobileStyle={{ fontSize: 18 }}>
+          powered by Kaddex
+        </Label>
         <STYButtonContainer>
           <CustomButton
             background={theme.colors.white}
             color={theme.colors.primary}
-            onClick={() =>
-              window.open(
-                XWALLET_DOWNLOAD_LINK,
-                "_blank",
-                "noopener,noreferrer"
-              )
-            }
+            onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}
             customClass="analytics"
           >
             Download Wallet
           </CustomButton>
-          {/* <CustomButton
-            onClick={() =>
-              window.open(
-                `${window.location.origin}/how-to-install`,
-                "_self",
-                "noopener,noreferrer"
-              )
-            }
-          >
-            Installation Instructions
-          </CustomButton> */}
         </STYButtonContainer>
-      </TextContainer>
+      </FlexContainer>
       <BottomTitle isHover={isHover}>
-        Built on{" "}
-        <Link
-          onMouseOver={() => setIsHover(true)}
-          onMouseLeave={() => setIsHover(false)}
-          href="https://kadena.io/"
-          target="_blank"
-        >
+        Built on{' '}
+        <Link onMouseOver={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} href="https://kadena.io/" target="_blank">
           Kadena <div className="underline"></div>
         </Link>
       </BottomTitle>

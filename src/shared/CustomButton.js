@@ -1,36 +1,30 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from "react";
-import styled from "styled-components/macro";
-import { Button as SUIButton } from "semantic-ui-react";
+import React from 'react';
+import styled from 'styled-components/macro';
+import { Button as SUIButton } from 'semantic-ui-react';
 
 const STYStyledButton = styled(SUIButton)`
-  cursor: ${({ disabled }) => (disabled ? "default !important" : "pointer")};
+  cursor: ${({ disabled }) => (disabled ? 'default !important' : 'pointer')};
   display: flex !important;
   justify-content: center;
   align-items: center;
   padding: 16px;
-  font-family: ${({ theme: { fontFamily } }) =>
-    `${fontFamily.bold} !important`};
-  font-size: ${({ fontSize }) =>
-    fontSize ? fontSize + " !important" : "16px !important"};
+  font-family: ${({ theme: { fontFamily } }) => `${fontFamily.syncopate} !important`};
+  font-size: ${({ fontSize }) => (fontSize ? fontSize + ' !important' : '16px !important')};
   color: ${({ theme: { colors }, disabled, $color }) => {
-    if ($color) return $color + " !important";
+    if ($color) return $color + ' !important';
     if (disabled) return `${colors.primary} !important`;
     else return `${colors.white} !important`;
   }};
-  background: ${({
-    theme: { buttonBackgroundGradient },
-    disabled,
-    background,
-  }) => {
-    if (background) return background + " !important";
-    if (disabled) return "transparent !important";
-    return buttonBackgroundGradient + "!important";
+  background: ${({ theme: { buttonBackgroundGradient }, disabled, background }) => {
+    if (background) return background + ' !important';
+    if (disabled) return 'transparent !important';
+    return buttonBackgroundGradient + '!important';
   }};
   border-radius: 10px !important;
   opacity: 1 !important;
   border: ${({ theme: { colors }, $border }) => {
-    if ($border) return $border + " !important";
+    if ($border) return $border + ' !important';
     else return `1px solid ${colors.white} !important`;
   }};
   height: 39px;

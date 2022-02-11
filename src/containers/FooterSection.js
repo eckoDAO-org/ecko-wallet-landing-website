@@ -1,97 +1,16 @@
 import React from 'react';
-import { Divider, Grid } from 'semantic-ui-react';
+import { Divider } from 'semantic-ui-react';
 import styled from 'styled-components/macro';
 import { XWalletHeaderLogo, XWalletLogo } from '../assets';
 import XWalletFooterList from '../components/layout/footer/XWalletFooterList';
 import { ITEM_LINKS } from '../constants/itemLinks';
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  width: 100%;
-  height: 100%;
-  background: #171b29;
-  padding: 30px;
-  /* overflow: auto; */
-`;
-
-const FooterContainer = styled.div`
-  display: flex;
-  flex-flow: column;
-  color: #fff;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    margin-top: 40px;
-    flex-flow: column;
-  }
-`;
-
-const PrivacyElement = styled.p`
-  font: normal normal normal 14px/20px montserrat-regular;
-  margin: 0;
-`;
-
-const FooterGrid = styled(Grid)`
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel}px`}) {
-    flex-direction: column;
-  }
-`;
-
-const FooterBottomContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 0 50px;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    padding: 0;
-  }
-`;
-
-const BottomContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    flex-flow: column;
-  }
-`;
-
-const Title = styled.div`
-  text-align: left;
-  font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
-  font-size: 32px;
-  /* @media (max-width: ${({ theme: { mediaQueries } }) =>
-    `${mediaQueries.desktopPixel + 1}px`}) {
-    text-align: center;
-  } */
-
-  color: ${({ theme: { colors } }) => colors.white};
-  margin-bottom: 24px;
-`;
-
-const IconListListContainer = styled.div`
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+import Label from '../shared/Label';
+import FlexContainer from './Container';
 
 const IconItem = styled.div`
   display: flex;
   align-items: center;
-  font-family: montserrat-regular;
+  font-family: ${({ theme: { fontFamily } }) => fontFamily.basier};
   font-size: 16px;
   color: #ffffff;
   &:hover {
@@ -109,61 +28,51 @@ const IconItem = styled.div`
   }
 `;
 
-const GridColumn = styled(Grid.Column)`
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    margin-bottom: 32px;
-  }
-
-`;
-
 const FooterSection = () => {
   return (
-    <Container id='footer'>
-      <FooterContainer>
-        <FooterGrid>
-        <GridColumn>
+    <FlexContainer id="footer" className="w-100 column" style={{ padding: 30, background: '#171b29' }}>
+      <FlexContainer className="w-100 justify-sb" style={{ padding: '0 50px' }}>
         <XWalletLogo />
-          </GridColumn>
-          <GridColumn>
-            <Title>X-Wallet</Title>
-            <XWalletFooterList />
-          </GridColumn>
-          <GridColumn>
-            <Title>Community</Title>
-            <IconListListContainer>
-              {Object.values(ITEM_LINKS).map((social, index) => (
-                <IconItem
-                  to='/'
-                  key={index}
-                  style={{ paddingBottom: 9,cursor:'pointer' }}
-                  onClick={() =>
-                    window.open(social.link, '_blank', 'noopener,noreferrer')
-                  }
-                >
-                  {social.icon}
-                  {social.label}
-                </IconItem>
-              ))}
-            </IconListListContainer>
-          </GridColumn>
-        </FooterGrid>
-        <FooterBottomContainer>
-          <Divider
-            style={{
-              margin: ' 24px 0',
-              backgroundColor: '#FFFFFF',
-              height: 3,
-              boxShadow: '0 0 5px #ffffff',
-            }}
-          />
-          <BottomContainer>
-            <XWalletHeaderLogo />
-            <PrivacyElement>©2021, Privacy Policy</PrivacyElement>
-          </BottomContainer>
-        </FooterBottomContainer>
-      </FooterContainer>
-    </Container>
+        <FlexContainer className="column" gap={24}>
+          <Label fontSize={32} fontFamily="syncopate">
+            X-Wallet
+          </Label>
+          <XWalletFooterList />
+        </FlexContainer>
+        <FlexContainer className="column" gap={24}>
+          <Label fontSize={32} fontFamily="syncopate">
+            Community
+          </Label>
+          <FlexContainer className="column">
+            {Object.values(ITEM_LINKS).map((social, index) => (
+              <IconItem
+                to="/"
+                key={index}
+                style={{ paddingBottom: 9, cursor: 'pointer' }}
+                onClick={() => window.open(social.link, '_blank', 'noopener,noreferrer')}
+              >
+                {social.icon}
+                {social.label}
+              </IconItem>
+            ))}
+          </FlexContainer>
+        </FlexContainer>
+      </FlexContainer>
+      <FlexContainer className="column" style={{ padding: '0 50px' }}>
+        <Divider
+          style={{
+            margin: ' 24px 0',
+            backgroundColor: '#FFFFFF',
+            height: 3,
+            boxShadow: '0 0 5px #ffffff',
+          }}
+        />
+        <FlexContainer className="justify-sb">
+          <XWalletHeaderLogo />
+          <Label fontSize={14}>©2021, Privacy Policy</Label>
+        </FlexContainer>
+      </FlexContainer>
+    </FlexContainer>
   );
 };
 

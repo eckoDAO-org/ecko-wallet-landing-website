@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
     *, *:before, *:after {
@@ -28,9 +28,8 @@ export default createGlobalStyle`
       min-width: 0;
       font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
       color: ${({ theme: { colors } }) => colors.primary};
-      background: linear-gradient(122deg, #070610 0%, #4C125A 100%);
+      background-color: #0A0B1D;
       background-attachment: fixed;
-      /* background: -webkit-gradient(linear, left top, left bottom, from(#070610), to(#4C125A)) fixed; */
       opacity: 1;
       
       

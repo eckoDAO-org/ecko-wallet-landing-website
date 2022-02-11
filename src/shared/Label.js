@@ -1,78 +1,131 @@
 import React from 'react';
-import styled, { css } from 'styled-components/macro';
-import { STYColumnContainer, STYRowContainer } from '../components/layout/Containers';
-import { theme } from '../styles/theme';
+import styled from 'styled-components/macro';
+import PropTypes from 'prop-types';
+import useWindowSize from '../hooks/useWindowSize';
+import theme, { getColor } from '../styles/theme';
 
 const STYText = styled.span`
   display: flex;
   align-items: center;
   cursor: ${({ onClick }) => onClick && 'pointer'};
   z-index: 1;
-  color: ${({ theme: { colors }, labelColor }) => labelColor || colors.white};
-  ${({ inverted, theme: { colors } }) =>
-    inverted &&
-    css`
-      color: ${colors.primary};
-    `}
-  font-size:${({ fontSize }) => fontSize}px;
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobileSmallPixel}px`}) {
-    ${({ fontSize }) => {
-      if (fontSize >= 24) {
-        return css`
-          font-size: 24px;
-        `;
-      }
-    }}
+  color: ${({ color }) => color};
+
+  svg {
+    path {
+      fill: ${({ theme: { colors } }) => colors.white};
+    }
+  }
+
+  &.fit-content {
+    width: fit-content;
+  }
+  &.uppercase {
+    text-transform: uppercase;
+  }
+
+  &.capitalize {
+    text-transform: capitalize;
+  }
+
+  &.text-center {
+    text-align: center;
+    display: blocK;
+  }
+
+  &.align-fs {
+    align-items: flex-start;
+  }
+
+  &.justify-ce {
+    justify-content: center;
+  }
+
+  &.block {
+    display: block;
+  }
+
+  &.nowrap {
+    white-space: nowrap;
+  }
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
+    &.tablet-text-center {
+      text-align: center;
+    }
   }
 `;
 
-const STYIconContainer = styled.div`
-  margin-right: 8px;
-`;
+const Label = ({
+  id,
+  className,
+  desktopClassName,
+  tabletClassName,
+  mobileClassName,
+  desktopPixel,
+  mobilePixel,
+  children,
+  fontFamily,
+  fontSize,
+  color,
+  style,
+  desktopStyle,
+  tabletStyle,
+  mobileStyle,
+  onClick,
+}) => {
+  const [width] = useWindowSize();
 
-const Label = ({ className, children, label, labelColor, fontFamily = 'bold', fontSize = 16, labelStyle, inverted, onClick }) => {
+  const getClassName = () => {
+    let classname = className;
+    if (width >= (desktopPixel || theme.mediaQueries.desktopPixel) && desktopClassName) {
+      classname = `${classname} ${desktopClassName} `;
+    }
+    if (width < (desktopPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletClassName) {
+      classname = `${classname} ${tabletClassName} `;
+    }
+    if (width < (mobilePixel || theme.mediaQueries.mobilePixel) && mobileClassName) {
+      classname = `${classname} ${mobileClassName} `;
+    }
+    return classname;
+  };
+
   return (
     <STYText
-      className={className}
-      labelColor={labelColor}
-      inverted={inverted}
+      id={id}
+      className={getClassName()}
+      color={getColor(color)}
       fontSize={fontSize}
       onClick={onClick}
-      style={{ fontFamily: theme.fontFamily[fontFamily], ...labelStyle }}
+      mobilePixel={mobilePixel}
+      style={{
+        fontFamily: theme.fontFamily[fontFamily],
+        fontSize,
+        ...style,
+        ...(width >= (desktopPixel || theme.mediaQueries.desktopPixel) && desktopStyle),
+        ...(width < (desktopPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletStyle),
+        ...(width < (mobilePixel || theme.mediaQueries.mobilePixel) && mobileStyle),
+      }}
     >
-      {children || label || '-'}
+      {children}
     </STYText>
   );
 };
 
 export default Label;
 
-export const LabelWithIcon = ({ className, icon, label, labelColor, fontFamily = 'bold', fontSize = 16, labelStyle, containerStyle, iconStyle }) => {
-  return (
-    <STYRowContainer style={containerStyle}>
-      {icon && <STYIconContainer style={iconStyle}>{icon}</STYIconContainer>}
+Label.propTypes = {
+  children: PropTypes.any.isRequired,
+  fontSize: PropTypes.number,
 
-      <Label className={className} labelColor={labelColor} fontSize={fontSize} fontFamily={fontFamily} style={{ ...labelStyle }}>
-        {label}
-      </Label>
-    </STYRowContainer>
-  );
+  fontFamily: PropTypes.oneOf(['basier', 'syncopate', 'syncopate-regular']),
+  onClose: PropTypes.func,
+  color: PropTypes.oneOf(['white', 'primary']),
 };
 
-export const SpacebetweenLabel = ({ leftLabel, rightLabel, fontSize = 13, style }) => {
-  return (
-    <STYRowContainer style={{ justifyContent: 'space-between', ...style }}>
-      <Label label={leftLabel} fontFamily="regular" fontSize={fontSize} />
-      <Label label={rightLabel} fontSize={fontSize} labelStyle={{ textAlign: 'right' }} />
-    </STYRowContainer>
-  );
-};
-
-export const LabelColumn = ({ id, value, containerStyle }) => {
-  return (
-    <STYColumnContainer style={containerStyle}>
-      <Label label={id} fontFamily="regular" labelColor={`${theme.colors.white}99`} />
-      <Label label={value} fontFamily="regular" />
-    </STYColumnContainer>
-  );
+Label.defaultProps = {
+  fontSize: null,
+  fontFamily: 'basier',
+  onClick: null,
+  color: 'white',
 };

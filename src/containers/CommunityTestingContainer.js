@@ -1,10 +1,11 @@
-import React from "react";
-import { Image } from "semantic-ui-react";
-import styled from "styled-components";
-import { STYContainer } from "../components/layout/Containers";
-import CommunityTestingImage from "../assets/images/png/community-test-image.png";
-import Label from "../shared/Label";
-import { ITEM_LINKS } from "../constants/itemLinks";
+import React from 'react';
+import { Image } from 'semantic-ui-react';
+import styled from 'styled-components';
+import { STYContainer } from '../components/layout/Containers';
+import CommunityTestingImage from '../assets/images/png/community-test-image.png';
+import Label from '../shared/Label';
+import { ITEM_LINKS } from '../constants/itemLinks';
+import FlexContainer from './Container';
 
 const CommunityMainContainer = styled(STYContainer)`
   flex-direction: row;
@@ -13,8 +14,7 @@ const CommunityMainContainer = styled(STYContainer)`
   height: 100%;
   width: 100%;
 
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.desktopPixel - 1}px`}) {
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
     flex-direction: column;
     & > * {
       align-self: self-end;
@@ -24,59 +24,29 @@ const CommunityMainContainer = styled(STYContainer)`
     }
   }
 
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
   }
 
   img {
     width: 650px;
     height: 680px;
-    @media (max-width: ${({ theme: { mediaQueries } }) =>
-        `${mediaQueries.mobilePixel + 1}px`}) {
+    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
       max-width: 350px;
       max-height: 350px;
     }
-    @media (max-width: ${({ theme: { mediaQueries } }) =>
-        `${mediaQueries.smallMobilePixel}px`}) {
+    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.smallMobilePixel}px`}) {
       max-width: 300px;
       max-height: 300px;
     }
   }
 `;
 
-const TextContainer = styled(STYContainer)`
-  max-width: 700px;
-  width: 100%;
-  padding: 68px;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    padding: 40px 16px;
-  }
-  align-items: flex-start;
-  text-align: left;
-`;
-
-const Title = styled.span`
-  text-align: left;
-  margin-bottom: 16px;
-  font-family: ${({ theme: { fontFamily } }) => fontFamily.bold};
-  font-size: 32px;
-  letter-spacing: 0px;
-  color: #ffffff;
-  opacity: 1;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    font: normal normal bold 24px montserrat-bold;
-  }
-`;
-
 const VersionSup = styled.sup`
   font-size: 24px;
-  margin-left: -10px;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel}px`}) {
+  padding-bottom: 20px;
+  margin-right: 10px;
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
     font-size: 16px;
-    margin-left: -5px;
   }
 `;
 
@@ -84,43 +54,34 @@ const CommunityTestingContainer = () => {
   return (
     <CommunityMainContainer id="community">
       <Image src={CommunityTestingImage} alt="community" size="small" />
-      <TextContainer>
-        <Title>
-          X-Wallet <VersionSup>v1</VersionSup> is live!
-        </Title>
-        <Label fontFamily="regular" labelStyle={{ display: "inline-block" }}>
-          We're beta testing for a reason. In the coming weeks, Kaddex will
-          deploy a series of incentives for discovering bugs. Stay tuned to the{" "}
+      <FlexContainer className="column" style={{ padding: 68, maxWidth: 700 }} mobileStyle={{ padding: '40px 16px' }}>
+        <FlexContainer className="f-wrap" style={{ marginBottom: 16 }}>
+          <Label fontFamily="syncopate" fontSize={32} style={{ whiteSpace: 'nowrap' }}>
+            X-Wallet <VersionSup>v1</VersionSup>
+          </Label>
+          <Label fontFamily="syncopate" fontSize={32}>
+            is live!
+          </Label>
+        </FlexContainer>
+
+        <Label fontFamily="regular" style={{ display: 'inline-block' }}>
+          We're beta testing for a reason. In the coming weeks, Kaddex will deploy a series of incentives for discovering bugs. Stay tuned to the{' '}
           <Label
-            fontFamily="bold"
-            labelStyle={{ display: "inline-block", cursor: "pointer" }}
-            onClick={() =>
-              window.open(
-                ITEM_LINKS.TWITTER_KADDEX.link,
-                "_blank",
-                "noopener,noreferrer"
-              )
-            }
+            style={{ display: 'inline-block', cursor: 'pointer', fontWeight: 'bold' }}
+            onClick={() => window.open(ITEM_LINKS.TWITTER_KADDEX.link, '_blank', 'noopener,noreferrer')}
           >
             @KaddeXofficial Twitter,
-          </Label>{" "}
-          or our{" "}
+          </Label>
+          or our{' '}
           <Label
-            fontFamily="bold"
-            labelStyle={{ display: "inline-block", cursor: "pointer" }}
-            onClick={() =>
-              window.open(
-                ITEM_LINKS.DISCORD.link,
-                "_blank",
-                "noopener,noreferrer"
-              )
-            }
+            style={{ display: 'inline-block', cursor: 'pointer', fontWeight: 'bold' }}
+            onClick={() => window.open(ITEM_LINKS.DISCORD.link, '_blank', 'noopener,noreferrer')}
           >
             http://discord.gg/kaddex
-          </Label>{" "}
-          for more details on the program.{" "}
+          </Label>{' '}
+          for more details on the program.{' '}
         </Label>
-      </TextContainer>
+      </FlexContainer>
     </CommunityMainContainer>
   );
 };

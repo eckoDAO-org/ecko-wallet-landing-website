@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
+import Label from './Label';
 
 const Item = styled.a`
   color: #ffffff;
@@ -8,8 +9,7 @@ const Item = styled.a`
   text-transform: capitalize;
   background: transparent;
   cursor: pointer;
-  font-family: ${({ theme: { fontFamily }, textRegular }) =>
-    textRegular ? fontFamily.regular : fontFamily.bold};
+  font-family: ${({ theme: { fontFamily }, textRegular }) => (textRegular ? fontFamily.regular : fontFamily.bold)};
 
   &:hover {
     text-shadow: ${({ shadowHover }) => shadowHover && '0 0 5px #ffffff'};
@@ -22,17 +22,7 @@ const Item = styled.a`
     height: 3px;
   }
 `;
-const HeaderItem = ({
-  id,
-  className,
-  href,
-  target,
-  children,
-  disabledHover,
-  style,
-  textRegular,
-  shadowHover,
-}) => {
+const HeaderItem = ({ id, className, href, target, children, disabledHover, style, textRegular, shadowHover }) => {
   const [isHover, setIsHover] = useState(false);
 
   return (
@@ -49,8 +39,8 @@ const HeaderItem = ({
       shadowHover={shadowHover}
     >
       <>
-        {children}
-        {!disabledHover && <div className='underline'></div>}
+        <Label>{children}</Label>
+        {!disabledHover && <div className="underline"></div>}
       </>
     </Item>
   );

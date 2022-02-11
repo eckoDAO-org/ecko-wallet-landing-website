@@ -1,79 +1,88 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import { XWalletHeaderLogo, XWalletLetterLogo } from '../../../assets';
+import FlexContainer from '../../../containers/Container';
 import useWindowSize from '../../../hooks/useWindowSize';
 import { ROUTE_INDEX } from '../../../router/routes';
 import HeaderItem from '../../../shared/HeaderItem';
 import theme from '../../../styles/theme';
 import RightHeaderItems from './RightHeaderItems';
 
-const Container = styled.div`
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
+const Container = styled(FlexContainer)`
   min-height: ${({ theme: { header } }) => `${header.height}px`};
   width: 100%;
-  padding: 2em 5em;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    padding: 0 1.5em;
-  }
-  z-index: 1000;
-`;
+  padding: 2em 50px;
 
-const LeftContainer = styled.div`
-  display: flex;
-  align-items: center;
-  margin-right: 25px;
-  & > *:not(:last-child) {
+  z-index: 10;
+
+  svg {
     margin-right: 25px;
   }
+  transition: all 0.5s ease;
+
+  &.sticky {
+    z-index: 100;
+    transform: ${({ isSticky }) => (isSticky ? 'translateY(-105px)' : 'translateY(-200px)')};
+    position: fixed;
+    background-color: rgba(7, 6, 16, 0.5);
+    z-index: 50;
+    width: 100%;
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
 `;
 
-const RightContainer = styled.div`
-  display: flex;
-`;
+const DesktopHeader = () => {
+  const [isSticky, setIsSticky] = useState(false);
+  useEffect(() => {
+    window.addEventListener('scroll', handleIsSticky);
+    return () => {
+      window.removeEventListener('scroll', handleIsSticky);
+    };
+  }, []);
 
-const DesktopHeader = ({ className, menuWithMarginBottom }) => {
+  const handleIsSticky = () => {
+    const scrollTop = window.scrollY;
+    scrollTop >= 250 ? setIsSticky(true) : setIsSticky(false);
+  };
+
+  return (
+    <div id="header">
+      <Header />
+
+      <Header className="sticky" isSticky={isSticky} />
+    </div>
+  );
+};
+
+const Header = ({ className, isSticky }) => {
   const history = useHistory();
   const [width] = useWindowSize();
 
+  const goToTop = () => {
+    history.push(ROUTE_INDEX);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 
   return (
-    <Container id='header' className={className}>
-      <LeftContainer>
-        {
-          width <= theme.mediaQueries.mobilePixel ?
-          <XWalletLetterLogo
-          style={{ cursor: 'pointer' }}
-          onClick={() => history.push(ROUTE_INDEX)}
-        /> :   <XWalletHeaderLogo
-        style={{ cursor: 'pointer' }}
-        onClick={() => history.push(ROUTE_INDEX)}
-      />
-        }
-            {/* <HeaderItem
-        style={{ marginRight: 24 }}
-        className='mobile-none'
-        href='/how-to-install'
-      >
-        How to install
-      </HeaderItem> */}
-      <HeaderItem
-        style={{ marginRight: 24 }}
-        className='mobile-none'
-        href='https://kaddex.com/'
-      >
-        Kaddex
-      </HeaderItem>
-      </LeftContainer>
-      <RightContainer>
-        <RightHeaderItems
-          pact={[]}
-          menuWithMarginBottom={menuWithMarginBottom}
-        />
-      </RightContainer>
+    <Container className={`justify-sb ${className}`} isSticky={isSticky}>
+      <FlexContainer>
+        {width <= theme.mediaQueries.mobilePixel ? (
+          <XWalletLetterLogo style={{ cursor: 'pointer' }} onClick={() => goToTop()} />
+        ) : (
+          <XWalletHeaderLogo style={{ cursor: 'pointer' }} onClick={() => goToTop()} />
+        )}
+
+        <HeaderItem style={{ marginRight: 24 }} className="mobile-none" href="https://kaddex.com/">
+          Kaddex
+        </HeaderItem>
+      </FlexContainer>
+      <RightHeaderItems />
     </Container>
   );
 };
