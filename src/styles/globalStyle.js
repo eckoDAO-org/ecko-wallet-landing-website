@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
     *, *:before, *:after {
@@ -25,6 +25,7 @@ export default createGlobalStyle`
       min-height: 100%;
       line-height: inherit;
       /* overflow: auto; */
+      overflow-x: hidden;
       min-width: 0;
       font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
       color: ${({ theme: { colors } }) => colors.primary};
@@ -37,6 +38,8 @@ export default createGlobalStyle`
     };
 
     #root {
+      overflow-x: hidden;
+
       height: 100%;
       & > div:first-child {
         display: flex;
@@ -65,15 +68,13 @@ export default createGlobalStyle`
     }
 
     .desktop-none {
-      @media (min-width: ${({ theme: { mediaQueries } }) =>
-        `${mediaQueries.mobilePixel + 1}px`}) {
+      @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
         display: none !important;
       }
     }
 
     .mobile-none {
-      @media (max-width: ${({ theme: { mediaQueries } }) =>
-        `${mediaQueries.mobilePixel}px`}) {
+      @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
         display: none !important;
       }
     }
