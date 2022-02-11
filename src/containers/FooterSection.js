@@ -31,7 +31,7 @@ const IconItem = styled.div`
 const FooterSection = () => {
   return (
     <FlexContainer id="footer" className="w-100 column" style={{ padding: 30, background: '#171b29' }}>
-      <FlexContainer className="w-100 justify-sb" style={{ padding: '0 50px' }}>
+      <FlexContainer className="w-100 justify-sb" mobileClassName="column" gap={32} desktopStyle={{ padding: '0 50px' }}>
         <XWalletLogo />
         <FlexContainer className="column" gap={24}>
           <Label fontSize={32} fontFamily="syncopate">
@@ -58,7 +58,7 @@ const FooterSection = () => {
           </FlexContainer>
         </FlexContainer>
       </FlexContainer>
-      <FlexContainer className="column" style={{ padding: '0 50px' }}>
+      <FlexContainer className="column" desktopStyle={{ padding: '0 50px' }}>
         <Divider
           style={{
             margin: ' 24px 0',
@@ -67,7 +67,7 @@ const FooterSection = () => {
             boxShadow: '0 0 5px #ffffff',
           }}
         />
-        <FlexContainer className="justify-sb">
+        <FlexContainer className="justify-sb" mobileClassName="column" gap={16}>
           <XWalletHeaderLogo />
           <Label fontSize={14}>©2021, Privacy Policy</Label>
         </FlexContainer>

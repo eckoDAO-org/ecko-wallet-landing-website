@@ -49,7 +49,13 @@ const MultiTokenEcosystemContainer = () => {
       tabletClassName="column"
       mobileClassName="column"
     >
-      <FlexContainer className="column" gap={16} style={{ maxWidth: 700, padding: '0 68px' }} mobileStyle={{ padding: '0 16px' }}>
+      <FlexContainer
+        className="column"
+        gap={16}
+        desktopStyle={{ paddingTop: 75 }}
+        style={{ maxWidth: 700, padding: '0 68px' }}
+        mobileStyle={{ padding: '0 16px' }}
+      >
         <Label fontSize={32} fontFamily="syncopate">
           Multitoken Ecosystem
         </Label>
