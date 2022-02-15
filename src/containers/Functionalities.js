@@ -27,28 +27,27 @@ const UiMainContainer = styled(FlexContainer)`
   }
 `;
 
-const UiContainer = () => {
+const Functionalities = () => {
   return (
     <UiMainContainer id="ui" className="image-render column align-ce">
-      <Label className="text-center" fontSize={32} fontFamily="syncopate" style={{ marginBottom: 16 }}>
-        X-Wallet Functionality
+      <Label className="text-center" size="big" fontFamily="syncopate" style={{ marginBottom: 16 }}>
+        Functionalities
       </Label>
       <Label className="text-center">
-        Within X-Wallet users will be able to send and receive assets, execute cross-chain transfers, view transactions, interact with Dapps, and
-        more. X-Wallet will provide everything a user needs to interact with Dapps, with more features being added as Kadena evolves.{' '}
+        Within X-Wallet users will be able to send and receive assets, execute cross-chain transfers, <br />
+        view transactions, interact with Dapps and much more.
       </Label>
       <Image src={UiImage} alt="ux" size="small" />
-      <Label className="text-center" fontFamily="syncopate" fontSize={32} style={{ marginBottom: 16 }}>
+      <Label className="text-center" fontFamily="syncopate" size="big" style={{ marginBottom: 16 }}>
         Secure and Compatible
       </Label>
       <Label className="text-center">
-        By default, all accounts created within X-Wallet are k:accounts.
-        <br /> X-Wallet is compatible with both Chrome and Brave.
-        <br /> X-Wallet generates secure keys and passwords that only YOU have access to.
-        <br /> Your keys, your Crypto.
+        By default, all accounts created within X-Wallet are k:accounts. <br />
+        When installing X-Wallet, users can either create a new account or import an existing one. <br />
+        X-Wallet is compatible with both Chrome and Brave.
       </Label>
     </UiMainContainer>
   );
 };
 
-export default UiContainer;
+export default Functionalities;

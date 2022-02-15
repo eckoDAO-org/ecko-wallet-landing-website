@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 import IntroductionSection from './IntroductionSection';
 import BannerContainer from './BannerContainer';
 import UxContainer from './UxContainer';
-import UiContainer from './UiContainer';
+import Functionalities from './Functionalities';
 import CommunityTestingContainer from './CommunityTestingContainer';
 import ContactUsContainer from './ContactUsContainer';
 import MultiTokenEcosystemContainer from './MultiTokenEcosystemContainer';
@@ -27,8 +27,8 @@ const MainContainer = () => {
       <IntroductionSection />
       <UxContainer />
       <BannerContainer />
-      <UiContainer />
-      {/* <CommunityTestingContainer/> */}
+      <Functionalities />
+      <CommunityTestingContainer />
       <MultiTokenEcosystemContainer />
       <ContactUsContainer />
     </OuterContainer>

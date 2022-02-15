@@ -4,12 +4,27 @@ import PropTypes from 'prop-types';
 import useWindowSize from '../../hooks/useWindowSize';
 import theme, { getColor } from '../../styles/theme';
 
+const getConfiguration = (configuration, size, type) => {
+  return theme?.[configuration]?.[size]?.[type] || -1;
+};
+
 const STYText = styled.span`
   display: flex;
   align-items: center;
   cursor: ${({ onClick }) => onClick && 'pointer'};
   z-index: 1;
   color: ${({ color }) => color};
+  font-size: ${({ size, fontSize }) => (!fontSize ? getConfiguration('fontSizes', size, 'desktop') : fontSize)}px;
+  line-height: ${({ size }) => size && getConfiguration('lineHeight', size, 'desktop')}px;
+
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
+    font-size: ${({ size, fontSize }) => (!fontSize ? getConfiguration('fontSizes', size, 'tablet') : fontSize)}px;
+    line-height: ${({ size }) => size && getConfiguration('lineHeight', size, 'tablet')}px;
+  }
+  @media (max-width: ${({ theme: { mediaQueries }, mobilePixel }) => (mobilePixel ? `${mobilePixel - 1}px` : `${mediaQueries.mobilePixel - 1}px`)}) {
+    font-size: ${({ size, fontSize }) => (!fontSize ? getConfiguration('fontSizes', size, 'mobile') : fontSize)}px;
+    line-height: ${({ size }) => size && getConfiguration('lineHeight', size, 'mobile')}px;
+  }
 
   svg {
     path {
@@ -49,6 +64,10 @@ const STYText = styled.span`
     white-space: nowrap;
   }
 
+  &.f-wrap {
+    flex-wrap: wrap;
+  }
+
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
     &.tablet-text-center {
       text-align: center;
@@ -67,6 +86,7 @@ const Label = ({
   children,
   fontFamily,
   fontSize,
+  size,
   color,
   style,
   desktopStyle,
@@ -98,6 +118,7 @@ const Label = ({
       fontSize={fontSize}
       onClick={onClick}
       mobilePixel={mobilePixel}
+      size={size}
       style={{
         fontFamily: theme.fontFamily[fontFamily],
         fontSize,
@@ -117,6 +138,7 @@ export default Label;
 Label.propTypes = {
   children: PropTypes.any.isRequired,
   fontSize: PropTypes.number,
+  size: PropTypes.oneOf(['big', 'normal']),
 
   fontFamily: PropTypes.oneOf(['basier', 'syncopate', 'syncopate-regular']),
   onClose: PropTypes.func,
@@ -125,6 +147,7 @@ Label.propTypes = {
 
 Label.defaultProps = {
   fontSize: null,
+  size: 'normal',
   fontFamily: 'basier',
   onClick: null,
   color: 'white',

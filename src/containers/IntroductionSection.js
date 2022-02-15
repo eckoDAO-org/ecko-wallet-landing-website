@@ -1,22 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
-import { ArrowDownIcon, XWalletLogo } from '../assets';
-import { STYButtonContainer } from '../components/layout/Containers';
+import { ArrowDownIcon } from '../assets';
 import { XWALLET_DOWNLOAD_LINK } from '../constants/itemLinks';
 import theme from '../styles/theme';
 import FlexContainer from '../components/shared/Container';
-import CustomButton from '../components/shared/CustomButton';
 import Label from '../components/shared/Label';
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  width: 100%;
-  height: 100%;
-  padding: 30px;
-`;
+import gradientBackground from '../assets/images/shared/gradient-background.png';
+import useWindowSize from '../hooks/useWindowSize';
 
 const BottomTitle = styled.div`
   font-family: ${({ theme: { fontFamily } }) => fontFamily.basier};
@@ -59,8 +49,9 @@ const Link = styled.a`
 
 const VersionSup = styled.sup`
   font-size: 24px;
-  padding-bottom: 20px;
-  margin-right: 10px;
+  padding-bottom: 44px;
+  line-height: 0px;
+  margin-left: 10px;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
     font-size: 16px;
   }
@@ -68,28 +59,47 @@ const VersionSup = styled.sup`
 
 const IntroductionSection = () => {
   const [isHover, setIsHover] = useState(false);
-
+  const [width] = useWindowSize();
   return (
-    <Container id="intro">
-      <XWalletLogo style={{ marginBottom: 32 }} />
-      <FlexContainer className="column align-ce">
-        <Label fontFamily="syncopate" style={{ fontSize: 48 }} mobileStyle={{ fontSize: 24 }}>
-          X-Wallet <VersionSup>v1</VersionSup> is live!
-        </Label>
-        <Label style={{ fontSize: 32, marginTop: 16, marginBottom: 32 }} mobileStyle={{ fontSize: 18 }}>
-          powered by Kaddex
-        </Label>
-        <STYButtonContainer>
-          <CustomButton
-            background={theme.colors.white}
-            color={theme.colors.primary}
-            onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}
-            customClass="analytics"
-          >
-            Download Wallet
-          </CustomButton>
-        </STYButtonContainer>
+    <FlexContainer id="intro" className="column align-ce justify-ce w-100 h-100 relative" style={{ padding: 30 }}>
+      <img src={gradientBackground} style={{ position: 'absolute', height: 1000, bottom: -320, width: '100%', zIndex: -1 }} alt="" />
+
+      <FlexContainer
+        gap={width > theme.mediaQueries.desktopPixel ? 64 : 35}
+        className="align-fs"
+        tabletClassName="column align-ce"
+        mobileClassName="column align-ce"
+      >
+        <FlexContainer className="column" tabletClassName="align-ce" mobileClassName="align-ce">
+          <Label fontFamily="syncopate" size="huge">
+            X-Wallet <VersionSup>v1.0.3</VersionSup>
+          </Label>
+          <Label fontFamily="syncopate" size="huge">
+            is live!
+          </Label>
+        </FlexContainer>
+        <FlexContainer className="column" tabletClassName="align-ce" mobileClassName="align-ce">
+          <Label color="blue" style={{ fontSize: 20, marginTop: 16, marginBottom: 32 }} mobileStyle={{ fontSize: 18 }}>
+            powered by Kaddex
+          </Label>
+          <FlexContainer className="pointer" onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}>
+            <Label fontFamily="syncopate" style={{ padding: '8px 16px', borderRadius: 10, border: '1px solid #fff' }}>
+              Download Wallet
+            </Label>
+          </FlexContainer>
+        </FlexContainer>
       </FlexContainer>
+
+      <iframe
+        width={width < theme.mediaQueries.mobilePixel ? width - 60 : '543'}
+        height={width < theme.mediaQueries.mobilePixel ? (width - 60) / 1.76 : '380'}
+        src={`https://www.youtube.com/embed/Bejawe9NhXQ`}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        title="Embedded youtube"
+        style={{ marginTop: 40 }}
+      />
       <BottomTitle isHover={isHover}>
         Built on{' '}
         <Link onMouseOver={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} href="https://kadena.io/" target="_blank">
@@ -99,7 +109,7 @@ const IntroductionSection = () => {
       <a href="#ux">
         <ArrowDownIcon />
       </a>
-    </Container>
+    </FlexContainer>
   );
 };
 

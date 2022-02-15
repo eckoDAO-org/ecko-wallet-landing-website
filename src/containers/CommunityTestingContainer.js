@@ -1,18 +1,14 @@
 import React from 'react';
 import { Image } from 'semantic-ui-react';
 import styled from 'styled-components';
-import { STYContainer } from '../components/layout/Containers';
 import CommunityTestingImage from '../assets/images/png/community-test-image.png';
-import { ITEM_LINKS } from '../constants/itemLinks';
 import FlexContainer from '../components/shared/Container';
 import Label from '../components/shared/Label';
+import { DISCORD, TWITTER_X_WALLET } from '../constants/social-media';
+import gradientBackground from '../assets/images/shared/gradient-background-2.png';
 
-const CommunityMainContainer = styled(STYContainer)`
-  flex-direction: row;
-  justify-content: flex-start;
+const CommunityMainContainer = styled(FlexContainer)`
   margin: 72px 0;
-  height: 100%;
-  width: 100%;
 
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
     flex-direction: column;
@@ -52,34 +48,45 @@ const VersionSup = styled.sup`
 
 const CommunityTestingContainer = () => {
   return (
-    <CommunityMainContainer id="community">
+    <CommunityMainContainer id="community" className="relative w-100 h-100">
+      <img src={gradientBackground} style={{ position: 'absolute', height: 1000, bottom: -320, width: '100%', zIndex: -1 }} alt="" />
+
       <Image src={CommunityTestingImage} alt="community" size="small" />
-      <FlexContainer className="column" style={{ padding: 68, maxWidth: 700 }} mobileStyle={{ padding: '40px 16px' }}>
-        <FlexContainer className="f-wrap" style={{ marginBottom: 16 }}>
-          <Label fontFamily="syncopate" fontSize={32} style={{ whiteSpace: 'nowrap' }}>
-            X-Wallet <VersionSup>v1</VersionSup>
-          </Label>
-          <Label fontFamily="syncopate" fontSize={32}>
-            is live!
+      <FlexContainer className="column justify-ce" style={{ padding: 68, maxWidth: 700 }} mobileStyle={{ padding: '40px 16px' }}>
+        <FlexContainer style={{ marginBottom: 16 }}>
+          <Label fontFamily="syncopate" className="f-wrap" size="big">
+            <span>
+              X-Wallet <VersionSup>v1.0.3</VersionSup> for
+            </span>
+            community
+            <br />
+            testing
           </Label>
         </FlexContainer>
 
-        <Label fontFamily="regular" style={{ display: 'inline-block' }}>
-          We're beta testing for a reason. In the coming weeks, Kaddex will deploy a series of incentives for discovering bugs. Stay tuned to the{' '}
+        <Label style={{ display: 'inline-block' }}>
+          In the coming weeks, Kaddex will deploy a series of incentives for discovering bugs. Stay tuned to the
           <Label
             style={{ display: 'inline-block', cursor: 'pointer', fontWeight: 'bold' }}
-            onClick={() => window.open(ITEM_LINKS.TWITTER_KADDEX.link, '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open(TWITTER_X_WALLET.link, '_blank', 'noopener,noreferrer')}
           >
+            {' '}
             @KaddeXofficial Twitter,
           </Label>
           or our{' '}
           <Label
             style={{ display: 'inline-block', cursor: 'pointer', fontWeight: 'bold' }}
-            onClick={() => window.open(ITEM_LINKS.DISCORD.link, '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open(DISCORD.link, '_blank', 'noopener,noreferrer')}
           >
             http://discord.gg/kaddex
           </Label>{' '}
-          for more details on the program.{' '}
+          for more details on this program, and be sure to follow{' '}
+          <Label
+            style={{ display: 'inline-block', cursor: 'pointer', fontWeight: 'bold' }}
+            onClick={() => window.open(DISCORD.DISCORD.link, '_blank', 'noopener,noreferrer')}
+          >
+            @XWalletOfficial
+          </Label>{' '}
         </Label>
       </FlexContainer>
     </CommunityMainContainer>

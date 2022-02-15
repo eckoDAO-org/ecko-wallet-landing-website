@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import { XWalletHeaderLogo, XWalletLetterLogo } from '../../../assets';
@@ -7,8 +7,8 @@ import useWindowSize from '../../../hooks/useWindowSize';
 import { ROUTE_INDEX } from '../../../router/routes';
 import theme from '../../../styles/theme';
 import FlexContainer from '../../shared/Container';
-import CustomButton from '../../shared/CustomButton';
 import HeaderItem from '../../shared/HeaderItem';
+import Label from '../../shared/Label';
 
 const Container = styled(FlexContainer)`
   min-height: ${({ theme: { header } }) => `${header.height}px`};
@@ -24,7 +24,7 @@ const Container = styled(FlexContainer)`
 
   &.sticky {
     z-index: 100;
-    transform: ${({ isSticky }) => (isSticky ? 'translateY(-105px)' : 'translateY(-200px)')};
+    transform: ${({ isSticky }) => (isSticky ? 'translateY(-105px)' : 'translateY(-230px)')};
     position: fixed;
     background-color: rgba(7, 6, 16, 0.5);
     z-index: 50;
@@ -35,30 +35,17 @@ const Container = styled(FlexContainer)`
   }
 `;
 
-const DesktopHeader = () => {
-  const [isSticky, setIsSticky] = useState(false);
-  useEffect(() => {
-    window.addEventListener('scroll', handleIsSticky);
-    return () => {
-      window.removeEventListener('scroll', handleIsSticky);
-    };
-  }, []);
-
-  const handleIsSticky = () => {
-    const scrollTop = window.scrollY;
-    scrollTop >= 250 ? setIsSticky(true) : setIsSticky(false);
-  };
-
+const Header = ({ isSticky }) => {
   return (
     <div id="header">
-      <Header />
+      <CommonHeader />
 
-      <Header className="sticky" isSticky={isSticky} />
+      <CommonHeader className="sticky" isSticky={isSticky} />
     </div>
   );
 };
 
-const Header = ({ className, isSticky }) => {
+const CommonHeader = ({ className, isSticky }) => {
   const history = useHistory();
   const [width] = useWindowSize();
 
@@ -83,11 +70,13 @@ const Header = ({ className, isSticky }) => {
           Kaddex
         </HeaderItem>
       </FlexContainer>
-      <CustomButton customClass="analytics" onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}>
-        Download
-      </CustomButton>
+      <FlexContainer className="pointer" onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}>
+        <Label fontSize={14} fontFamily="syncopate" style={{ padding: '8px 16px', borderRadius: 10, border: '1px solid #fff' }}>
+          Download
+        </Label>
+      </FlexContainer>
     </Container>
   );
 };
 
-export default DesktopHeader;
+export default Header;

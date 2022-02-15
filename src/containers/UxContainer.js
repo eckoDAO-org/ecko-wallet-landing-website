@@ -42,17 +42,19 @@ const UxContainer = () => {
   return (
     <UxMainContainer
       id="ux"
-      style={{ marginTop: 100 }}
-      desktopStyle={{ padding: '0 120px' }}
+      desktopStyle={{ padding: '0 120px', marginTop: 100 }}
       tabletClassName="column"
       mobileClassName="column"
-      tabletStyle={{ padding: 16 }}
+      tabletStyle={{ padding: 16, marginTop: 60 }}
+      mobileStyle={{ marginTop: 40 }}
     >
       <FlexContainer className="column" style={{ padding: '0 68px', maxWidth: 700 }} smallMobileStyle={{ padding: '0 16px' }}>
-        <Label fontSize={32} fontFamily="syncopate" style={{ marginBottom: 16 }}>
+        <Label size="big" fontFamily="syncopate" style={{ marginBottom: 16 }}>
           Improved User Experience
         </Label>
-        <Label>X-Wallet is a user-friendly and robust Kadena-native wallet designed for seamless interaction with Dapps on the Kadena network</Label>
+        <Label>
+          X-Wallet is a new user friendly and robust Kadena native wallet that will drastically improve the easiness of DeFi operations on Kaddex
+        </Label>
       </FlexContainer>
       <Image src={UxImage} alt="ux" size="small" />
     </UxMainContainer>

@@ -56,7 +56,7 @@ const MultiTokenEcosystemContainer = () => {
         style={{ maxWidth: 700, padding: '0 68px' }}
         mobileStyle={{ padding: '0 16px' }}
       >
-        <Label fontSize={32} fontFamily="syncopate">
+        <Label size="big" fontFamily="syncopate">
           Multitoken Ecosystem
         </Label>
         <Label>

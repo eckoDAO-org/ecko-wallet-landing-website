@@ -5,11 +5,10 @@ import CustomButton from '../components/shared/CustomButton';
 import theme from '../styles/theme';
 
 const ButtonContainer = styled(STYButtonContainer)`
-  padding: 0px 0px 72px;
   justify-content: center;
   align-items: center;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {
-    padding: 0px 16px 72px;
+    padding: 0px 16px;
   }
 
   & > * {
