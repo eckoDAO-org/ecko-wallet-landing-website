@@ -1,9 +1,9 @@
 import React from 'react';
 import { Image } from 'semantic-ui-react';
 import styled from 'styled-components';
-import MEImage from '../assets/images/png/multitoken_ecosystem.png';
-import FlexContainer from '../components/shared/Container';
-import Label from '../components/shared/Label';
+import MEImage from '../../assets/images/png/multitoken_ecosystem.png';
+import FlexContainer from '../shared/Container';
+import Label from '../shared/Label';
 
 const MEMainContainer = styled(FlexContainer)`
   margin-bottom: 100px;
@@ -40,7 +40,7 @@ const MEMainContainer = styled(FlexContainer)`
   }
 `;
 
-const MultiTokenEcosystemContainer = () => {
+const MultiTokenEcosystemSection = () => {
   return (
     <MEMainContainer
       id="multi-ecosystem"
@@ -69,4 +69,4 @@ const MultiTokenEcosystemContainer = () => {
   );
 };
 
-export default MultiTokenEcosystemContainer;
+export default MultiTokenEcosystemSection;

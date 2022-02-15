@@ -1,11 +1,11 @@
 import React from 'react';
 import { Image } from 'semantic-ui-react';
 import styled from 'styled-components';
-import CommunityTestingImage from '../assets/images/png/community-test-image.png';
-import FlexContainer from '../components/shared/Container';
-import Label from '../components/shared/Label';
-import { DISCORD, TWITTER_X_WALLET } from '../constants/social-media';
-import gradientBackground from '../assets/images/shared/gradient-background-2.png';
+import CommunityTestingImage from '../../assets/images/png/community-test-image.png';
+import FlexContainer from '../shared/Container';
+import Label from '../shared/Label';
+import { DISCORD, TWITTER_X_WALLET } from '../../constants/social-media';
+import gradientBackground from '../../assets/images/shared/gradient-background-2.png';
 
 const CommunityMainContainer = styled(FlexContainer)`
   margin: 72px 0;
@@ -46,7 +46,7 @@ const VersionSup = styled.sup`
   }
 `;
 
-const CommunityTestingContainer = () => {
+const CommunityTestingSection = () => {
   return (
     <CommunityMainContainer id="community" className="relative w-100 h-100">
       <img src={gradientBackground} style={{ position: 'absolute', height: 1000, bottom: -320, width: '100%', zIndex: -1 }} alt="" />
@@ -93,4 +93,4 @@ const CommunityTestingContainer = () => {
   );
 };
 
-export default CommunityTestingContainer;
+export default CommunityTestingSection;

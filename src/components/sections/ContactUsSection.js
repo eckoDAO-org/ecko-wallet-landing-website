@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { STYButtonContainer } from '../components/layout/Containers';
-import CustomButton from '../components/shared/CustomButton';
-import theme from '../styles/theme';
+import CustomButton from '../shared/CustomButton';
+import FlexContainer from '../shared/Container';
+import { theme } from '../../styles/theme';
 
-const ButtonContainer = styled(STYButtonContainer)`
-  justify-content: center;
-  align-items: center;
+const ButtonContainer = styled(FlexContainer)`
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {
     padding: 0px 16px;
   }
@@ -20,9 +18,9 @@ const ButtonContainer = styled(STYButtonContainer)`
   }
 `;
 
-const ContactUsContainer = () => {
+const ContactUsSection = () => {
   return (
-    <ButtonContainer>
+    <ButtonContainer className="justify-ce align-ce">
       <CustomButton
         background={theme.colors.white}
         color={theme.colors.primary}
@@ -36,4 +34,4 @@ const ContactUsContainer = () => {
   );
 };
 
-export default ContactUsContainer;
+export default ContactUsSection;

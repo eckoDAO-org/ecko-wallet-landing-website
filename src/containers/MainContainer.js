@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import IntroductionSection from './IntroductionSection';
-import BannerContainer from './BannerContainer';
-import UxContainer from './UxContainer';
-import Functionalities from './Functionalities';
-import CommunityTestingContainer from './CommunityTestingContainer';
-import ContactUsContainer from './ContactUsContainer';
-import MultiTokenEcosystemContainer from './MultiTokenEcosystemContainer';
+import IntroductionSection from '../components/sections/IntroductionSection';
+import BannerSection from '../components/sections/BannerSection';
+import UxSection from '../components/sections/UxSection';
+import FunctionalitiesSection from '../components/sections/FunctionalitiesSection';
+import CommunityTestingSection from '../components/sections/CommunityTestingSection';
+import ContactUsSection from '../components/sections/ContactUsSection';
+import MultiTokenEcosystemSection from '../components/sections/MultiTokenEcosystemSection';
 
 const OuterContainer = styled.div`
   display: flex;
@@ -25,12 +25,12 @@ const MainContainer = () => {
   return (
     <OuterContainer>
       <IntroductionSection />
-      <UxContainer />
-      <BannerContainer />
-      <Functionalities />
-      <CommunityTestingContainer />
-      <MultiTokenEcosystemContainer />
-      <ContactUsContainer />
+      <UxSection />
+      <BannerSection />
+      <FunctionalitiesSection />
+      <CommunityTestingSection />
+      <MultiTokenEcosystemSection />
+      <ContactUsSection />
     </OuterContainer>
   );
 };

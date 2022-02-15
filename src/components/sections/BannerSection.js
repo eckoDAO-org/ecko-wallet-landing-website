@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { XWALLET_DOWNLOAD_LINK } from '../constants/itemLinks';
-import FlexContainer from '../components/shared/Container';
-import Label from '../components/shared/Label';
-import Stripes from '../components/shared/Stripes';
+import { XWALLET_DOWNLOAD_LINK } from '../../constants/itemLinks';
+import FlexContainer from '../shared/Container';
+import Stripes from '../shared/Stripes';
+import Label from '../shared/Label';
 
 const Link = styled.a`
   text-decoration: none;
@@ -16,7 +16,7 @@ const Link = styled.a`
   }
 `;
 
-const BannerContainer = () => {
+const BannerSection = () => {
   return (
     <FlexContainer className="w-100" style={{ padding: '0px 56px' }}>
       <FlexContainer
@@ -35,4 +35,4 @@ const BannerContainer = () => {
   );
 };
 
-export default BannerContainer;
+export default BannerSection;

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
-import { ArrowDownIcon } from '../assets';
-import { XWALLET_DOWNLOAD_LINK } from '../constants/itemLinks';
-import theme from '../styles/theme';
-import FlexContainer from '../components/shared/Container';
-import Label from '../components/shared/Label';
-import gradientBackground from '../assets/images/shared/gradient-background.png';
-import useWindowSize from '../hooks/useWindowSize';
-import GradientContainer from '../components/shared/GradientContainer';
+import { theme } from '../../styles/theme';
+import Label from '../shared/Label';
+import gradientBackground from '../../assets/images/shared/gradient-background.png';
+import useWindowSize from '../../hooks/useWindowSize';
+import GradientContainer from '../shared/GradientContainer';
+import { ArrowDownIcon } from '../../assets';
+import FlexContainer from '../shared/Container';
+import { XWALLET_DOWNLOAD_LINK } from '../../constants/itemLinks';
 
 const BottomTitle = styled.div`
   font-family: ${({ theme: { fontFamily } }) => fontFamily.basier};

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Image } from 'semantic-ui-react';
 import styled from 'styled-components';
-import UiImage from '../assets/images/png/ui-image.png';
-import FlexContainer from '../components/shared/Container';
-import Label from '../components/shared/Label';
+import UiImage from '../../assets/images/png/ui-image.png';
+import FlexContainer from '../shared/Container';
+import Label from '../shared/Label';
 
 const UiMainContainer = styled(FlexContainer)`
   padding: 0 120px;
@@ -27,7 +27,7 @@ const UiMainContainer = styled(FlexContainer)`
   }
 `;
 
-const Functionalities = () => {
+const FunctionalitiesSection = () => {
   return (
     <UiMainContainer id="ui" className="image-render column align-ce">
       <Label className="text-center" size="big" fontFamily="syncopate" style={{ marginBottom: 16 }}>
@@ -50,4 +50,4 @@ const Functionalities = () => {
   );
 };
 
-export default Functionalities;
+export default FunctionalitiesSection;

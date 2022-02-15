@@ -24,6 +24,7 @@ const FooterSection = () => {
       tabletClassName="column align-ce"
       mobileClassName="column align-ce"
       style={{ marginTop: 165 }}
+      mobileStyle={{ marginTop: 100 }}
     >
       {width >= theme.mediaQueries.desktopPixel && <Copyrights />}
 
