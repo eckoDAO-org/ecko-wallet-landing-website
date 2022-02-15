@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import FooterSection from './footer/FooterSection';
 import DesktopHeader from './header/DesktopHeader';
 
 const MainContainer = styled.div`
@@ -19,8 +18,6 @@ const Layout = ({ children }) => {
     <MainContainer id="main-container">
       <DesktopHeader />
       <MainContent>{children}</MainContent>
-
-      <FooterSection />
     </MainContainer>
   );
 };

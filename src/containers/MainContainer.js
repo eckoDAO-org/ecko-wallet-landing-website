@@ -8,7 +8,6 @@ import CommunityTestingContainer from './CommunityTestingContainer';
 import ContactUsContainer from './ContactUsContainer';
 import MultiTokenEcosystemContainer from './MultiTokenEcosystemContainer';
 
-
 const OuterContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -17,8 +16,7 @@ const OuterContainer = styled.div`
   width: 100%;
   height: 100%;
   padding-bottom: 0;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     padding: 0;
   }
 `;
@@ -27,11 +25,11 @@ const MainContainer = () => {
   return (
     <OuterContainer>
       <IntroductionSection />
-      <UxContainer/>
-      <BannerContainer/>
-      <UiContainer/>
-      <CommunityTestingContainer/>
-      <MultiTokenEcosystemContainer/>
+      <UxContainer />
+      <BannerContainer />
+      <UiContainer />
+      {/* <CommunityTestingContainer/> */}
+      <MultiTokenEcosystemContainer />
       <ContactUsContainer />
     </OuterContainer>
   );
