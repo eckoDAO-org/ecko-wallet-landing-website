@@ -1,9 +1,9 @@
 import React from 'react';
 import { Image } from 'semantic-ui-react';
 import styled from 'styled-components';
-import Label from '../shared/Label';
 import UiImage from '../assets/images/png/ui-image.png';
-import FlexContainer from './Container';
+import FlexContainer from '../components/shared/Container';
+import Label from '../components/shared/Label';
 
 const UiMainContainer = styled(FlexContainer)`
   padding: 0 120px;

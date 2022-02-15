@@ -1,11 +1,11 @@
 import React from 'react';
 import { Divider } from 'semantic-ui-react';
 import styled from 'styled-components/macro';
-import { XWalletHeaderLogo, XWalletLogo } from '../assets';
-import XWalletFooterList from '../components/layout/footer/XWalletFooterList';
-import { ITEM_LINKS } from '../constants/itemLinks';
-import Label from '../shared/Label';
-import FlexContainer from './Container';
+import { XWalletHeaderLogo, XWalletLogo } from '../../../assets';
+import XWalletFooterList from './XWalletFooterList';
+import FlexContainer from '../../shared/Container';
+import { ITEM_LINKS } from '../../../constants/itemLinks';
+import Label from '../../shared/Label';
 
 const IconItem = styled.div`
   display: flex;

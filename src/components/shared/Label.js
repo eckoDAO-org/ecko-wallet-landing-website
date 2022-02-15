@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import PropTypes from 'prop-types';
-import useWindowSize from '../hooks/useWindowSize';
-import theme, { getColor } from '../styles/theme';
+import useWindowSize from '../../hooks/useWindowSize';
+import theme, { getColor } from '../../styles/theme';
 
 const STYText = styled.span`
   display: flex;

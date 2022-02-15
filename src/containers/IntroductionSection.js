@@ -3,10 +3,10 @@ import styled from 'styled-components/macro';
 import { ArrowDownIcon, XWalletLogo } from '../assets';
 import { STYButtonContainer } from '../components/layout/Containers';
 import { XWALLET_DOWNLOAD_LINK } from '../constants/itemLinks';
-import CustomButton from '../shared/CustomButton';
-import Label from '../shared/Label';
 import theme from '../styles/theme';
-import FlexContainer from './Container';
+import FlexContainer from '../components/shared/Container';
+import CustomButton from '../components/shared/CustomButton';
+import Label from '../components/shared/Label';
 
 const Container = styled.div`
   display: flex;

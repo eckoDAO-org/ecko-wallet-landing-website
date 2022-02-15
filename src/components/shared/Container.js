@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components/macro';
-import useWindowSize from '../hooks/useWindowSize';
-import theme from '../styles/theme';
-import browserDetection from '../utils/browserDetection';
+import useWindowSize from '../../hooks/useWindowSize';
+import theme from '../../styles/theme';
+import browserDetection from '../../utils/browserDetection';
 
 const FlexContainer = ({
   className,

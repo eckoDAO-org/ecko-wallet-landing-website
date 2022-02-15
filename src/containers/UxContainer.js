@@ -1,9 +1,9 @@
 import React from 'react';
 import { Image } from 'semantic-ui-react';
 import styled from 'styled-components';
-import Label from '../shared/Label';
 import UxImage from '../assets/images/png/ux-image.png';
-import FlexContainer from './Container';
+import FlexContainer from '../components/shared/Container';
+import Label from '../components/shared/Label';
 
 const UxMainContainer = styled(FlexContainer)`
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {

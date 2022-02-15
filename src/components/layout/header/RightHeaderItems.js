@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { XWALLET_DOWNLOAD_LINK } from '../../../constants/itemLinks';
-import CustomButton from '../../../shared/CustomButton';
+import CustomButton from '../../shared/CustomButton';
 
 const RightContainerHeader = styled.div`
   display: flex;

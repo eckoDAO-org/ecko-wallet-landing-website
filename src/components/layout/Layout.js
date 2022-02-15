@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import FooterSection from './footer/FooterSection';
 import DesktopHeader from './header/DesktopHeader';
-import FooterSection from '../../containers/FooterSection';
 
 const MainContainer = styled.div`
   display: flex;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Image } from 'semantic-ui-react';
 import styled from 'styled-components';
-import Label from '../shared/Label';
 import MEImage from '../assets/images/png/multitoken_ecosystem.png';
-import FlexContainer from './Container';
+import FlexContainer from '../components/shared/Container';
+import Label from '../components/shared/Label';
 
 const MEMainContainer = styled(FlexContainer)`
   margin-bottom: 100px;

@@ -3,9 +3,9 @@ import { Image } from 'semantic-ui-react';
 import styled from 'styled-components';
 import { STYContainer } from '../components/layout/Containers';
 import CommunityTestingImage from '../assets/images/png/community-test-image.png';
-import Label from '../shared/Label';
 import { ITEM_LINKS } from '../constants/itemLinks';
-import FlexContainer from './Container';
+import FlexContainer from '../components/shared/Container';
+import Label from '../components/shared/Label';
 
 const CommunityMainContainer = styled(STYContainer)`
   flex-direction: row;

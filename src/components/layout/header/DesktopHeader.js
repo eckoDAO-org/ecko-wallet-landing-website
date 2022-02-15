@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import { XWalletHeaderLogo, XWalletLetterLogo } from '../../../assets';
-import FlexContainer from '../../../containers/Container';
 import useWindowSize from '../../../hooks/useWindowSize';
 import { ROUTE_INDEX } from '../../../router/routes';
-import HeaderItem from '../../../shared/HeaderItem';
 import theme from '../../../styles/theme';
+import FlexContainer from '../../shared/Container';
+import HeaderItem from '../../shared/HeaderItem';
 import RightHeaderItems from './RightHeaderItems';
 
 const Container = styled(FlexContainer)`

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { XWALLET_DOWNLOAD_LINK } from '../constants/itemLinks';
-import Label from '../shared/Label';
-import FlexContainer from './Container';
+import FlexContainer from '../components/shared/Container';
+import Label from '../components/shared/Label';
 
 const Container = styled(FlexContainer)`
   display: flex;
