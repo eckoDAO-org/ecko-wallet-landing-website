@@ -7,6 +7,7 @@ import FlexContainer from '../components/shared/Container';
 import Label from '../components/shared/Label';
 import gradientBackground from '../assets/images/shared/gradient-background.png';
 import useWindowSize from '../hooks/useWindowSize';
+import GradientContainer from '../components/shared/GradientContainer';
 
 const BottomTitle = styled.div`
   font-family: ${({ theme: { fontFamily } }) => fontFamily.basier};
@@ -82,11 +83,12 @@ const IntroductionSection = () => {
           <Label color="blue" style={{ fontSize: 20, marginTop: 16, marginBottom: 32 }} mobileStyle={{ fontSize: 18 }}>
             powered by Kaddex
           </Label>
-          <FlexContainer className="pointer" onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}>
-            <Label fontFamily="syncopate" style={{ padding: '8px 16px', borderRadius: 10, border: '1px solid #fff' }}>
+
+          <GradientContainer onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}>
+            <Label className="rainbow" fontFamily="syncopate">
               Download Wallet
             </Label>
-          </FlexContainer>
+          </GradientContainer>
         </FlexContainer>
       </FlexContainer>
 

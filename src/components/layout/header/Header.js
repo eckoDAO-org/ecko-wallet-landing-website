@@ -7,6 +7,7 @@ import useWindowSize from '../../../hooks/useWindowSize';
 import { ROUTE_INDEX } from '../../../router/routes';
 import theme from '../../../styles/theme';
 import FlexContainer from '../../shared/Container';
+import GradientContainer from '../../shared/GradientContainer';
 import HeaderItem from '../../shared/HeaderItem';
 import Label from '../../shared/Label';
 
@@ -70,11 +71,12 @@ const CommonHeader = ({ className, isSticky }) => {
           Kaddex
         </HeaderItem>
       </FlexContainer>
-      <FlexContainer className="pointer" onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}>
-        <Label fontSize={14} fontFamily="syncopate" style={{ padding: '8px 16px', borderRadius: 10, border: '1px solid #fff' }}>
+
+      <GradientContainer onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}>
+        <Label fontSize={14} className="rainbow" size="small" fontFamily="syncopate">
           Download
         </Label>
-      </FlexContainer>
+      </GradientContainer>
     </Container>
   );
 };

@@ -68,6 +68,13 @@ const STYText = styled.span`
     flex-wrap: wrap;
   }
 
+  &.rainbow {
+    display: block;
+    background-image: linear-gradient(94.39deg, #55bade 0.84%, #cf7098 44.14%, #f7cb79 90.22%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
     &.tablet-text-center {
       text-align: center;
