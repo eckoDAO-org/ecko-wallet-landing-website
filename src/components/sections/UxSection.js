@@ -44,9 +44,9 @@ const UxSection = () => {
       id="ux"
       desktopStyle={{ padding: '0 120px' }}
       desktopClassName="justify-ce align-ce"
-      tabletClassName="column"
+      tabletClassName="justify-ce align-ce"
       mobileClassName="column"
-      tabletStyle={{ padding: 16, marginTop: 60 }}
+      tabletStyle={{ padding: '0 56px' }}
       mobileStyle={{ padding: '0 32px' }}
     >
       <FlexContainer className="column" style={{ maxWidth: 700 }} desktopStyle={{ padding: '0 48px' }}>

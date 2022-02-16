@@ -93,8 +93,8 @@ const IntroductionSection = () => {
       </FlexContainer>
 
       <iframe
-        width={width < theme.mediaQueries.mobilePixel ? width - 60 : '543'}
-        height={width < theme.mediaQueries.mobilePixel ? (width - 60) / 1.76 : '380'}
+        width={width < theme.mediaQueries.mobilePixel ? width - 72 : '543'}
+        height={width < theme.mediaQueries.mobilePixel ? (width - 72) / 1.76 : '380'}
         src="https://www.youtube.com/embed/3bjmIxeQ4mk"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

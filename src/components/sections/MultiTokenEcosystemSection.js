@@ -46,6 +46,7 @@ const MultiTokenEcosystemSection = () => {
       id="multi-ecosystem"
       style={{ padding: '16px 68px' }}
       desktopStyle={{ padding: '0 120px' }}
+      tabletStyle={{ padding: '0 56px' }}
       mobileStyle={{ padding: '16px 32px' }}
       tabletClassName="column"
       mobileClassName="column"

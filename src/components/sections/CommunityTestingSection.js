@@ -50,14 +50,20 @@ const CommunityTestingSection = () => {
       <img src={gradientBackground} style={{ position: 'absolute', height: 1000, bottom: -320, width: '100%', zIndex: -1 }} alt="" />
 
       <Image src={CommunityTestingImage} alt="community" size="small" />
-      <FlexContainer className="column justify-ce" style={{ padding: 68, maxWidth: 700 }} mobileStyle={{ padding: '16px 32px' }}>
-        <FlexContainer style={{ marginBottom: 16 }}>
-          <Label fontFamily="syncopate" className="f-wrap" size="big">
-            <span>
-              X-Wallet <VersionSup>v1.0.3</VersionSup> for
-            </span>
+      <FlexContainer
+        className="column justify-ce"
+        style={{ padding: 68, maxWidth: 700 }}
+        tabletStyle={{ paddingBottom: 0 }}
+        mobileStyle={{ padding: '16px 32px' }}
+      >
+        <FlexContainer className="column align-fs" tabletClassName="align-ce" mobileClassName="align-ce">
+          <Label fontFamily="syncopate" className="nowrap" size="big">
+            X-Wallet <VersionSup>v1.0.3</VersionSup>
+          </Label>
+          <Label fontFamily="syncopate" size="big">
             community
-            <br />
+          </Label>
+          <Label fontFamily="syncopate" size="big">
             testing
           </Label>
         </FlexContainer>

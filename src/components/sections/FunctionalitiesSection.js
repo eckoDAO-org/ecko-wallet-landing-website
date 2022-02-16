@@ -22,7 +22,7 @@ const UiMainContainer = styled(FlexContainer)`
 
 const FunctionalitiesSection = () => {
   return (
-    <UiMainContainer id="ui" className="image-render column align-ce" mobileStyle={{ padding: '0 32px' }}>
+    <UiMainContainer id="ui" className="image-render column align-ce" tabletStyle={{ padding: '0 56px' }} mobileStyle={{ padding: '0 32px' }}>
       <Label className="text-center" size="big" fontFamily="syncopate" style={{ marginBottom: 16 }}>
         Functionalities
       </Label>

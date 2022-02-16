@@ -25,7 +25,7 @@ const Container = styled(FlexContainer)`
 
   &.sticky {
     z-index: 100;
-    transform: ${({ isSticky }) => (isSticky ? 'translateY(-105px)' : 'translateY(-230px)')};
+    transform: ${({ isSticky }) => (isSticky ? 'translateY(-115px)' : 'translateY(-230px)')};
     position: fixed;
     background-color: rgba(7, 6, 16, 0.5);
     z-index: 50;
@@ -59,7 +59,7 @@ const CommonHeader = ({ className, isSticky }) => {
   };
 
   return (
-    <Container className={`justify-sb ${className}`} isSticky={isSticky}>
+    <Container className={`justify-sb align-ce ${className}`} isSticky={isSticky}>
       <FlexContainer>
         {width <= theme.mediaQueries.mobilePixel ? (
           <XWalletLetterLogo style={{ cursor: 'pointer' }} onClick={() => goToTop()} />

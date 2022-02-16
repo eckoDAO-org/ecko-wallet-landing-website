@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { XWALLET_DOWNLOAD_LINK } from '../../constants/itemLinks';
 import FlexContainer from '../shared/Container';
@@ -19,24 +19,46 @@ const Link = styled.a`
   }
 `;
 
+const TitleContainer = styled(FlexContainer)`
+  a {
+    text-decoration: none;
+    text-align: center;
+  }
+  .underline {
+    width: ${({ isHover }) => (isHover ? '100%' : 0)};
+    transition: width 0.3s;
+    background: ${({ theme: { colors } }) => colors.white};
+    height: 6px;
+
+    @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
+      width: 0;
+    }
+  }
+`;
+
 const BannerSection = () => {
   const [width] = useWindowSize();
+  const [isHover, setIsHover] = useState(false);
+
   return (
-    <FlexContainer className="w-100 relative" style={{ padding: '0px 56px' }} mobileStyle={{ padding: '0 16px' }}>
+    <FlexContainer className="w-100 relative" style={{ padding: '0px 56px' }} mobileStyle={{ padding: '0 32px' }}>
       <RadiusBackground style={{ top: 0, left: width < theme.mediaQueries.mobilePixel ? 16 : 56 }} />
 
-      <FlexContainer
+      <TitleContainer
+        isHover={isHover}
+        onMouseOver={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
         className="w-100 align-ce justify-ce relative"
         style={{ background: 'linear-gradient(114.43deg, #293445 5.17%, #292a45 65.62%)', borderRadius: 60, padding: 80 }}
       >
-        <Link href={XWALLET_DOWNLOAD_LINK} target="_blank" className="analytics">
+        <Link href={XWALLET_DOWNLOAD_LINK} target="_blank">
           <Label className="justify-ce" fontFamily="syncopate" size="big" mobileStyle={{ fontSize: 24 }}>
-            <span style={{ textDecoration: 'underline' }}>Download</span>&nbsp;X-Wallet
+            Download X-Wallet
           </Label>
           <div className="underline"></div>
         </Link>
         <Stripes />
-      </FlexContainer>
+      </TitleContainer>
     </FlexContainer>
   );
 };
