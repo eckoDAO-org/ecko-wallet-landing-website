@@ -5,7 +5,7 @@ import Label from '../shared/Label';
 import gradientBackground from '../../assets/images/shared/gradient-background.png';
 import useWindowSize from '../../hooks/useWindowSize';
 import GradientContainer from '../shared/GradientContainer';
-import { ArrowDownIcon } from '../../assets';
+import { ArrowDownIcon, XWalletLogo } from '../../assets';
 import FlexContainer from '../shared/Container';
 import { XWALLET_DOWNLOAD_LINK } from '../../constants/itemLinks';
 
@@ -62,18 +62,25 @@ const IntroductionSection = () => {
   const [isHover, setIsHover] = useState(false);
   const [width] = useWindowSize();
   return (
-    <FlexContainer id="intro" className="column align-ce justify-ce w-100 h-100 relative" mobileStyle={{ padding: '0 32px' }}>
+    <FlexContainer
+      id="intro"
+      className="column align-ce justify-ce w-100 h-100 relative"
+      mobileStyle={{ padding: '0 32px' }}
+      style={{ marginTop: 56 }}
+    >
       <img src={gradientBackground} style={{ position: 'absolute', height: 1000, bottom: -320, width: '100%', zIndex: -1 }} alt="" />
+
+      <XWalletLogo />
 
       <FlexContainer
         gap={width > theme.mediaQueries.desktopPixel ? 64 : 35}
-        className="align-fs"
+        className="align-ce"
         tabletClassName="column align-ce"
         mobileClassName="column align-ce"
       >
-        <FlexContainer className="column" tabletClassName="align-ce" mobileClassName="align-ce">
+        <FlexContainer className="column" tabletClassName="align-ce" mobileClassName="align-ce" style={{ marginTop: 64 }}>
           <Label fontFamily="syncopate" size="huge">
-            X-Wallet <VersionSup>v1.0.3</VersionSup>
+            X-Wallet <VersionSup>v1</VersionSup>
           </Label>
           <Label fontFamily="syncopate" size="huge">
             is live!
@@ -92,7 +99,7 @@ const IntroductionSection = () => {
         </FlexContainer>
       </FlexContainer>
 
-      <iframe
+      {/* <iframe
         width={width < theme.mediaQueries.mobilePixel ? width - 72 : '543'}
         height={width < theme.mediaQueries.mobilePixel ? (width - 72) / 1.76 : '380'}
         src="https://www.youtube.com/embed/3bjmIxeQ4mk"
@@ -101,7 +108,7 @@ const IntroductionSection = () => {
         allowFullScreen
         title="Embedded youtube"
         style={{ marginTop: 40 }}
-      />
+      /> */}
       <BottomTitle isHover={isHover}>
         Built on{' '}
         <Link onMouseOver={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} href="https://kadena.io/" target="_blank">

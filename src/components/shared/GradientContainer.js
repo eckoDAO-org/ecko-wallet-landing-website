@@ -43,12 +43,13 @@ export const STYGradientBorder = styled.div`
   width: 100%;
   height: 100%;
   z-index: -10;
+  cursor: ${({ onClick }) => (onClick ? 'pointer' : 'default')};
 `;
 
 const GradientContainer = ({ className, children, padding, gap, style, backgroundColor, onClick }) => {
   return (
     <STYContainer className={className} padding={padding} gap={gap} style={style} backgroundColor={backgroundColor} onClick={onClick}>
-      <STYGradientBorder />
+      <STYGradientBorder onClick={onClick} />
       {children}
     </STYContainer>
   );

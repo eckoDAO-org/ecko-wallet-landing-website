@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import CommunityTestingImage from '../../assets/images/png/community-test-image.png';
 import FlexContainer from '../shared/Container';
 import Label from '../shared/Label';
-import { DISCORD, TWITTER_KADDEX_OFFICIAL, TWITTER_X_WALLET } from '../../constants/social-media';
+import { DISCORD, TWITTER_KADDEX_OFFICIAL, TWITTER } from '../../constants/social-media';
 import gradientBackground from '../../assets/images/shared/gradient-background-2.png';
 
 const CommunityMainContainer = styled(FlexContainer)`
@@ -46,7 +46,7 @@ const VersionSup = styled.sup`
 
 const CommunityTestingSection = () => {
   return (
-    <CommunityMainContainer id="community" className="relative w-100 h-100">
+    <CommunityMainContainer id="community" className="relative w-100 h-100" desktopStyle={{ marginTop: 60 }}>
       <img src={gradientBackground} style={{ position: 'absolute', height: 1000, bottom: -320, width: '100%', zIndex: -1 }} alt="" />
 
       <Image src={CommunityTestingImage} alt="community" size="small" />
@@ -58,13 +58,10 @@ const CommunityTestingSection = () => {
       >
         <FlexContainer className="column align-fs" tabletClassName="align-ce" mobileClassName="align-ce">
           <Label fontFamily="syncopate" className="nowrap" size="big">
-            X-Wallet <VersionSup>v1.0.3</VersionSup>
+            X-Wallet <VersionSup>v1</VersionSup>
           </Label>
           <Label fontFamily="syncopate" size="big">
-            community
-          </Label>
-          <Label fontFamily="syncopate" size="big">
-            testing
+            community testing
           </Label>
         </FlexContainer>
 
@@ -86,7 +83,7 @@ const CommunityTestingSection = () => {
           for more details on this program, and be sure to follow{' '}
           <Label
             style={{ display: 'inline-block', cursor: 'pointer', fontWeight: 'bold' }}
-            onClick={() => window.open(TWITTER_X_WALLET.link, '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open(TWITTER.link, '_blank', 'noopener,noreferrer')}
           >
             @XWalletOfficial
           </Label>{' '}

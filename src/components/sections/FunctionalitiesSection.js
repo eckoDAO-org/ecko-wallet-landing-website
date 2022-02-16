@@ -7,15 +7,17 @@ import Label from '../shared/Label';
 
 const UiMainContainer = styled(FlexContainer)`
   img {
-    max-width: 100%;
+    max-width: 50%;
     max-height: 100%;
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
       max-width: 340px;
       max-height: 340px;
+      padding: 0px;
     }
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.smallMobilePixel}px`}) {
       max-width: 280px;
       max-height: 300px;
+      padding: 0px;
     }
   }
 `;

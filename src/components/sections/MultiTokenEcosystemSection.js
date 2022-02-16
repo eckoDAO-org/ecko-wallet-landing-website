@@ -26,9 +26,9 @@ const MEMainContainer = styled(FlexContainer)`
     }
   }
 
-  img {
-    max-width: 47%;
-    max-height: 47%;
+  .wallet-img {
+    max-width: 40%;
+    max-height: 40%;
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
       max-width: 340px;
       max-height: 340px;
@@ -44,6 +44,8 @@ const MultiTokenEcosystemSection = () => {
   return (
     <MEMainContainer
       id="multi-ecosystem"
+      className="relative"
+      desktopClassName="align-ce"
       style={{ padding: '16px 68px' }}
       desktopStyle={{ padding: '0 120px' }}
       tabletStyle={{ padding: '0 56px' }}
@@ -51,7 +53,7 @@ const MultiTokenEcosystemSection = () => {
       tabletClassName="column"
       mobileClassName="column"
     >
-      <FlexContainer className="column" gap={16} desktopStyle={{ marginTop: 75 }}>
+      <FlexContainer className="column" gap={16} desktopStyle={{ padding: '0 120px' }}>
         <Label size="big" fontFamily="syncopate">
           Multitoken Ecosystem
         </Label>
@@ -60,7 +62,7 @@ const MultiTokenEcosystemSection = () => {
           X-Wallet is the only wallet in the Kadena ecosystem that now supports all tokens on the Kadena network.
         </Label>
       </FlexContainer>
-      <Image src={MEImage} alt="ux" size="small" />
+      <Image src={MEImage} className="wallet-img" alt="ux" size="small" />
     </MEMainContainer>
   );
 };

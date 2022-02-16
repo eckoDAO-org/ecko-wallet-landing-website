@@ -36,6 +36,12 @@ const FooterSection = () => {
         <Label className="pointer" fontSize={16} onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}>
           Download
         </Label>
+        <Label className="pointer" fontSize={16}>
+          How To Install
+        </Label>
+        <Label className="pointer" fontSize={16} onClick={() => window.open('https://www.kaddex.com/', '_blank', 'noopener,noreferrer')}>
+          Kaddex
+        </Label>
       </FlexContainer>
 
       {width >= theme.mediaQueries.desktopPixel && <Socials />}

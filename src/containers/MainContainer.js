@@ -4,10 +4,10 @@ import IntroductionSection from '../components/sections/IntroductionSection';
 import BannerSection from '../components/sections/BannerSection';
 import UxSection from '../components/sections/UxSection';
 import FunctionalitiesSection from '../components/sections/FunctionalitiesSection';
-import CommunityTestingSection from '../components/sections/CommunityTestingSection';
 import ContactUsSection from '../components/sections/ContactUsSection';
 import MultiTokenEcosystemSection from '../components/sections/MultiTokenEcosystemSection';
 import FlexContainer from '../components/shared/Container';
+import gradientBackground from '../assets/images/shared/gradient-background-2.png';
 
 const OuterContainer = styled(FlexContainer)`
   & > *:not(:last-child) {
@@ -23,13 +23,14 @@ const OuterContainer = styled(FlexContainer)`
 
 const MainContainer = () => {
   return (
-    <OuterContainer className="column justify-ce align-ce w-100 h-100">
+    <OuterContainer className="column justify-ce align-ce w-100 h-100 relative">
       <IntroductionSection />
       <UxSection />
       <BannerSection />
       <FunctionalitiesSection />
-      <CommunityTestingSection />
+      {/* <CommunityTestingSection /> */}
       <MultiTokenEcosystemSection />
+      <img src={gradientBackground} style={{ position: 'absolute', width: '100%', bottom: 0, zIndex: -1 }} alt="" />
       <ContactUsSection />
     </OuterContainer>
   );

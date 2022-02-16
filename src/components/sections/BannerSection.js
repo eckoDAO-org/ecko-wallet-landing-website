@@ -46,12 +46,10 @@ const BannerSection = () => {
 
       <TitleContainer
         isHover={isHover}
-        onMouseOver={() => setIsHover(true)}
-        onMouseLeave={() => setIsHover(false)}
         className="w-100 align-ce justify-ce relative"
         style={{ background: 'linear-gradient(114.43deg, #293445 5.17%, #292a45 65.62%)', borderRadius: 60, padding: 80 }}
       >
-        <Link href={XWALLET_DOWNLOAD_LINK} target="_blank">
+        <Link href={XWALLET_DOWNLOAD_LINK} target="_blank" onMouseOver={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)}>
           <Label className="justify-ce" fontFamily="syncopate" size="big" mobileStyle={{ fontSize: 24 }}>
             Download X-Wallet
           </Label>
