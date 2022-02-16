@@ -9,7 +9,7 @@ const STYContainer = styled(FlexContainer)`
   cursor: ${({ onClick }) => (onClick ? 'pointer' : 'default')};
   padding: ${({ padding = 16 }) => padding}px;
   background: ${({ theme: { backgroundContainer }, backgroundColor }) => backgroundColor || backgroundContainer};
-  border-radius: 10px;
+  border-radius: 30px;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
     padding: 16px;
   }
