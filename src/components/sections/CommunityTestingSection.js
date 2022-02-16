@@ -4,12 +4,10 @@ import styled from 'styled-components';
 import CommunityTestingImage from '../../assets/images/png/community-test-image.png';
 import FlexContainer from '../shared/Container';
 import Label from '../shared/Label';
-import { DISCORD, TWITTER_X_WALLET } from '../../constants/social-media';
+import { DISCORD, TWITTER_KADDEX_OFFICIAL, TWITTER_X_WALLET } from '../../constants/social-media';
 import gradientBackground from '../../assets/images/shared/gradient-background-2.png';
 
 const CommunityMainContainer = styled(FlexContainer)`
-  margin: 72px 0;
-
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
     flex-direction: column;
     & > * {
@@ -52,7 +50,7 @@ const CommunityTestingSection = () => {
       <img src={gradientBackground} style={{ position: 'absolute', height: 1000, bottom: -320, width: '100%', zIndex: -1 }} alt="" />
 
       <Image src={CommunityTestingImage} alt="community" size="small" />
-      <FlexContainer className="column justify-ce" style={{ padding: 68, maxWidth: 700 }} mobileStyle={{ padding: '40px 16px' }}>
+      <FlexContainer className="column justify-ce" style={{ padding: 68, maxWidth: 700 }} mobileStyle={{ padding: '16px 32px' }}>
         <FlexContainer style={{ marginBottom: 16 }}>
           <Label fontFamily="syncopate" className="f-wrap" size="big">
             <span>
@@ -65,14 +63,13 @@ const CommunityTestingSection = () => {
         </FlexContainer>
 
         <Label style={{ display: 'inline-block' }}>
-          In the coming weeks, Kaddex will deploy a series of incentives for discovering bugs. Stay tuned to the
+          In the coming weeks, Kaddex will deploy a series of incentives for discovering bugs. Stay tuned to the{' '}
           <Label
             style={{ display: 'inline-block', cursor: 'pointer', fontWeight: 'bold' }}
-            onClick={() => window.open(TWITTER_X_WALLET.link, '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open(TWITTER_KADDEX_OFFICIAL.link, '_blank', 'noopener,noreferrer')}
           >
-            {' '}
             @KaddeXofficial Twitter,
-          </Label>
+          </Label>{' '}
           or our{' '}
           <Label
             style={{ display: 'inline-block', cursor: 'pointer', fontWeight: 'bold' }}
@@ -83,7 +80,7 @@ const CommunityTestingSection = () => {
           for more details on this program, and be sure to follow{' '}
           <Label
             style={{ display: 'inline-block', cursor: 'pointer', fontWeight: 'bold' }}
-            onClick={() => window.open(DISCORD.DISCORD.link, '_blank', 'noopener,noreferrer')}
+            onClick={() => window.open(TWITTER_X_WALLET.link, '_blank', 'noopener,noreferrer')}
           >
             @XWalletOfficial
           </Label>{' '}

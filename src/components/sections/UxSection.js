@@ -42,13 +42,14 @@ const UxSection = () => {
   return (
     <UxMainContainer
       id="ux"
-      desktopStyle={{ padding: '0 120px', marginTop: 100 }}
+      desktopStyle={{ padding: '0 120px' }}
+      desktopClassName="justify-ce align-ce"
       tabletClassName="column"
       mobileClassName="column"
       tabletStyle={{ padding: 16, marginTop: 60 }}
-      mobileStyle={{ marginTop: 40 }}
+      mobileStyle={{ padding: '0 32px' }}
     >
-      <FlexContainer className="column" style={{ padding: '0 68px', maxWidth: 700 }} smallMobileStyle={{ padding: '0 16px' }}>
+      <FlexContainer className="column" style={{ maxWidth: 700 }} desktopStyle={{ padding: '0 48px' }}>
         <Label size="big" fontFamily="syncopate" style={{ marginBottom: 16 }}>
           Improved User Experience
         </Label>

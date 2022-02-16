@@ -6,7 +6,7 @@ import theme from '../../styles/theme';
 
 const STYStripesContainer = styled.div`
   position: absolute;
-  bottom: 0px;
+  bottom: 1px;
   left: 0;
   line-height: 0;
 `;

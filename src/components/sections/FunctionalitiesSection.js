@@ -6,13 +6,6 @@ import FlexContainer from '../shared/Container';
 import Label from '../shared/Label';
 
 const UiMainContainer = styled(FlexContainer)`
-  padding: 0 120px;
-  margin-top: 72px;
-
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
-    padding: 16px;
-  }
-
   img {
     max-width: 100%;
     max-height: 100%;
@@ -29,7 +22,7 @@ const UiMainContainer = styled(FlexContainer)`
 
 const FunctionalitiesSection = () => {
   return (
-    <UiMainContainer id="ui" className="image-render column align-ce">
+    <UiMainContainer id="ui" className="image-render column align-ce" mobileStyle={{ padding: '0 32px' }}>
       <Label className="text-center" size="big" fontFamily="syncopate" style={{ marginBottom: 16 }}>
         Functionalities
       </Label>
@@ -38,7 +31,7 @@ const FunctionalitiesSection = () => {
         view transactions, interact with Dapps and much more.
       </Label>
       <Image src={UiImage} alt="ux" size="small" />
-      <Label className="text-center" fontFamily="syncopate" size="big" style={{ marginBottom: 16 }}>
+      <Label className="text-center" fontFamily="syncopate" size="big" mobileStyle={{ marginTop: 64 }}>
         Secure and Compatible
       </Label>
       <Label className="text-center">

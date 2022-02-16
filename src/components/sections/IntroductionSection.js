@@ -62,7 +62,7 @@ const IntroductionSection = () => {
   const [isHover, setIsHover] = useState(false);
   const [width] = useWindowSize();
   return (
-    <FlexContainer id="intro" className="column align-ce justify-ce w-100 h-100 relative" style={{ padding: 30 }}>
+    <FlexContainer id="intro" className="column align-ce justify-ce w-100 h-100 relative" mobileStyle={{ padding: '0 32px' }}>
       <img src={gradientBackground} style={{ position: 'absolute', height: 1000, bottom: -320, width: '100%', zIndex: -1 }} alt="" />
 
       <FlexContainer
@@ -95,7 +95,7 @@ const IntroductionSection = () => {
       <iframe
         width={width < theme.mediaQueries.mobilePixel ? width - 60 : '543'}
         height={width < theme.mediaQueries.mobilePixel ? (width - 60) / 1.76 : '380'}
-        src={`https://www.youtube.com/embed/Bejawe9NhXQ`}
+        src="https://www.youtube.com/embed/3bjmIxeQ4mk"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen

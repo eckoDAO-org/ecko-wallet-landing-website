@@ -4,6 +4,10 @@ export const TWITTER_X_WALLET = {
   name: '@XWalletOfficial',
   link: 'https://twitter.com/xwalletofficial',
 };
+export const TWITTER_KADDEX_OFFICIAL = {
+  name: '@kaddexofficial',
+  link: 'https://twitter.com/kaddexofficial',
+};
 
 export const TWITTER = {
   name: 'Twitter',

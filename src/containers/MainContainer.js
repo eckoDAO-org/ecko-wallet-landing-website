@@ -7,23 +7,23 @@ import FunctionalitiesSection from '../components/sections/FunctionalitiesSectio
 import CommunityTestingSection from '../components/sections/CommunityTestingSection';
 import ContactUsSection from '../components/sections/ContactUsSection';
 import MultiTokenEcosystemSection from '../components/sections/MultiTokenEcosystemSection';
+import FlexContainer from '../components/shared/Container';
 
-const OuterContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 0;
+const OuterContainer = styled(FlexContainer)`
+  & > *:not(:last-child) {
+    margin-bottom: 96px;
+  }
+
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
-    padding: 0;
+    & > *:not(:last-child) {
+      margin-bottom: 64px;
+    }
   }
 `;
 
 const MainContainer = () => {
   return (
-    <OuterContainer>
+    <OuterContainer className="column justify-ce align-ce w-100 h-100">
       <IntroductionSection />
       <UxSection />
       <BannerSection />

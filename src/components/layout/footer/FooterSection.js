@@ -29,8 +29,8 @@ const FooterSection = () => {
       {width >= theme.mediaQueries.desktopPixel && <Copyrights />}
 
       <FlexContainer className="column" columnGap={30} gap={30}>
-        <Label fontFamily="syncopate" fontSize={24} style={{ marginBottom: 10 }}>
-          Support
+        <Label fontFamily="syncopate" fontSize={24}>
+          X-Wallet
         </Label>
 
         <Label className="pointer" fontSize={16} onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}>
