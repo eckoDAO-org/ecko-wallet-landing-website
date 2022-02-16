@@ -42,7 +42,7 @@ const BannerSection = () => {
 
   return (
     <FlexContainer className="w-100 relative" style={{ padding: '0px 56px' }} mobileStyle={{ padding: '0 32px' }}>
-      <RadiusBackground style={{ top: 0, left: width < theme.mediaQueries.mobilePixel ? 16 : 56 }} />
+      <RadiusBackground style={{ top: 0, left: width < theme.mediaQueries.mobilePixel ? 32 : 56 }} />
 
       <TitleContainer
         isHover={isHover}
