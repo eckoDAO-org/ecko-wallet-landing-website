@@ -45,6 +45,9 @@ const GoTopButton = styled.div`
 
 const Layout = ({ children }) => {
   const [isSticky, setIsSticky] = useState(false);
+  const [seconds, setSeconds] = useState(0);
+  const [intervalId, setIntervalId] = useState(null);
+
   useEffect(() => {
     window.addEventListener('scroll', handleIsSticky);
     return () => {
@@ -57,6 +60,32 @@ const Layout = ({ children }) => {
     scrollTop >= 250 ? setIsSticky(true) : setIsSticky(false);
   };
 
+  const startTimer = () => {
+    const interval = setInterval(() => {
+      setSeconds((seconds) => seconds + 1);
+    }, 2000);
+    setIntervalId(interval);
+  };
+
+  const stopTimer = () => {
+    setSeconds(0);
+    clearInterval(intervalId);
+  };
+
+  useEffect(() => {
+    if (isSticky) {
+      startTimer();
+    }
+  }, [isSticky]);
+
+  useEffect(() => {
+    if (seconds === 2) {
+      setIsSticky(false);
+      stopTimer();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [seconds]);
+
   const goToTop = () => {
     window.scrollTo({
       top: 0,
@@ -66,7 +95,7 @@ const Layout = ({ children }) => {
 
   return (
     <MainContainer id="main-container">
-      <Header isSticky={isSticky} />
+      <Header isSticky={isSticky} stopTimer={stopTimer} startTimer={startTimer} />
       <MainContent>{children}</MainContent>
       <FooterSection />
 

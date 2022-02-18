@@ -59,7 +59,7 @@ const MultiTokenEcosystemSection = () => {
         </Label>
         <Label>
           In addition, users can recover Chainweaver (Kadena’s official wallet) password seed phrases, and quickly regenerate existing accounts.
-          X-Wallet is the only wallet in the Kadena ecosystem that now supports all tokens on the Kadena network.
+          X-Wallet is the only wallet in Kadena ecosystem that now supports all tokens on the Kadena network.
         </Label>
       </FlexContainer>
       <Image src={MEImage} className="wallet-img" alt="ux" size="small" />

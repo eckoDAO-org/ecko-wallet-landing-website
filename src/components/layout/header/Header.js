@@ -36,17 +36,17 @@ const Container = styled(FlexContainer)`
   }
 `;
 
-const Header = ({ isSticky }) => {
+const Header = ({ isSticky, stopTimer, startTimer }) => {
   return (
     <div id="header">
       <CommonHeader />
 
-      <CommonHeader className="sticky" isSticky={isSticky} />
+      <CommonHeader className="sticky" isSticky={isSticky} stopTimer={stopTimer} startTimer={startTimer} />
     </div>
   );
 };
 
-const CommonHeader = ({ className, isSticky }) => {
+const CommonHeader = ({ className, isSticky, stopTimer, startTimer }) => {
   const history = useHistory();
   const [width] = useWindowSize();
 
@@ -59,7 +59,7 @@ const CommonHeader = ({ className, isSticky }) => {
   };
 
   return (
-    <Container className={`justify-sb align-ce ${className}`} isSticky={isSticky}>
+    <Container className={`justify-sb align-ce ${className}`} isSticky={isSticky} onMouseEnter={stopTimer} onMouseLeave={startTimer}>
       <FlexContainer>
         {width <= theme.mediaQueries.mobilePixel ? (
           <XWalletLetterLogo style={{ cursor: 'pointer' }} onClick={() => goToTop()} />

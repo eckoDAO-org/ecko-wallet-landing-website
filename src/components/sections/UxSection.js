@@ -53,9 +53,7 @@ const UxSection = () => {
         <Label size="big" fontFamily="syncopate" style={{ marginBottom: 16 }}>
           Improved User Experience
         </Label>
-        <Label>
-          X-Wallet is a new user friendly and robust Kadena native wallet that will drastically improve the easiness of DeFi operations on Kaddex
-        </Label>
+        <Label>X-Wallet is a new user-friendly and robust Kadena-native wallet that will drastically improve DeFi operations on Kaddex.</Label>
       </FlexContainer>
       <Image src={UxImage} alt="ux" size="small" />
     </UxMainContainer>
