@@ -5,7 +5,7 @@ import Label from '../shared/Label';
 import gradientBackground from '../../assets/images/shared/gradient-background.png';
 import useWindowSize from '../../hooks/useWindowSize';
 import GradientContainer from '../shared/GradientContainer';
-import { ArrowDownIcon, XWalletLogo } from '../../assets';
+import { ArrowDownIcon } from '../../assets';
 import FlexContainer from '../shared/Container';
 import { XWALLET_DOWNLOAD_LINK } from '../../constants/itemLinks';
 
@@ -70,7 +70,7 @@ const IntroductionSection = () => {
     >
       <img src={gradientBackground} style={{ position: 'absolute', height: 1000, bottom: -320, width: '100%', zIndex: -1 }} alt="" />
 
-      <XWalletLogo />
+      {/* <XWalletLogo /> */}
 
       <FlexContainer
         gap={width > theme.mediaQueries.desktopPixel ? 64 : 35}
@@ -99,16 +99,16 @@ const IntroductionSection = () => {
         </FlexContainer>
       </FlexContainer>
 
-      {/* <iframe
+      <iframe
         width={width < theme.mediaQueries.mobilePixel ? width - 72 : '543'}
         height={width < theme.mediaQueries.mobilePixel ? (width - 72) / 1.76 : '380'}
-        src="https://www.youtube.com/embed/3bjmIxeQ4mk"
+        src="https://www.youtube.com/embed/829R9FvBAEo"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
         title="Embedded youtube"
         style={{ marginTop: 40 }}
-      /> */}
+      />
       <BottomTitle isHover={isHover}>
         Built on{' '}
         <Link onMouseOver={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} href="https://kadena.io/" target="_blank">
