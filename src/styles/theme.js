@@ -13,28 +13,23 @@ export const getColor = (color) => {
 
 export const configuration = {
   fontSizes: {
-    huge: { desktop: 60, tablet: 50, mobile: 32 },
-    big: { desktop: 32, tablet: 32, mobile: 24 },
-    medium: { desktop: 24, tablet: 24, mobile: 24 },
-    normal: { desktop: 16, tablet: 16, mobile: 16 },
+    huge: { desktop: 40, tablet: 30, mobile: 20 },
+    big: { desktop: 30, tablet: 24, mobile: 16 },
+    medium: { desktop: 16, tablet: 14, mobile: 12 },
+    normal: { desktop: 12, tablet: 12, mobile: 12 },
   },
   lineHeight: {
-    huge: { desktop: 75, tablet: 65, mobile: 50 },
-    big: { desktop: 42, tablet: 42, mobile: 42 },
-    medium: { desktop: 42, tablet: 42, mobile: 42 },
+    huge: { desktop: 62.5, tablet: 50, mobile: 40 },
+    big: { desktop: 37.5, tablet: 30, mobile: 24 },
+    medium: { desktop: 28, tablet: 24, mobile: 20 },
 
-    normal: { desktop: 26, tablet: 26, mobile: 26 },
+    normal: { desktop: 21, tablet: 21, mobile: 21 },
   },
 };
 
 export const theme = {
-  layout: {
-    desktopWidth: '80%',
-    mobileWidth: '95%',
-    mainContentPadding: 24,
-  },
   header: {
-    height: 56,
+    height: 87,
   },
   mediaQueries: {
     mobileBreakpoint: '48rem',

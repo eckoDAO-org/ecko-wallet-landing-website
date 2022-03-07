@@ -149,7 +149,7 @@ Label.propTypes = {
 
   fontFamily: PropTypes.oneOf(['basier', 'syncopate', 'syncopate-regular']),
   onClose: PropTypes.func,
-  color: PropTypes.oneOf(['white', 'primary']),
+  color: PropTypes.oneOf(['white', 'primary', 'blue']),
 };
 
 Label.defaultProps = {

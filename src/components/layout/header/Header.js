@@ -14,8 +14,6 @@ import Label from '../../shared/Label';
 const Container = styled(FlexContainer)`
   min-height: ${({ theme: { header } }) => `${header.height}px`};
   width: 100%;
-  padding: 2em 50px;
-
   z-index: 10;
 
   svg {
@@ -59,24 +57,35 @@ const CommonHeader = ({ className, isSticky, stopTimer, startTimer }) => {
   };
 
   return (
-    <Container className={`justify-sb align-ce ${className}`} isSticky={isSticky} onMouseEnter={stopTimer} onMouseLeave={startTimer}>
+    <Container
+      className={`justify-sb align-ce ${className}`}
+      isSticky={isSticky}
+      onMouseEnter={stopTimer}
+      onMouseLeave={startTimer}
+      style={{ padding: '20px 50px' }}
+      mobileStyle={{ padding: '20px 24px' }}
+    >
       <FlexContainer>
         {width <= theme.mediaQueries.mobilePixel ? (
           <XWalletLetterLogo style={{ cursor: 'pointer' }} onClick={() => goToTop()} />
         ) : (
           <XWalletHeaderLogo style={{ cursor: 'pointer' }} onClick={() => goToTop()} />
         )}
+      </FlexContainer>
 
+      <FlexContainer className="align-ce">
         <HeaderItem style={{ marginRight: 24 }} className="mobile-none" href="https://kaddex.com/">
           Kaddex
         </HeaderItem>
+        <GradientContainer
+          onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}
+          style={{ height: 38, padding: 0, width: 180 }}
+        >
+          <Label fontSize={13} className="rainbow" size="small" fontFamily="syncopate">
+            Download
+          </Label>
+        </GradientContainer>
       </FlexContainer>
-
-      <GradientContainer onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}>
-        <Label fontSize={14} className="rainbow" size="small" fontFamily="syncopate">
-          Download
-        </Label>
-      </GradientContainer>
     </Container>
   );
 };

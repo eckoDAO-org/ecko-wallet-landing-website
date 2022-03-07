@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/macro';
-import { TopUpIcon } from '../../assets';
-import FooterSection from './footer/FooterSection';
+import xWalletBackground from '../../assets/images/png/x-wallet-background.png';
+
 import Header from './header/Header';
 
 const MainContainer = styled.div`
   display: flex;
-  height: 100%;
   width: 100%;
+  height: 100%;
 `;
 
 const MainContent = styled.div`
   height: 100%;
   width: 100%;
+  height: ${({ theme }) => `calc(100vh - ${theme.header.height}px)`};
 `;
 
 const GoTopButton = styled.div`
@@ -96,12 +97,14 @@ const Layout = ({ children }) => {
   return (
     <MainContainer id="main-container">
       <Header isSticky={isSticky} stopTimer={stopTimer} startTimer={startTimer} />
+      {/* <img src={xWalletBackground} style={{ position: 'absolute', height: '95%', left: '50%', transform: 'translateX(-50%)' }} alt="" /> */}
+
       <MainContent>{children}</MainContent>
-      <FooterSection />
+      {/* <FooterSection />
 
       <GoTopButton isSticky={isSticky} onClick={goToTop}>
         <TopUpIcon />
-      </GoTopButton>
+      </GoTopButton> */}
     </MainContainer>
   );
 };
