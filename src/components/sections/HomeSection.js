@@ -24,14 +24,9 @@ const HomeSection = () => {
     }
   };
 
-  console.log('getHeight', getHeight());
   return (
-    <FlexContainer
-      className="relative h-100 w-100 column justify-sb"
-      style={{ paddingLeft: 50, paddingTop: 50 }}
-      mobileStyle={{ paddingLeft: 24, paddingTop: 24 }}
-    >
-      <FlexContainer className="column">
+    <FlexContainer className="relative h-100 w-100 column justify-sb" mobileStyle={{ padding: '0px 24px' }}>
+      <FlexContainer className="column" desktopStyle={{ paddingLeft: 50, paddingTop: 50 }}>
         <Label fontFamily="syncopate" size="huge" style={{ letterSpacing: '-0.05em' }}>
           user-friendly and
         </Label>
@@ -43,9 +38,12 @@ const HomeSection = () => {
         </Label>
       </FlexContainer>
 
-      <img src={xWalletBackground} style={{ position: 'absolute', height: getHeight(), left: '50%', transform: 'translateX(-50%)' }} alt="" />
+      <img
+        src={xWalletBackground}
+        style={{ position: 'absolute', height: getHeight(), left: '50%', transform: 'translateX(-50%)', top: height < 800 ? '7%' : 0 }}
+        alt=""
+      />
 
-      {/* <img src={xWalletBackground} alt="" style={{ position: 'absolute', height: '100%', left: '50%', transform: 'translateX(-50%)' }} /> */}
       <FlexContainer className="column justyfi-ce align-ce">
         <Label fontFamily="syncopate" size="big" style={{ letterSpacing: '-0.1em', marginBottom: 32 }}>
           X-Wallet v1 is live!
@@ -57,14 +55,20 @@ const HomeSection = () => {
 
         <GradientContainer
           onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}
-          style={{ height: 38, padding: 0, width: 180, marginBottom: 56 }}
+          style={{ height: 38, padding: 0, width: 180 }}
         >
           <Label fontSize={13} className="rainbow" size="small" fontFamily="syncopate">
             Download
           </Label>
         </GradientContainer>
 
-        <Label color="blue" size="normal" className="text-center" style={{ letterSpacing: '-0.1em' }}>
+        <Label
+          color="blue"
+          size="normal"
+          className="text-center"
+          style={{ letterSpacing: '-0.1em', marginBottom: 4, marginTop: 56 }}
+          mobileStyle={{ marginTop: 36 }}
+        >
           Stay tuned to the{' '}
           <span style={{ cursor: 'pointer' }} onClick={() => window.open(TWITTER_KADDEX_OFFICIAL.link, '_blank', 'noopener,noreferrer')}>
             @KaddeXofficial Twitter
