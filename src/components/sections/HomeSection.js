@@ -49,8 +49,11 @@ const HomeSection = () => {
           X-Wallet v1 is live!
         </Label>
         <Label color="blue" size="medium" className="text-center f-wrap" style={{ letterSpacing: '-0.1em', marginBottom: 30 }}>
-          We're beta testing for a reason. In the coming weeks, Kaddex will deploy a <br />
-          series of incentives for discovering bugs.
+          The first Kadena-native web extension wallet.
+          <br />
+          Powered by Kaddex, it is specifically designed to interoperate with all the Kadena ecosystem dApps,
+          <br />
+          ensuring seamless interaction while never having to leave your browser.
         </Label>
 
         <GradientContainer
