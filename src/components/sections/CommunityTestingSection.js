@@ -2,7 +2,7 @@ import React from 'react';
 import { Image } from 'semantic-ui-react';
 import styled from 'styled-components';
 import CommunityTestingImage from '../../assets/images/png/community-test-image.png';
-import FlexContainer from '../shared/Container';
+import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import { DISCORD, TWITTER_KADDEX_OFFICIAL, TWITTER } from '../../constants/social-media';
 import gradientBackground from '../../assets/images/shared/gradient-background-2.png';

@@ -7,6 +7,10 @@ export default createGlobalStyle`
       box-sizing: inherit;
     }
 
+    /* remove mobile highlight on tap */
+    div {
+    -webkit-tap-highlight-color: transparent;
+    }
     *:focus {
       outline: none;
     }
@@ -24,28 +28,28 @@ export default createGlobalStyle`
       width: 100%;
       min-height: 100%;
       line-height: inherit;
-      /* overflow: auto; */
-      overflow-x: hidden;
       min-width: 0;
-      font-family: ${({ theme: { fontFamily } }) => fontFamily.regular};
-      color: ${({ theme: { colors } }) => colors.primary};
-      background-color: #0A0B1D;
+      font-family: ${({ theme: { fontFamily } }) => fontFamily.basier};
       background-attachment: fixed;
       opacity: 1;
-      
-      
+      background-color: ${({ theme: { colors } }) => colors.darkBlue};
+      overflow-x: hidden;
+
       
     };
 
     #root {
-      overflow-x: hidden;
-
       height: 100%;
+      overflow: hidden;
       & > div:first-child {
         display: flex;
         flex-flow: column;
         height: 100%;
       }
+    }
+
+    a {
+      text-decoration: none;
     }
 
     .ui.input>input {
@@ -63,18 +67,26 @@ export default createGlobalStyle`
       opacity: 1 !important;
     }
 
-    #tsparticles canvas{
-      z-index:-1 !important;
+    .desktop-none {
+      @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
+        display: none !important;
+      }
     }
 
-    .desktop-none {
-      @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
+    .desktop-only {
+      @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
         display: none !important;
       }
     }
 
     .mobile-none {
       @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
+        display: none !important;
+      }
+    }
+
+    .mobile-only {
+      @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
         display: none !important;
       }
     }

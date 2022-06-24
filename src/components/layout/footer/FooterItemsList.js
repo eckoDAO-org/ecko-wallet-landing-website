@@ -11,13 +11,13 @@ const FooterItemsList = ({ title, items, color, children }) => {
       {children ||
         items.map((item, i) =>
           item?.href ? (
-            <a href={item.href} target={item?.target}>
+            <a key={i} href={item.href} target={item?.target}>
               <Label key={i} color={color} fontSize={13}>
                 {item.text}
               </Label>
             </a>
           ) : (
-            <Label key={i} color={color} fontSize={13}>
+            <Label key={i} color={color} withShade={item?.disabled} fontSize={13}>
               {item.text}
             </Label>
           )

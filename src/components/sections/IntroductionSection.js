@@ -6,7 +6,7 @@ import gradientBackground from '../../assets/images/shared/gradient-background.p
 import useWindowSize from '../../hooks/useWindowSize';
 import GradientContainer from '../shared/GradientContainer';
 import { ArrowDownIcon } from '../../assets';
-import FlexContainer from '../shared/Container';
+import { FlexContainer } from '../shared/Container';
 import { XWALLET_DOWNLOAD_LINK } from '../../constants/itemLinks';
 
 const BottomTitle = styled.div`

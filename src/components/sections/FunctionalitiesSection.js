@@ -2,7 +2,7 @@ import React from 'react';
 import { Image } from 'semantic-ui-react';
 import styled from 'styled-components';
 import UiImage from '../../assets/images/png/ui-image.png';
-import FlexContainer from '../shared/Container';
+import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 
 const UiMainContainer = styled(FlexContainer)`

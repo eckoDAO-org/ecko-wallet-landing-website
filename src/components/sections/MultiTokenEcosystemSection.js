@@ -2,7 +2,7 @@ import React from 'react';
 import { Image } from 'semantic-ui-react';
 import styled from 'styled-components';
 import MEImage from '../../assets/images/png/multitoken_ecosystem.png';
-import FlexContainer from '../shared/Container';
+import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 
 const MEMainContainer = styled(FlexContainer)`

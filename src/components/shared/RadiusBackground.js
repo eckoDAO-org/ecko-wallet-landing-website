@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import FlexContainer from './Container';
+import { FlexContainer } from './Container';
 
 const RadiusBox = styled.div`
   height: 100%;

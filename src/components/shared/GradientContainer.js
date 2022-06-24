@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components/macro';
-import FlexContainer from './Container';
+import { FlexContainer } from './Container';
 
 const STYContainer = styled(FlexContainer)`
   position: relative;

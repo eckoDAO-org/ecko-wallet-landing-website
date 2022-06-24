@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { XWALLET_DOWNLOAD_LINK } from '../../constants/itemLinks';
-import FlexContainer from '../shared/Container';
+import { FlexContainer } from '../shared/Container';
 import Stripes from '../shared/Stripes';
 import Label from '../shared/Label';
 import RadiusBackground from '../shared/RadiusBackground';

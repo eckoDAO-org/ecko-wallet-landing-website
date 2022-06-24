@@ -1,33 +1,112 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/macro';
-import background from '../../assets/images/png/background.png';
-import useWindowSize from '../../hooks/useWindowSize';
-
 import Header from './header/Header';
+import FooterSection from './footer/FooterSection';
+import introductionBackground from '../../assets/images/backgrounds/introduction-background.png';
+import { ROUTE_INDEX } from '../../router/routes';
+import { useLocation } from 'react-router-dom';
+import { FlexContainer } from '../shared/Container';
+import { GoTopIcon } from '../../assets';
 
-const MainContainer = styled.div`
-  display: flex;
+const MainContent = styled.div`
+  height: 100%;
   width: 100%;
 `;
 
-const MainContent = styled.div`
-  width: 100%;
-  height: 100%;
+const GoTopButton = styled.div`
+  display: ${({ isSticky }) => (isSticky ? 'block' : 'none')};
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  line-height: 0;
+  opacity: 0.8;
+  cursor: pointer;
+
+  transition: all 0.5s ease;
+  animation: smoothOut 1s;
+
+  @keyframes smoothOut {
+    0% {
+      transform: translateY(142px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px #ffffff;
+  }
 `;
 
 const Layout = ({ children }) => {
-  const [_, height] = useWindowSize();
+  const location = useLocation();
+  const [seconds, setSeconds] = useState(0);
+  const [intervalId, setIntervalId] = useState(null);
+
+  const [isSticky, setIsSticky] = useState(false);
+  useEffect(() => {
+    window.addEventListener('scroll', handleIsSticky);
+    return () => {
+      window.removeEventListener('scroll', handleIsSticky);
+    };
+  }, []);
+
+  const handleIsSticky = () => {
+    const scrollTop = window.scrollY;
+    scrollTop >= 250 ? setIsSticky(true) : setIsSticky(false);
+  };
+
+  const startTimer = () => {
+    const interval = setInterval(() => {
+      setSeconds((seconds) => seconds + 1);
+    }, 2000);
+    setIntervalId(interval);
+  };
+
+  const stopTimer = () => {
+    setSeconds(0);
+    clearInterval(intervalId);
+  };
+
+  useEffect(() => {
+    if (isSticky) {
+      startTimer();
+    }
+  }, [isSticky]);
+
+  useEffect(() => {
+    if (seconds === 2) {
+      setIsSticky(false);
+      stopTimer();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [seconds]);
+
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
-    <MainContainer id="main-container" style={{ height }}>
-      <Header />
+    <FlexContainer className="w-100 h-100 relative" id="main-container">
       <img
-        src={background}
-        style={{ zIndex: -1, position: 'absolute', height: '100%', width: '100%', left: '50%', transform: 'translateX(-50%)' }}
+        src={introductionBackground}
+        style={{ position: 'absolute', zIndex: -1, height: location?.pathname !== ROUTE_INDEX ? '100%' : 1375, width: '100%' }}
         alt=""
       />
-
+      <Header isSticky={isSticky} stopTimer={stopTimer} startTimer={startTimer} />
       <MainContent>{children}</MainContent>
-    </MainContainer>
+      <FooterSection />
+
+      <GoTopButton isSticky={isSticky} onClick={goToTop}>
+        <GoTopIcon />
+      </GoTopButton>
+    </FlexContainer>
   );
 };
 

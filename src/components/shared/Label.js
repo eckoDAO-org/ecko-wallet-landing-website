@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import PropTypes from 'prop-types';
+import { getColor, theme } from '../../styles/theme';
 import useWindowSize from '../../hooks/useWindowSize';
-import theme, { getColor } from '../../styles/theme';
 
 const getConfiguration = (configuration, size, type) => {
   return theme?.[configuration]?.[size]?.[type] || -1;
@@ -14,6 +14,7 @@ const STYText = styled.span`
   cursor: ${({ onClick }) => onClick && 'pointer'};
   z-index: 1;
   color: ${({ color }) => color};
+
   font-size: ${({ size, fontSize }) => (!fontSize ? getConfiguration('fontSizes', size, 'desktop') : fontSize)}px;
   line-height: ${({ size }) => size && getConfiguration('lineHeight', size, 'desktop')}px;
 
@@ -32,8 +33,27 @@ const STYText = styled.span`
     }
   }
 
+  &.rainbow {
+    display: block;
+    background-image: ${({ gradient, gradientColors }) => {
+      if (gradient) {
+        return gradient;
+      }
+      return `linear-gradient(94.39deg,${gradientColors[0]} 0.84%, ${gradientColors[1]} 44.14%, ${gradientColors[2]} 90.22%)`;
+    }};
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  &.flex {
+    display: flex;
+  }
   &.fit-content {
     width: fit-content;
+  }
+  &.h-fit-content {
+    height: fit-content;
   }
   &.uppercase {
     text-transform: uppercase;
@@ -45,7 +65,6 @@ const STYText = styled.span`
 
   &.text-center {
     text-align: center;
-    display: blocK;
   }
 
   &.align-fs {
@@ -64,17 +83,6 @@ const STYText = styled.span`
     white-space: nowrap;
   }
 
-  &.f-wrap {
-    flex-wrap: wrap;
-  }
-
-  &.rainbow {
-    display: block;
-    background-image: linear-gradient(94.39deg, #55bade 0.84%, #cf7098 44.14%, #f7cb79 90.22%);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
     &.tablet-text-center {
       text-align: center;
@@ -90,16 +98,21 @@ const Label = ({
   mobileClassName,
   desktopPixel,
   mobilePixel,
+  gradientColors,
+  gradient,
   children,
   fontFamily,
   fontSize,
   size,
   color,
+  customColor,
   style,
   desktopStyle,
   tabletStyle,
   mobileStyle,
   onClick,
+  withShade,
+  dangerouslySetInnerHTML,
 }) => {
   const [width] = useWindowSize();
 
@@ -120,20 +133,22 @@ const Label = ({
   return (
     <STYText
       id={id}
-      className={getClassName()}
-      color={getColor(color)}
+      dangerouslySetInnerHTML={dangerouslySetInnerHTML}
+      gradient={gradient}
+      className={`${fontFamily === 'syncopate' ? 'uppercase' : ''} ${getClassName()}`}
+      color={customColor ? customColor : withShade ? `${getColor(color)}99` : getColor(color)}
       fontSize={fontSize}
+      size={size}
       onClick={onClick}
       mobilePixel={mobilePixel}
-      size={size}
       style={{
         fontFamily: theme.fontFamily[fontFamily],
-        fontSize,
         ...style,
         ...(width >= (desktopPixel || theme.mediaQueries.desktopPixel) && desktopStyle),
         ...(width < (desktopPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletStyle),
         ...(width < (mobilePixel || theme.mediaQueries.mobilePixel) && mobileStyle),
       }}
+      gradientColors={gradientColors}
     >
       {children}
     </STYText>
@@ -145,17 +160,17 @@ export default Label;
 Label.propTypes = {
   children: PropTypes.any.isRequired,
   fontSize: PropTypes.number,
-  size: PropTypes.oneOf(['big', 'normal']),
-
+  size: PropTypes.oneOf(['huge', 'big', 'large', 'medium', 'normal', 'small', 'tiny', 'nano']),
   fontFamily: PropTypes.oneOf(['basier', 'syncopate', 'syncopate-regular']),
   onClose: PropTypes.func,
-  color: PropTypes.oneOf(['white', 'primary', 'blue']),
+  color: PropTypes.oneOf(['white', 'primary', 'light-blue', 'pink', 'yellow', 'grey']),
+  gradientColors: PropTypes.arrayOf(PropTypes.string),
 };
 
 Label.defaultProps = {
   fontSize: null,
-  size: 'normal',
   fontFamily: 'basier',
   onClick: null,
   color: 'white',
+  gradientColors: ['#55bade', '#cf7098', '#f7cb79'],
 };

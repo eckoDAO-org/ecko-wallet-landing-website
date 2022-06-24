@@ -1,6 +1,6 @@
 import React from 'react';
 import { KaddexFooterIcon, KaddexLogoFooterIcon } from '../../../assets';
-import FlexContainer from '../../shared/Container';
+import { FlexContainer } from '../../shared/Container';
 import Label from '../../shared/Label';
 
 const Copyrights = () => {

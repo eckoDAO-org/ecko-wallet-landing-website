@@ -1,60 +1,54 @@
 import React from 'react';
-import styled from 'styled-components/macro';
 import Stripes from '../../shared/Stripes';
-
+import FooterItemsList from './FooterItemsList';
+import { FOOTER_DOWNLOAD, FOOTER_LEARN } from '../../../constants/footer';
 import useWindowSize from '../../../hooks/useWindowSize';
 import theme from '../../../styles/theme';
 import Socials from './Socials';
 import Copyrights from './Copyrights';
-import FlexContainer from '../../shared/Container';
-import { XWALLET_DOWNLOAD_LINK } from '../../../constants/itemLinks';
-import Label from '../../shared/Label';
-
-const FooterContainer = styled(FlexContainer)`
-  padding: 80px 90px;
-  background-color: #000000;
-`;
+import NavigationItems from './NavigationItems';
+import { FlexContainer } from '../../shared/Container';
 
 const FooterSection = () => {
   const [width] = useWindowSize();
   return (
-    <FooterContainer
+    <FlexContainer
       gap={40}
       className="relative justify-sb"
       tabletClassName="column align-ce"
       mobileClassName="column align-ce"
-      style={{ marginTop: 165 }}
-      mobileStyle={{ marginTop: 100 }}
+      style={{ backgroundColor: '#000000' }}
+      desktopStyle={{ padding: '80px 90px' }}
+      tabletStyle={{ padding: '80px 90px' }}
+      mobileStyle={{ padding: '80px 0px' }}
     >
       {width >= theme.mediaQueries.desktopPixel && <Copyrights />}
 
-      <FlexContainer className="column" columnGap={30} gap={30}>
-        <Label fontFamily="syncopate" fontSize={24}>
-          X-Wallet
-        </Label>
+      <FlexContainer gap={80} desktopStyle={{ margin: '0 50px' }} tabletClassName="column" mobileClassName="column">
+        <FlexContainer gap={80} columnGap={50}>
+          <FooterItemsList title="About">
+            <NavigationItems fontSize={13} color="yellow" disableHover hideKaddex />
+          </FooterItemsList>
+          <FooterItemsList {...FOOTER_DOWNLOAD} />
+        </FlexContainer>
 
-        <Label className="pointer" fontSize={16} onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}>
-          Download
-        </Label>
-        <Label className="pointer" fontSize={16}>
-          How To Install
-        </Label>
-        <Label className="pointer" fontSize={16} onClick={() => window.open('https://www.kaddex.com/', '_blank', 'noopener,noreferrer')}>
-          Kaddex
-        </Label>
+        <FooterItemsList {...FOOTER_LEARN} />
       </FlexContainer>
 
-      {width >= theme.mediaQueries.desktopPixel && <Socials />}
+      {width >= theme.mediaQueries.desktopPixel && (
+        <FlexContainer className="column" gap={16}>
+          <Socials />
+        </FlexContainer>
+      )}
 
       {width < theme.mediaQueries.desktopPixel && (
-        <FlexContainer className="column" style={{ marginTop: 70 }} gap={20}>
+        <FlexContainer className="column align-ce" style={{ marginTop: 70 }} gap={20}>
           <Socials />
-
           <Copyrights />
         </FlexContainer>
       )}
       <Stripes iconStyle={{ height: 112, width: 115 }} />
-    </FooterContainer>
+    </FlexContainer>
   );
 };
 

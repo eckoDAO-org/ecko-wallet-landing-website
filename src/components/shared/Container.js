@@ -1,9 +1,10 @@
 import styled, { css } from 'styled-components/macro';
 import useWindowSize from '../../hooks/useWindowSize';
-import theme from '../../styles/theme';
+import { theme } from '../../styles/theme';
 import browserDetection from '../../utils/browserDetection';
 
-const FlexContainer = ({
+export const FlexContainer = ({
+  reference,
   className,
   desktopClassName,
   desktopPixel,
@@ -15,7 +16,6 @@ const FlexContainer = ({
   style,
   tabletStyle,
   mobileStyle,
-  smallMobileStyle,
   backgroundImage,
   ...rest
 }) => {
@@ -37,6 +37,7 @@ const FlexContainer = ({
   return (
     <STYFlexContainer
       {...rest}
+      ref={reference}
       className={getClassName()}
       backgroundImage={backgroundImage}
       style={{
@@ -44,15 +45,12 @@ const FlexContainer = ({
         ...(width >= (desktopPixel || theme.mediaQueries.desktopPixel) && desktopStyle),
         ...(width < (desktopPixel || theme.mediaQueries.desktopPixel) && width >= theme.mediaQueries.mobilePixel && tabletStyle),
         ...(width < theme.mediaQueries.mobilePixel && mobileStyle),
-        ...(width < theme.mediaQueries.smallMobilePixel && (smallMobileStyle || mobileStyle)),
       }}
     >
       {children}
     </STYFlexContainer>
   );
 };
-
-export default FlexContainer;
 
 export const STYFlexContainer = styled.div`
   display: flex;
@@ -69,7 +67,7 @@ export const STYFlexContainer = styled.div`
   }
 
   &.scroll-mt {
-    scroll-margin-top: 100px;
+    scroll-margin-top: 115px;
   }
   &.align-fs {
     align-items: flex-start;
