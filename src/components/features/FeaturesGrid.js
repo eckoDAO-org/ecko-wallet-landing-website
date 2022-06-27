@@ -29,7 +29,7 @@ const FeaturesGrid = () => {
       mobileStyle={{ display: 'flex', flexDirection: 'column', padding: '0px 24px 50px' }}
     >
       {Object.values(FEATURES).map((item, index) => (
-        <>
+        <React.Fragment key={index}>
           <FlexContainer
             key={index}
             gap={width <= theme.mediaQueries.mobilePixel ? 32 : 56}
@@ -53,7 +53,7 @@ const FeaturesGrid = () => {
           {width < theme.mediaQueries.desktopPixel && index !== Object.values(FEATURES).length - 1 && (
             <Divider horizontal style={{ mixBlendMode: 'overlay', backgroundColor: '#FFFFFF', height: 1, width: '100%' }} />
           )}
-        </>
+        </React.Fragment>
       ))}
     </Grid>
   );

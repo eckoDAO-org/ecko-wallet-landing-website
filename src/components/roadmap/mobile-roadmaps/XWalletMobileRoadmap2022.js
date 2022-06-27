@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { RoadmapFlagcon } from '../../../assets';
 import { getColor } from '../../../styles/theme';
 import { FlexContainer } from '../../shared/Container';
 import Label from '../../shared/Label';
@@ -14,7 +15,7 @@ const Line = styled(FlexContainer)`
     content: '';
     position: absolute;
     width: 3px;
-    height: 55%;
+    height: 64%;
     background: ${({ color }) => getColor(color)};
     top: 0;
     bottom: 0;
@@ -47,7 +48,9 @@ const XWalletMobileRoadmap2022 = ({ color }) => {
                   background: getColor(value?.isMain ? 'pink' : value.isCompleted ? color : 'white'),
                   borderRadius: '50%',
                 }}
-              ></div>
+              >
+                {value?.isMain && <RoadmapFlagcon style={{ position: 'absolute', width: 40, left: 3, bottom: 8, zIndex: 4 }} />}
+              </div>
 
               <FlexContainer className="column" gap={8} key={i} style={{ marginLeft: 10 }}>
                 {value?.text?.map((tspan, j) => (
@@ -103,22 +106,23 @@ const CONFIGURATION = {
     text: [{ text: 'Fiat on Ramp' }],
     isCompleted: true,
   },
-
-  MOBILE_APP: {
-    position: 7,
-    text: [{ text: 'Mobile app' }],
-    isCompleted: true,
-  },
   BAND_REFRESH: {
-    position: 8,
+    position: 7,
     text: [{ text: 'Brand Refresh' }],
     isCompleted: true,
   },
-  FIAT_OFF_RAMP: {
-    position: 9,
-    text: [{ text: 'Fiat off Ramp' }],
 
-    isCompleted: false,
+  MOBILE_APP: {
+    position: 8,
+    text: [{ text: 'Mobile app' }],
+    isCompleted: true,
+  },
+
+  X_WALLET_V2: {
+    position: 9,
+    text: [{ text: 'X-Wallet v2' }],
+    isCompleted: true,
+    isMain: true,
   },
   SWAP_FUNTIONALITY: {
     position: 11,
@@ -136,12 +140,13 @@ const CONFIGURATION = {
     text: [{ text: 'NFTs integration' }],
     isCompleted: false,
   },
-
-  X_WALLET_V2: {
+  FIAT_OFF_RAMP: {
     position: 14,
-    text: [{ text: 'X-Wallet v2' }],
+    text: [{ text: 'Fiat off Ramp' }],
+
     isCompleted: false,
   },
+
   AUDITING: {
     position: 15,
     text: [{ text: 'Auditing' }],

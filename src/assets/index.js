@@ -6,12 +6,19 @@ export { ReactComponent as GoTopIcon } from './images/layout/go-top.svg';
 export { ReactComponent as CloseIcon } from './images/shared/close-icon.svg';
 export { ReactComponent as NotificationCaution } from './images/shared/ic_caution.svg';
 export { ReactComponent as KaddexLetterLogo } from './images/header/kaddex-letter-logo.svg';
-export { ReactComponent as XWalletHeaderLogo } from './images/header/x-wallet-horizontal.svg';
+export { ReactComponent as XWalletHeaderLogo } from './images/header/x-wallet-header.svg';
+export { ReactComponent as XWalletFooterLogo } from './images/layout/x-wallet-footer.svg';
 export { ReactComponent as XWalletLetterLogo } from './images/shared/x-wallet-letter.svg';
 export { ReactComponent as XWalletLogo } from './images/shared/x-wallet-logo.svg';
 export { ReactComponent as KaddexLogoFooterIcon } from './images/shared/kaddex-logo-footer.svg';
 export { ReactComponent as KaddexFooterIcon } from './images/shared/kaddex-footer.svg';
 export { ReactComponent as StripesIcon } from './images/shared/stripes.svg';
+
+// FIRST SECTION
+export { ReactComponent as AndroidIcon } from './images/first-section/android.svg';
+export { ReactComponent as BraveIcon } from './images/first-section/brave.svg';
+export { ReactComponent as IosIcon } from './images/first-section/ios.svg';
+export { ReactComponent as ChromeIcon } from './images/first-section/chrome.svg';
 
 // SOCIAL MEDIA
 export { ReactComponent as DiscordIcon } from './images/social-media/discord.svg';

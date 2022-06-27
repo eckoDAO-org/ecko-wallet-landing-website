@@ -90,4 +90,8 @@ export default createGlobalStyle`
         display: none !important;
       }
     }
+
+    .flex {
+      display: flex;
+    }
 `;

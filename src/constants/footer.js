@@ -1,4 +1,5 @@
 import { XWALLET_DOWNLOAD_LINK } from './itemLinks';
+import { IosIcon, AndroidIcon, ChromeIcon, BraveIcon } from '../assets';
 
 export const FOOTER_ABOUT = {
   title: 'ABOUT',
@@ -30,21 +31,25 @@ export const FOOTER_DOWNLOAD = {
       text: 'iOS App',
       href: '/',
       target: '_blank',
+      icon: <IosIcon />,
     },
     {
       text: 'Android App',
       href: '/',
       target: '_blank',
+      icon: <AndroidIcon />,
     },
     {
       text: 'Chrome Extension',
       href: XWALLET_DOWNLOAD_LINK,
       target: '_blank',
+      icon: <ChromeIcon />,
     },
     {
       text: 'Brave Extension',
       href: '/',
       target: '_blank',
+      icon: <BraveIcon />,
     },
   ],
 };

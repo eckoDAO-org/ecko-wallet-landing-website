@@ -7,7 +7,6 @@ import Label from '../shared/Label';
 import backgroundroadmap from '../../assets/images/roadmap/roadmap-background.png';
 import { R_2022 } from '../../constants/roadmaps';
 import theme from '../../styles/theme';
-import RoadmapTabs from './RoadmapTabs';
 import XWalletRoadmap2022 from './desktop-roadmaps/XWalletRoadmap2022';
 import XWalletMobileRoadmap2022 from './mobile-roadmaps/XWalletMobileRoadmap2022';
 
