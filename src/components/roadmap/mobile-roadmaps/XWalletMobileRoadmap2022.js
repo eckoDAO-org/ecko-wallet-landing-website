@@ -96,9 +96,9 @@ const CONFIGURATION = {
     text: [{ text: 'KDLaunch integration' }],
     isCompleted: true,
   },
-  _10k_DOWNLOADS: {
+  DOWNLOADS: {
     position: 5,
-    text: [{ text: '10,000 Downloads' }],
+    text: [{ text: '15,000 Downloads' }],
     isCompleted: true,
   },
   FIAT_ON_RAMP: {

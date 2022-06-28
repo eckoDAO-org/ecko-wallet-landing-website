@@ -61,12 +61,12 @@ const CONFIGURATION = {
     },
     color: theme.colors.primary,
   },
-  _10k_DOWNLOADS: {
+  DOWNLOADS: {
     circle: { x: 1490, y: 381 },
     text: {
       x: 1499,
       y: 446,
-      tspan: [{ x: -68.09, y: 0, text: '10,000 Downloads' }],
+      tspan: [{ x: -68.09, y: 0, text: '15,000 Downloads' }],
     },
 
     color: theme.colors.primary,

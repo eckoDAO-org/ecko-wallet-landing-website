@@ -1,4 +1,5 @@
 import React from 'react';
+import Analytics from '../components/analytics/Analytics';
 import Features from '../components/features/Features';
 import Projects from '../components/projects/Projects';
 import Roadmap from '../components/roadmap/Roadmap';
@@ -11,6 +12,7 @@ const MainContainer = () => {
       <FirstSection />
       <Features />
       <Projects />
+      <Analytics />
       <Roadmap />
     </FlexContainer>
   );

@@ -78,14 +78,7 @@ const Roadmap = () => {
   }, [selectedRoadmapId, roadmapsContainer]);
 
   return (
-    <RoadmapWrapper
-      id="roadmap"
-      gap={50}
-      className="column scroll-mt relative"
-      desktopPixel={1460}
-      tabletStyle={{ marginTop: 80 }}
-      mobileStyle={{ marginTop: 80 }}
-    >
+    <RoadmapWrapper id="roadmap" gap={50} className="column scroll-mt relative" desktopPixel={1460}>
       <FlexContainer className="w-100 justify-sb">
         <Label
           size="big"

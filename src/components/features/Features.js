@@ -13,6 +13,7 @@ const FeaturesWrapper = styled(FlexContainer)`
   width: 100%;
   background-image: ${`url(${gradientBackground})`};
   padding: 120px 0px;
+  border-radius: 40px;
   /* padding-bottom: 90px; */
 
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {

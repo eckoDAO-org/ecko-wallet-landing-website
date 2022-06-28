@@ -13,8 +13,10 @@ const BackgroundContainer = styled(FlexContainer)`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  margin-top: -50px;
+  z-index: -1;
   @media (min-width: 1500px) {
-    padding: 120px 174px;
+    padding: 170px 174px 120px;
   }
 `;
 const FlexRow = styled(FlexContainer)`
@@ -35,9 +37,9 @@ const Projects = () => {
     <BackgroundContainer
       gap={getGap(16, 36, 72)}
       className="column align-ce justify-ce"
-      mobileStyle={{ padding: '80px 16px' }}
-      tabletStyle={{ padding: '80px 16px' }}
-      desktopStyle={{ padding: '120px 90px' }}
+      mobileStyle={{ padding: '130px 16px 80px' }}
+      tabletStyle={{ padding: '130px 16px 80px' }}
+      desktopStyle={{ padding: '170px 90px 120px' }}
     >
       <Label fontFamily="syncopate" size="big">
         INTEGRATED PROJECTS

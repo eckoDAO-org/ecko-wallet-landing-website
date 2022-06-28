@@ -1,4 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
+import browserDetection from '../utils/browserDetection';
 
 export default createGlobalStyle`
     *, *:before, *:after {
@@ -94,4 +95,114 @@ export default createGlobalStyle`
     .flex {
       display: flex;
     }
+    .self-end {
+      justify-self: flex-end;
+    }
+    .self-start {
+      justify-self: flex-start;
+    }
+    .self-align-end {
+      align-self: flex-end;
+    }
+    .self-align-start {
+      align-self: flex-start;
+    }
+
+    &.hide-scrollbar {
+    scroll-behavior: smooth;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    scrollbar-width: none;
+  }
+  &.pointer {
+    cursor: pointer;
+  }
+
+  &.scroll-mt {
+    scroll-margin-top: 115px;
+  }
+  &.align-fs {
+    align-items: flex-start;
+  }
+
+  &.align-fe {
+    align-items: flex-end;
+  }
+
+  &.align-ce {
+    align-items: center;
+  }
+
+  &.justify-ce {
+    justify-content: center;
+  }
+
+  &.justify-sb {
+    justify-content: space-between;
+  }
+  &.justify-sa {
+    justify-content: space-around;
+  }
+
+  &.justify-fe {
+    justify-content: flex-end;
+  }
+
+  &.justify-fs {
+    justify-content: flex-start;
+  }
+
+  &.absolute {
+    position: absolute;
+  }
+
+  &.fixed {
+    position: fixed;
+  }
+
+  &.relative {
+    position: relative;
+  }
+
+  &.w-100 {
+    width: 100%;
+  }
+  &.h-100 {
+    height: 100%;
+  }
+
+  &.flex-1 {
+    flex: 1;
+  }
+
+  &.h-fit-content {
+    height: fit-content;
+  }
+
+  &.column {
+    flex-direction: column;
+    ${({ gap }) => {
+      if (gap) {
+        const browser = browserDetection();
+
+        if (browser === 'SAFARI') {
+          return css`
+            & > *:not(:last-child) {
+              margin-bottom: ${gap}px;
+              margin-right: 0px;
+            }
+          `;
+        } else
+          return css`
+            row-gap: ${({ gap }) => gap}px;
+            column-gap: 0px;
+          `;
+      }
+    }}
+  }
+
+  &.column-reverse {
+    flex-direction: column-reverse;
+  }
 `;

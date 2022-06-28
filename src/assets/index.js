@@ -55,3 +55,10 @@ export { ReactComponent as KdswapIcon } from './images/projects/kdswap.svg';
 export { ReactComponent as KongsIcon } from './images/projects/kongs.svg';
 export { ReactComponent as MokIcon } from './images/projects/mok.svg';
 export { ReactComponent as TimpiIcon } from './images/projects/timpi.svg';
+
+// ANALYTICS
+export { ReactComponent as OpenQuoteIcon } from './images/analytics/quote-open.svg';
+export { ReactComponent as CloseQuoteIcon } from './images/analytics/quote-close.svg';
+export { ReactComponent as MobileDownloadSVG } from './images/analytics/mobile.svg';
+export { ReactComponent as DesktopDownloadSVG } from './images/analytics/desktop.svg';
+export { ReactComponent as FifteenThousandsDownloadSVG } from './images/analytics/15k+.svg';
