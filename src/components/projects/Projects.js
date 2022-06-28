@@ -35,6 +35,7 @@ const Projects = () => {
 
   return (
     <BackgroundContainer
+      id="projects"
       gap={getGap(16, 36, 72)}
       className="column align-ce justify-ce"
       mobileStyle={{ padding: '130px 16px 80px' }}

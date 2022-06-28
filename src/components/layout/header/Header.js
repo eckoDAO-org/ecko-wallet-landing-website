@@ -64,28 +64,31 @@ const CommonHeader = ({ className, isSticky, stopTimer, startTimer }) => {
   return (
     <Container
       desktopPixel={880}
-      className={`align-ce justify-sb ${className}`}
+      className={`align-ce  ${className}`}
       tabletClassName="justify-ce"
       mobileClassName="justify-ce"
+      desktopClassName="justify-sb"
       isSticky={isSticky}
       onMouseEnter={stopTimer}
       onMouseLeave={startTimer}
     >
-      {width < 880 ? <XWalletLetterLogo /> : <XWalletHeaderLogo className="kaddex-logo" onClick={goToTop} />}
+      <XWalletHeaderLogo className="kaddex-logo" onClick={goToTop} />
       {width >= 880 && (
         <FlexContainer className="align-ce" gap={24}>
           <NavigationItems />
         </FlexContainer>
       )}
       {width < 880 && <Hamburger />}
-      <GradientContainer
-        onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}
-        style={{ height: 38, padding: 0, width: 180 }}
-      >
-        <Label fontSize={13} className="rainbow" size="small" fontFamily="syncopate">
-          Download
-        </Label>
-      </GradientContainer>
+      {width > 880 && (
+        <GradientContainer
+          onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}
+          style={{ height: 38, padding: 0, width: 180 }}
+        >
+          <Label fontSize={13} className="rainbow" size="small" fontFamily="syncopate">
+            Download
+          </Label>
+        </GradientContainer>
+      )}
     </Container>
   );
 };
