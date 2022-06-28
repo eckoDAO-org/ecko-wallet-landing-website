@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="54" viewBox="0 0 60 54">
+  <g id="aswap" transform="translate(-971 -6639)">
+    <g id="Kaddex" transform="translate(971 6639)">
+      <g id="Logo_Down" transform="translate(19.171 47.355)">
+        <path id="logo_down_yellow" d="M453.163,674.6a1.075,1.075,0,0,0-.944-.6h-28.35a1.079,1.079,0,0,0-1.075,1.082v5.088a.473.473,0,0,0,.471.474h32.888Z" transform="translate(-422.794 -674.001)" fill="#fff"/>
+      </g>
+      <g id="Logo_dx" transform="translate(29.976)">
+        <path id="logo_dx_blu" d="M542.431,239l26.152,53.3a.478.478,0,0,1-.028.445.472.472,0,0,1-.382.225h-7.041l-20.611-41.715" transform="translate(-538.601 -239)" fill="#fff"/>
+        <path id="Logo_dx_gradient" d="M526.367,239l7.787,15.83-3.962,8-7.546-15.294a1.1,1.1,0,0,1,0-.949Z" transform="translate(-522.538 -239)" fill="#fff"/>
+      </g>
+      <g id="Logo_sx">
+        <path id="Logo_sx_pink" d="M271.522,239.628a1.075,1.075,0,0,1,.943-.6h7.117l-.061.123-3.891,7.856L253.02,292.688a.472.472,0,0,1-.41.256h-5.764a1.074,1.074,0,0,1-.9-.52,1.089,1.089,0,0,1-.045-1.042Z" transform="translate(-245.792 -239.03)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

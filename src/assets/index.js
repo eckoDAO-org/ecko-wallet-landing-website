@@ -41,3 +41,17 @@ export { ReactComponent as PrivateIcon } from './images/features/private.svg';
 export { ReactComponent as SecureCompatibleIcon } from './images/features/secure-compatible.svg';
 export { ReactComponent as SendReceiveStoreIcon } from './images/features/send-receive-store.svg';
 export { ReactComponent as HandPhoneSVG } from './images/features/hand-phone.svg';
+
+// PROJECTS
+export { ReactComponent as KaddexIcon } from './images/projects/kaddex.svg';
+export { ReactComponent as AswapIcon } from './images/projects/aswap.svg';
+export { ReactComponent as BabenaIcon } from './images/projects/babena.svg';
+export { ReactComponent as DocushieldIcon } from './images/projects/docushield.svg';
+export { ReactComponent as GallinasIcon } from './images/projects/gallinas.svg';
+export { ReactComponent as HypeIcon } from './images/projects/hype.svg';
+export { ReactComponent as KadenaBullsIcon } from './images/projects/kadena-bulls.svg';
+export { ReactComponent as KdLaunchIcon } from './images/projects/kdlaunch.svg';
+export { ReactComponent as KdswapIcon } from './images/projects/kdswap.svg';
+export { ReactComponent as KongsIcon } from './images/projects/kongs.svg';
+export { ReactComponent as MokIcon } from './images/projects/mok.svg';
+export { ReactComponent as TimpiIcon } from './images/projects/timpi.svg';
