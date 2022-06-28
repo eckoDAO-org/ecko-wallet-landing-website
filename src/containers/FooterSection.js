@@ -4,6 +4,7 @@ import styled from 'styled-components/macro';
 import { XWalletHeaderLogo, XWalletLogo } from '../assets';
 import XWalletFooterList from '../components/layout/footer/XWalletFooterList';
 import { ITEM_LINKS } from '../constants/itemLinks';
+import { ROUTE_PRIVACY_POLICY } from '../router/routes';
 
 const Container = styled.div`
   display: flex;
@@ -114,7 +115,6 @@ const GridColumn = styled(Grid.Column)`
       `${mediaQueries.mobilePixel + 1}px`}) {
     margin-bottom: 32px;
   }
-
 `;
 
 const FooterSection = () => {
@@ -122,8 +122,8 @@ const FooterSection = () => {
     <Container id='footer'>
       <FooterContainer>
         <FooterGrid>
-        <GridColumn>
-        <XWalletLogo />
+          <GridColumn>
+            <XWalletLogo />
           </GridColumn>
           <GridColumn>
             <Title>X-Wallet</Title>
@@ -136,7 +136,7 @@ const FooterSection = () => {
                 <IconItem
                   to='/'
                   key={index}
-                  style={{ paddingBottom: 9,cursor:'pointer' }}
+                  style={{ paddingBottom: 9, cursor: 'pointer' }}
                   onClick={() =>
                     window.open(social.link, '_blank', 'noopener,noreferrer')
                   }
@@ -159,7 +159,18 @@ const FooterSection = () => {
           />
           <BottomContainer>
             <XWalletHeaderLogo />
-            <PrivacyElement>©2021, Privacy Policy</PrivacyElement>
+            <PrivacyElement
+              style={{ cursor: 'pointer' }}
+              onClick={() =>
+                window.open(
+                  ROUTE_PRIVACY_POLICY,
+                  '_blank',
+                  'noopener,noreferrer'
+                )
+              }
+            >
+              ©2022, Privacy Policy
+            </PrivacyElement>
           </BottomContainer>
         </FooterBottomContainer>
       </FooterContainer>
