@@ -14,9 +14,11 @@ import {
   ROUTE_HOW_TO_INSTALL,
   ROUTE_INDEX,
   ROUTE_PRIVACY_POLICY,
+  ROUTE_TERMS_OF_USE,
 } from './routes';
 import HowToInstallContainer from '../containers/HowToInstallContainer';
 import PrivacyPolicyContainer from '../containers/PrivacyPolicyContainer';
+import TermsOfUseContainer from '../containers/TermsOfUseContainer';
 const Container = styled.div`
   display: flex;
   height: 100%;
@@ -41,6 +43,11 @@ export const AppRouter = () => {
               exact
               path={ROUTE_PRIVACY_POLICY}
               component={PrivacyPolicyContainer}
+            />
+            <Route
+              exact
+              path={ROUTE_TERMS_OF_USE}
+              component={TermsOfUseContainer}
             />
             <Redirect to={ROUTE_INDEX} />
           </Switch>

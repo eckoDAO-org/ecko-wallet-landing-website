@@ -27,7 +27,7 @@ const Intro = styled(STYColumnContainer)`
   margin-bottom: 72px;
 `;
 
-const HowToInstallContainer = () => {
+const PrivacyPolicyContainer = () => {
   return (
     <OuterContainer id='ux'>
       <XWalletLogo style={{ marginBottom: 32 }} />
@@ -290,4 +290,4 @@ const HowToInstallContainer = () => {
   );
 };
 
-export default HowToInstallContainer;
+export default PrivacyPolicyContainer;
