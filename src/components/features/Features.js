@@ -14,6 +14,7 @@ const FeaturesWrapper = styled(FlexContainer)`
   background-image: ${`url(${gradientBackground})`};
   padding: 120px 0px;
   border-radius: 40px;
+  z-index: 1;
   /* padding-bottom: 90px; */
 
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {

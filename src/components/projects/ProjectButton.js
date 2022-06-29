@@ -6,6 +6,9 @@ import Label from '../shared/Label';
 
 const ProjectButtonContainer = styled(FlexContainer)`
   background: #393b4f60 0% 0% no-repeat padding-box;
+  &:hover {
+    background: #393b4f99 0% 0% no-repeat padding-box;
+  }
   border-radius: 250px;
   padding: 24px;
   min-width: 268px;

@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import { XWalletHeaderLogo, XWalletLetterLogo } from '../../../assets';
-import { XWALLET_DOWNLOAD_LINK } from '../../../constants/itemLinks';
+import { XWALLET_CHROME_DOWNLOAD_LINK } from '../../../constants/itemLinks';
 import useWindowSize from '../../../hooks/useWindowSize';
 import { ROUTE_INDEX } from '../../../router/routes';
 import GradientContainer from '../../shared/GradientContainer';
@@ -81,7 +81,7 @@ const CommonHeader = ({ className, isSticky, stopTimer, startTimer }) => {
       {width < 880 && <Hamburger />}
       {width > 880 && (
         <GradientContainer
-          onClick={() => window.open(XWALLET_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}
+          onClick={() => window.open(XWALLET_CHROME_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}
           style={{ height: 38, padding: 0, width: 180 }}
         >
           <Label fontSize={13} className="rainbow" size="small" fontFamily="syncopate">

@@ -1,11 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { AndroidIcon, BraveIcon, ChromeIcon, DesktopDownloadSVG, IosIcon, MobileDownloadSVG } from '../../assets';
+import { AndroidIcon, BraveIcon, ChromeIcon, IosIcon } from '../../assets';
 import { FlexContainer } from '../shared/Container';
 import CustomButton from '../shared/CustomButton';
 import Label from '../shared/Label';
 import desktopAppImage from '../../assets/images/analytics/desktop.png';
 import mobileAppImage from '../../assets/images/analytics/mobile.png';
+import {
+  XWALLET_ANDROID_DOWNLOAD_LINK,
+  XWALLET_BRAVE_DOWNLOAD_LINK,
+  XWALLET_CHROME_DOWNLOAD_LINK,
+  XWALLET_IOS_DOWNLOAD_LINK,
+} from '../../constants/itemLinks';
 
 const DownloadSectionContainer = styled(FlexContainer)`
   @media (min-width: 1500px) {
@@ -98,14 +104,28 @@ const DownloadSection = () => {
           {/* CHROME */}
           <div className="flex column justify-sb align-ce" style={{ marginRight: 24 }}>
             <ChromeIcon style={{ marginBottom: 16 }} />
-            <CustomButton border="none" background="#423C6B" onClick={() => {}}>
+            <CustomButton
+              className="pointer"
+              border="none"
+              background="#423C6B"
+              onClick={() => {
+                window.open(XWALLET_CHROME_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer');
+              }}
+            >
               CHROME
             </CustomButton>
           </div>
           {/* BRAVE */}
           <div className="flex column justify-sb align-ce">
             <BraveIcon style={{ marginBottom: 16 }} />
-            <CustomButton border="none" background="#423C6B" onClick={() => {}}>
+            <CustomButton
+              className="pointer"
+              border="none"
+              background="#423C6B"
+              onClick={() => {
+                window.open(XWALLET_BRAVE_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer');
+              }}
+            >
               BRAVE
             </CustomButton>
           </div>
@@ -126,11 +146,22 @@ const DownloadSection = () => {
         </Label>
         <div className="flex justify-ce w-100" style={{ zIndex: 1 }}>
           {/* IOS */}
-          <div className="flex column justify-sb align-ce pointer" style={{ marginRight: 24 }} onClick={() => {}}>
+          <div
+            className="flex column justify-sb align-ce pointer"
+            style={{ marginRight: 24 }}
+            onClick={() => {
+              window.open(XWALLET_IOS_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer');
+            }}
+          >
             <IosIcon className="scale-svg" />
           </div>
-          {/* ANDROIDx   */}
-          <div className="flex column justify-sb align-ce pointer" onClick={() => {}}>
+          {/* ANDROID   */}
+          <div
+            className="flex column justify-sb align-ce pointer"
+            onClick={() => {
+              window.open(XWALLET_ANDROID_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer');
+            }}
+          >
             <AndroidIcon className="scale-svg" />
           </div>
         </div>

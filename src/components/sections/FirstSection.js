@@ -33,6 +33,7 @@ const BackgroundXWalletContainer2 = styled(FlexContainer)`
 `;
 
 const IconContainer = styled.div`
+  cursor: pointer;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
     svg {
       height: 23px;
@@ -83,12 +84,36 @@ const FirstSection = () => {
             </Label>
             <FlexContainer className="w-100 justify-sb" mobileStyle={{ padding: `0 16px` }}>
               <FlexContainer gap={24}>
-                <IconContainer>{FOOTER_DOWNLOAD.items[0].icon}</IconContainer>
-                <IconContainer>{FOOTER_DOWNLOAD.items[1].icon}</IconContainer>
+                <IconContainer
+                  onClick={() => {
+                    window.open(FOOTER_DOWNLOAD.items[0].href, '_blank', 'noopener,noreferrer');
+                  }}
+                >
+                  {FOOTER_DOWNLOAD.items[0].icon}
+                </IconContainer>
+                <IconContainer
+                  onClick={() => {
+                    window.open(FOOTER_DOWNLOAD.items[1].href, '_blank', 'noopener,noreferrer');
+                  }}
+                >
+                  {FOOTER_DOWNLOAD.items[1].icon}
+                </IconContainer>
               </FlexContainer>
               <FlexContainer gap={24}>
-                <IconContainer>{FOOTER_DOWNLOAD.items[2].icon}</IconContainer>
-                <IconContainer>{FOOTER_DOWNLOAD.items[3].icon}</IconContainer>
+                <IconContainer
+                  onClick={() => {
+                    window.open(FOOTER_DOWNLOAD.items[2].href, '_blank', 'noopener,noreferrer');
+                  }}
+                >
+                  {FOOTER_DOWNLOAD.items[2].icon}
+                </IconContainer>
+                <IconContainer
+                  onClick={() => {
+                    window.open(FOOTER_DOWNLOAD.items[3].href, '_blank', 'noopener,noreferrer');
+                  }}
+                >
+                  {FOOTER_DOWNLOAD.items[3].icon}
+                </IconContainer>
               </FlexContainer>
             </FlexContainer>
           </FlexContainer>
