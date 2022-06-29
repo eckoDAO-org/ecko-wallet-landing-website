@@ -1,5 +1,4 @@
-import { createGlobalStyle, css } from 'styled-components';
-import browserDetection from '../utils/browserDetection';
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
     *, *:before, *:after {

@@ -6,7 +6,6 @@ import useWindowSize from '../../../hooks/useWindowSize';
 import theme from '../../../styles/theme';
 import Socials from './Socials';
 import Copyrights from './Copyrights';
-import NavigationItems from './NavigationItems';
 import { FlexContainer } from '../../shared/Container';
 
 const FooterSection = () => {
@@ -17,10 +16,10 @@ const FooterSection = () => {
       className="relative justify-sb"
       tabletClassName="column align-ce"
       mobileClassName="column align-ce"
-      style={{ backgroundColor: '#000000' }}
-      desktopStyle={{ padding: '80px 90px' }}
-      tabletStyle={{ padding: '80px 90px' }}
-      mobileStyle={{ padding: '80px 0px' }}
+      style={{ backgroundColor: '#000000', marginTop: -50 }}
+      desktopStyle={{ padding: '130px 90px 80px' }}
+      tabletStyle={{ padding: '130px 90px 80px' }}
+      mobileStyle={{ padding: '130px 0px 80px' }}
     >
       {width >= theme.mediaQueries.desktopPixel && <Copyrights />}
 

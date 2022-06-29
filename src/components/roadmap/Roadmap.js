@@ -56,7 +56,7 @@ const KaddexRoadmapContainer = styled(FlexContainer)`
 const Roadmap = () => {
   const [width] = useWindowSize();
   const TRANSLATE_X_OFFSET = width <= theme.mediaQueries.mobilePixel ? 50 : 64;
-  const [translateX, setTranslateX] = useState(`${TRANSLATE_X_OFFSET}px`);
+  const [, setTranslateX] = useState(`${TRANSLATE_X_OFFSET}px`);
   const [translateXRoadmap, setTranslateXRoadmap] = useState(0);
 
   const [selectedRoadmapId, setSelectedRoadmapId] = useState(R_2022.id);
@@ -78,7 +78,7 @@ const Roadmap = () => {
   }, [selectedRoadmapId, roadmapsContainer]);
 
   return (
-    <RoadmapWrapper id="roadmap" gap={50} className="column scroll-mt relative" desktopPixel={1460}>
+    <RoadmapWrapper id="roadmap" gap={50} className="column scroll-mt relative z1" desktopPixel={1460}>
       <FlexContainer className="w-100 justify-sb">
         <Label
           size="big"
