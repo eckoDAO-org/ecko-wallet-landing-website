@@ -1,6 +1,5 @@
 import React from 'react';
 import { FlexContainer } from '../shared/Container';
-import backgroundFirstSection from '../../assets/images/backgrounds/background-first-section.png';
 import xWalletBackground from '../../assets/images/backgrounds/x-background.svg';
 import frontendXWallet from '../../assets/images/first-section/frontend-x-wallet.png';
 import Label from '../shared/Label';
@@ -9,19 +8,12 @@ import styled from 'styled-components';
 import { FOOTER_DOWNLOAD } from '../../constants/footer';
 
 const BackgroundContainer = styled(FlexContainer)`
-  background: transparent linear-gradient(42deg, #f3bd2f3c 0%, #fa41a53c 47%, #04c9e452 100%) 0% 0% no-repeat padding-box;
-  background-image: ${`url(${backgroundFirstSection})`};
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  filter: blur(50px);
-  height: 100vh;
+  background: transparent 0% 0% no-repeat padding-box;
   margin-bottom: 64px;
-`;
-const BackgroundXWalletContainer = styled(FlexContainer)`
-  background: transparent linear-gradient(30deg, #00000070 0%, #20264e 100%) 0% 0% no-repeat padding-box;
-  height: 100%;
-  z-index: 1;
+  height: 100vh;
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
+    height: calc(100vh - 96px);
+  }
 `;
 const BackgroundXWalletContainer2 = styled(FlexContainer)`
   background-image: ${`url(${xWalletBackground})`};
@@ -29,6 +21,9 @@ const BackgroundXWalletContainer2 = styled(FlexContainer)`
   background-size: contain;
   background-position: center;
   height: 100vh;
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
+    height: calc(100vh - 96px);
+  }
   z-index: 1;
 `;
 
@@ -59,9 +54,7 @@ const FirstSection = () => {
 
   return (
     <>
-      <BackgroundContainer className="  w-100 column align-ce justify-ce">
-        <BackgroundXWalletContainer className=" w-100 column align-ce justify-ce"></BackgroundXWalletContainer>
-      </BackgroundContainer>
+      <BackgroundContainer className="  w-100 column align-ce justify-ce"></BackgroundContainer>
       <BackgroundXWalletContainer2 className="absolute w-100 justify-ce">
         <FlexContainer
           className="w-100 column align-ce"
@@ -71,8 +64,23 @@ const FirstSection = () => {
           desktopStyle={{ padding: '70px 174px' }}
           mobileStyle={{ padding: '0px 24px' }}
         >
-          <Label fontFamily="syncopate" size="huge" style={{ letterSpacing: '-0.05em', textAlign: 'center' }}>
-            THE KADENA ECOSYSTEM GATEWAY
+          <Label
+            fontFamily="syncopate"
+            size="huge"
+            className="justify-ce wrap"
+            style={{ letterSpacing: '-0.05em', textAlign: 'center', whiteSpace: 'wrap' }}
+          >
+            THE
+            <Label
+              className="rainbow"
+              gradientColors={['#FFA900', '#f9b317', '#F3BD2F']}
+              fontFamily="syncopate"
+              size="huge"
+              style={{ margin: '0px 16px' }}
+            >
+              KADENA
+            </Label>
+            ECOSYSTEM GATEWAY
           </Label>
 
           <img src={frontendXWallet} style={{ width: getWidth() }} alt="" />

@@ -18,9 +18,10 @@ const RoadmapWrapper = styled(FlexContainer)`
   background-position: center;
   width: 100%;
   background-image: ${`url(${backgroundroadmap})`};
-  border-radius: 60px;
+  border-radius: 40px;
   padding-top: 100px;
   padding-bottom: 90px;
+  box-shadow: 0px 0px 99px #0d0e2699;
 
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {
     padding: 80px 0px;

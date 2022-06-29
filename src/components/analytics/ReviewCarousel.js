@@ -65,7 +65,7 @@ const ReviewCarousel = () => {
   const Review = ({ children }) => (
     <FlexContainer gap={getSize(20, 20, 40, 40)} className="column w-100 swiper-slide justify-ce align-ce ">
       <OpenQuoteIcon className="self-align-start" height={getSize(32, 32, 78, 78)} width={getSize(32, 32, 78, 78)} />
-      <Label style={{ opacity: 0.2 }} size="medium" fontFamily="syncopate" labelStyle>
+      <Label style={{ opacity: 0.6 }} size="medium" fontFamily="syncopate" labelStyle>
         {children}
       </Label>
       <CloseQuoteIcon className="self-align-end" height={getSize(32, 32, 78, 78)} width={getSize(32, 32, 78, 78)} />

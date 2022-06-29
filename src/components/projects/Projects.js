@@ -13,6 +13,8 @@ const BackgroundContainer = styled(FlexContainer)`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  box-shadow: 0px 0px 99px #0d0e2699;
+
   @media (min-width: 1500px) {
     padding: 120px 174px;
   }

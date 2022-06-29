@@ -2,15 +2,35 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/macro';
 import Header from './header/Header';
 import FooterSection from './footer/FooterSection';
-import introductionBackground from '../../assets/images/backgrounds/introduction-background.png';
-import { ROUTE_INDEX } from '../../router/routes';
 import { useLocation } from 'react-router-dom';
 import { FlexContainer } from '../shared/Container';
 import { GoTopIcon } from '../../assets';
 
+const BackgroundGradientContainer = styled(FlexContainer)`
+  background: transparent linear-gradient(42deg, #f3bd2f3c 0%, #fa41a53c 47%, #04c9e452 100%) 0% 0% no-repeat padding-box;
+  background-image: url(./background-first-section.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(50px);
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+`;
+
 const MainContent = styled.div`
   height: 100%;
   width: 100%;
+  z-index: 100;
+`;
+
+const BackgroundXWalletContainer = styled(FlexContainer)`
+  background: transparent linear-gradient(30deg, #00000070 0%, #20264e 100%) 0% 0% no-repeat padding-box;
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+  z-index: 1;
 `;
 
 const GoTopButton = styled.div`
@@ -42,7 +62,6 @@ const GoTopButton = styled.div`
 `;
 
 const Layout = ({ children }) => {
-  const location = useLocation();
   const [seconds, setSeconds] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
 
@@ -94,18 +113,18 @@ const Layout = ({ children }) => {
 
   return (
     <FlexContainer className="w-100 h-100 relative" id="main-container">
-      <img
-        src={introductionBackground}
-        style={{ position: 'absolute', zIndex: -1, height: location?.pathname !== ROUTE_INDEX ? '100%' : 1375, width: '100%' }}
-        alt=""
-      />
       <Header isSticky={isSticky} stopTimer={stopTimer} startTimer={startTimer} />
-      <MainContent>{children}</MainContent>
-      <FooterSection />
 
-      <GoTopButton isSticky={isSticky} onClick={goToTop}>
-        <GoTopIcon />
-      </GoTopButton>
+      <BackgroundGradientContainer className=" absolute"></BackgroundGradientContainer>
+      <BackgroundXWalletContainer className=" absolute"></BackgroundXWalletContainer>
+      <FlexContainer className="w-100 h-100 relative z1 column">
+        <MainContent>{children}</MainContent>
+        <FooterSection />
+
+        <GoTopButton isSticky={isSticky} onClick={goToTop}>
+          <GoTopIcon />
+        </GoTopButton>
+      </FlexContainer>
     </FlexContainer>
   );
 };

@@ -15,16 +15,18 @@ const FeaturesWrapper = styled(FlexContainer)`
   padding: 120px 0px;
   border-radius: 40px;
   z-index: 1;
+  box-shadow: 0px 0px 99px #0d0e2699;
+
   /* padding-bottom: 90px; */
 
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {
-    padding: 80px 0px;
+    padding: 80px 0px 0px;
   }
 `;
 
 const Features = () => {
   return (
-    <FeaturesWrapper id="features" mobileClassName="column" mobileStyle={{ borderRadius: 60 }} tabletClassName="column">
+    <FeaturesWrapper id="features" mobileClassName="column" tabletClassName="column">
       <FeaturesGrid />
       <HandPhone />
     </FeaturesWrapper>

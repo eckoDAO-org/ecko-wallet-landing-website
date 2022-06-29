@@ -5,7 +5,7 @@ import Label from '../../shared/Label';
 const FooterItemsList = ({ title, items, color, children }) => {
   return (
     <FlexContainer className="column" columnGap={30} gap={30}>
-      <Label fontFamily="syncopate" fontSize={15} style={{ marginBottom: 10 }}>
+      <Label fontFamily="syncopate" size="small" style={{ marginBottom: 10 }}>
         {title}
       </Label>
       {children ||

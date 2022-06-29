@@ -1,4 +1,4 @@
-import { DiscordIcon, GithubIcon, MediumIcon, TelegramIcon, TwitterIcon } from '../assets';
+import { DiscordIcon, GithubIcon, MediumIcon, TelegramIcon, TwitterIcon, YoutubeIcon } from '../assets';
 
 export const TWITTER_KADDEX_OFFICIAL = {
   name: '@kaddexofficial',
@@ -24,7 +24,7 @@ const MEDIUM = {
 
 const GITHUB = {
   name: 'Github',
-  link: 'https://github.com/kaddex-org/x-wallet-landing',
+  link: 'https://github.com/kaddex-org/x-wallet',
   icon: <GithubIcon />,
 };
 
@@ -33,10 +33,10 @@ const TELEGRAM = {
   link: 'https://t.me/KaddeXofficial',
   icon: <TelegramIcon />,
 };
-// const YOUTUBE = {
-//   name: 'Youtube',
-//   link: 'https://www.youtube.com/channel/UCqne8XRfTGTQMr_9BXyfHBg',
-//   icon: <YoutubeIcon />,
-// };
+const YOUTUBE = {
+  name: 'Youtube',
+  link: 'https://www.youtube.com/channel/UCqne8XRfTGTQMr_9BXyfHBg',
+  icon: <YoutubeIcon />,
+};
 
-export const SOCIAL_MEDIA = [TWITTER, DISCORD, TELEGRAM, MEDIUM, GITHUB];
+export const SOCIAL_MEDIA = [TWITTER, DISCORD, YOUTUBE, TELEGRAM, MEDIUM, GITHUB];

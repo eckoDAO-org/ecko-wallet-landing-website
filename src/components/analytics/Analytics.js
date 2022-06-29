@@ -7,7 +7,7 @@ import DownloadSection from './DownloadSection';
 import ReviewCarousel from './ReviewCarousel';
 
 const BackgroundContainer = styled(FlexContainer)`
-  background: #20264e 0% 0% no-repeat padding-box;
+  background: transparent #20264e 0% 0% no-repeat padding-box;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -44,7 +44,7 @@ const DownloadBanner = () => {
         <FifteenThousandsDownloadSVG />
         <Label
           className="rainbow"
-          fontSize={65 * (width / height) > 100 ? 100 : 65 * (width / height)}
+          size="banner"
           fontFamily="syncopate"
           desktopStyle={{ width: 'fit-content' }}
           gradientColors={['#b766b6', '#f95197', '#f68861']}

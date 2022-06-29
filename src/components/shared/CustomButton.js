@@ -21,7 +21,7 @@ const STYStyledButton = styled(SUIButton)`
     if (disabled) return 'transparent !important';
     return buttonBackgroundGradient + '!important';
   }};
-  border-radius: 10px !important;
+  border-radius: 250px !important;
   opacity: 1 !important;
   border: ${({ theme: { colors }, $border }) => {
     if ($border) return $border + ' !important';
@@ -34,6 +34,9 @@ const STYStyledButton = styled(SUIButton)`
       fill: ${({ theme: { colors } }) => colors.white};
     }
   }
+  &:hover {
+    background: ${({ hoverColor }) => hoverColor + '!important'};
+  }
 `;
 
 const CustomButton = ({
@@ -44,6 +47,7 @@ const CustomButton = ({
   buttonStyle,
   background,
   color,
+  hoverColor,
   label,
   fontSize,
   children,
@@ -57,6 +61,7 @@ const CustomButton = ({
       disabled={disabled}
       background={background}
       $color={color}
+      hoverColor={hoverColor}
       fontSize={fontSize}
       style={buttonStyle}
       onClick={onClick}

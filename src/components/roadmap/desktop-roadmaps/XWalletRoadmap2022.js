@@ -187,7 +187,7 @@ const XWalletRoadmap2022 = ({ className }) => {
     >
       <g id="Roadmap" transform="translate(5 -190)">
         <g id="Group_68777" data-name="Group 68777">
-          <g id="Group_69201" data-name="Group 69201" transform="translate(-60 -841)">
+          <g id="Group_69201" data-name="Group 69201" transform="translate(-160 -841)">
             <g id="Group_69198" data-name="Group 69198" opacity="0.1">
               <path id="Path_44497" data-name="Path 44497" d="M136,1047l-72-36v72Z" fill={theme.colors.primary} />
               <path id="Path_44498" data-name="Path 44498" d="M244,1047l-72-36v72Z" transform="translate(-2)" fill={theme.colors.primary} />
@@ -198,6 +198,7 @@ const XWalletRoadmap2022 = ({ className }) => {
               <path id="Path_44503" data-name="Path 44503" d="M784,1047l-72-36v72Z" transform="translate(-15)" fill={theme.colors.primary} />
             </g>
           </g>
+
           <path
             id="Path_43816"
             data-name="Path 43816"
@@ -208,8 +209,8 @@ const XWalletRoadmap2022 = ({ className }) => {
           <line
             id="Line_585"
             data-name="Line 585"
-            x2="1593.5"
-            transform="translate(-5 206)"
+            x2="1890"
+            transform="translate(-300 206)"
             fill="none"
             stroke={theme.colors.primary}
             strokeWidth="4"
@@ -236,7 +237,6 @@ const XWalletRoadmap2022 = ({ className }) => {
             stroke={theme.colors.primary}
             strokeWidth="4"
           />
-
           {Object.keys(CONFIGURATION).map((config, i) => {
             const nodeConfig = CONFIGURATION[config];
             return (

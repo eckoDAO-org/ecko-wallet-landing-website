@@ -33,9 +33,7 @@ export default createGlobalStyle`
       background-attachment: fixed;
       opacity: 1;
       background-color: ${({ theme: { colors } }) => colors.darkBlue};
-      overflow-x: hidden;
-
-      
+      overflow-x: hidden;        
     };
 
     #root {
@@ -194,6 +192,9 @@ export default createGlobalStyle`
   }
   .margin-auto{
    margin:auto;
+  }
+  .wrap{
+   flex-wrap:wrap;
   }
 
 `;

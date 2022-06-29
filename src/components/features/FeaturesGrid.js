@@ -25,8 +25,8 @@ const FeaturesGrid = () => {
     <Grid
       className="w-100 align-fs justify-fs"
       desktopStyle={{ paddingLeft: 138 }}
-      tabletStyle={{ display: 'flex', flexDirection: 'column', padding: '0px 48px 50px' }}
-      mobileStyle={{ display: 'flex', flexDirection: 'column', padding: '0px 24px 50px' }}
+      tabletStyle={{ display: 'flex', flexDirection: 'column', padding: '0px 48px' }}
+      mobileStyle={{ display: 'flex', flexDirection: 'column', padding: '0px 24px' }}
     >
       {Object.values(FEATURES).map((item, index) => (
         <React.Fragment key={index}>

@@ -20,6 +20,7 @@ export const getColor = (color) => {
 };
 export const configuration = {
   fontSizes: {
+    banner: { desktop: 100, tablet: 64, mobile: 32 },
     huge: { desktop: 50, tablet: 40, mobile: 25 },
     big: { desktop: 40, tablet: 30, mobile: 20 },
     large: { desktop: 34, tablet: 28, mobile: 22 },
@@ -28,6 +29,17 @@ export const configuration = {
     small: { desktop: 15, tablet: 13, mobile: 13 },
     tiny: { desktop: 13, tablet: 10, mobile: 10 },
     nano: { desktop: 12, tablet: 10, mobile: 10 },
+  },
+  letterSpacing: {
+    banner: { desktop: -4, tablet: -2, mobile: -2 },
+    huge: { desktop: -2, tablet: -1, mobile: -1 },
+    big: { desktop: -2, tablet: -1, mobile: -1 },
+    large: { desktop: -2, tablet: -1, mobile: -1 },
+    medium: { desktop: -2, tablet: -1, mobile: -1 },
+    normal: { desktop: -1, tablet: -1, mobile: -1 },
+    small: { desktop: 0, tablet: -1, mobile: -1 },
+    tiny: { desktop: 0, tablet: 0, mobile: 0 },
+    nano: { desktop: 0, tablet: 0, mobile: 0 },
   },
   lineHeight: {
     huge: { desktop: 70, tablet: 50, mobile: 31.25 },

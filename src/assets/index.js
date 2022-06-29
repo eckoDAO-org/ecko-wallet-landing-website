@@ -62,3 +62,4 @@ export { ReactComponent as CloseQuoteIcon } from './images/analytics/quote-close
 export { ReactComponent as MobileDownloadSVG } from './images/analytics/mobile.svg';
 export { ReactComponent as DesktopDownloadSVG } from './images/analytics/desktop.svg';
 export { ReactComponent as FifteenThousandsDownloadSVG } from './images/analytics/15k+.svg';
+export { ReactComponent as FifteenThousandsDownloadMobileSVG } from './images/analytics/15k-mobile.svg';

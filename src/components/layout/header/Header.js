@@ -25,7 +25,6 @@ const Container = styled(FlexContainer)`
     transform: ${({ isSticky }) => (isSticky ? 'translateY(-105px)' : 'translateY(-200px)')};
     position: fixed;
     background-color: rgba(7, 6, 16, 0.5);
-    z-index: 50;
     width: 100%;
 
     -webkit-backdrop-filter: blur(10px);
@@ -43,14 +42,14 @@ const Container = styled(FlexContainer)`
 
 const Header = ({ isSticky, stopTimer, startTimer }) => {
   return (
-    <div>
+    <div style={{ zIndex: 100 }}>
       <CommonHeader />
       <CommonHeader className="sticky" isSticky={isSticky} stopTimer={stopTimer} startTimer={startTimer} />
     </div>
   );
 };
 
-const CommonHeader = ({ className, isSticky, stopTimer, startTimer }) => {
+export const CommonHeader = ({ className, isSticky, stopTimer, startTimer }) => {
   const history = useHistory();
   const [width] = useWindowSize();
 

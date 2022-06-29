@@ -17,14 +17,17 @@ const STYText = styled.span`
 
   font-size: ${({ size, fontSize }) => (!fontSize ? getConfiguration('fontSizes', size, 'desktop') : fontSize)}px;
   line-height: ${({ size }) => size && getConfiguration('lineHeight', size, 'desktop')}px;
+  letter-spacing: ${({ size }) => size && getConfiguration('letterSpacing', size, 'desktop')}px;
 
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
     font-size: ${({ size, fontSize }) => (!fontSize ? getConfiguration('fontSizes', size, 'tablet') : fontSize)}px;
     line-height: ${({ size }) => size && getConfiguration('lineHeight', size, 'tablet')}px;
+    letter-spacing: ${({ size }) => size && getConfiguration('letterSpacing', size, 'tablet')}px;
   }
   @media (max-width: ${({ theme: { mediaQueries }, mobilePixel }) => (mobilePixel ? `${mobilePixel - 1}px` : `${mediaQueries.mobilePixel - 1}px`)}) {
     font-size: ${({ size, fontSize }) => (!fontSize ? getConfiguration('fontSizes', size, 'mobile') : fontSize)}px;
     line-height: ${({ size }) => size && getConfiguration('lineHeight', size, 'mobile')}px;
+    letter-spacing: ${({ size }) => size && getConfiguration('letterSpacing', size, 'mobile')}px;
   }
 
   svg {
