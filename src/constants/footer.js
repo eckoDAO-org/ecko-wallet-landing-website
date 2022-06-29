@@ -1,5 +1,6 @@
 import { XWALLET_ANDROID_DOWNLOAD_LINK, XWALLET_BRAVE_DOWNLOAD_LINK, XWALLET_CHROME_DOWNLOAD_LINK, XWALLET_IOS_DOWNLOAD_LINK } from './itemLinks';
 import { IosIcon, AndroidIcon, ChromeIcon, BraveIcon } from '../assets';
+import { ROUTE_PRIVACY_POLICY, ROUTE_TERMS_OF_USE } from '../router/routes';
 
 export const FOOTER_ABOUT = {
   title: 'ABOUT',
@@ -7,19 +8,27 @@ export const FOOTER_ABOUT = {
   items: [
     {
       text: 'Features',
-      href: 'features',
+      href: '/#features',
     },
     {
       text: 'Projects',
-      href: 'projects',
+      href: '/#projects',
     },
     {
       text: 'Analytics',
-      href: 'analytics',
+      href: '/#analytics',
     },
     {
       text: 'Roadmap',
-      href: 'roadmap',
+      href: '/#roadmap',
+    },
+    {
+      text: 'Privacy & Policy',
+      href: ROUTE_PRIVACY_POLICY,
+    },
+    {
+      text: 'Terms of use',
+      href: ROUTE_TERMS_OF_USE,
     },
   ],
 };

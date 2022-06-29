@@ -1,7 +1,7 @@
 import React from 'react';
 import Stripes from '../../shared/Stripes';
 import FooterItemsList from './FooterItemsList';
-import { FOOTER_DOWNLOAD, FOOTER_LEARN } from '../../../constants/footer';
+import { FOOTER_ABOUT, FOOTER_DOWNLOAD, FOOTER_LEARN } from '../../../constants/footer';
 import useWindowSize from '../../../hooks/useWindowSize';
 import theme from '../../../styles/theme';
 import Socials from './Socials';
@@ -26,9 +26,7 @@ const FooterSection = () => {
 
       <FlexContainer gap={80} desktopStyle={{ margin: '0 50px' }} tabletClassName="column" mobileClassName="column">
         <FlexContainer gap={80} columnGap={50}>
-          <FooterItemsList title="About">
-            <NavigationItems fontSize={13} color="yellow" disableHover hideKaddex />
-          </FooterItemsList>
+          <FooterItemsList {...FOOTER_ABOUT} />
           <FooterItemsList {...FOOTER_DOWNLOAD} />
         </FlexContainer>
 

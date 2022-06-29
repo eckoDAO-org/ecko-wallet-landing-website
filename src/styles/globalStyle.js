@@ -193,5 +193,8 @@ export default createGlobalStyle`
   .z-1{
    z-index: -1;
   }
+  .margin-auto{
+   margin:auto;
+  }
 
 `;
