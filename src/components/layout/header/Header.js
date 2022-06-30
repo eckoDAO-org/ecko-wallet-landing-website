@@ -2,7 +2,6 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import { XWalletHeaderLogo } from '../../../assets';
-import { XWALLET_CHROME_DOWNLOAD_LINK } from '../../../constants/itemLinks';
 import useWindowSize from '../../../hooks/useWindowSize';
 import { ROUTE_INDEX } from '../../../router/routes';
 import GradientContainer from '../../shared/GradientContainer';

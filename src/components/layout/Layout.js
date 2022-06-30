@@ -4,6 +4,8 @@ import Header from './header/Header';
 import FooterSection from './footer/FooterSection';
 import { FlexContainer } from '../shared/Container';
 import { GoTopIcon } from '../../assets';
+import { useHistory } from 'react-router-dom';
+import { ROUTE_INDEX } from '../../router/routes';
 
 const BackgroundGradientContainer = styled(FlexContainer)`
   background: transparent linear-gradient(42deg, #f3bd2f3c 0%, #fa41a53c 47%, #04c9e452 100%) 0% 0% no-repeat padding-box;
@@ -40,6 +42,7 @@ const GoTopButton = styled.div`
   line-height: 0;
   opacity: 0.8;
   cursor: pointer;
+  z-index: 100;
 
   transition: all 0.5s ease;
   animation: smoothOut 1s;
@@ -61,6 +64,7 @@ const GoTopButton = styled.div`
 `;
 
 const Layout = ({ children }) => {
+  const history = useHistory();
   const [seconds, setSeconds] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
 
@@ -80,7 +84,7 @@ const Layout = ({ children }) => {
   const startTimer = () => {
     const interval = setInterval(() => {
       setSeconds((seconds) => seconds + 1);
-    }, 2000);
+    }, 5000);
     setIntervalId(interval);
   };
 
@@ -96,7 +100,7 @@ const Layout = ({ children }) => {
   }, [isSticky]);
 
   useEffect(() => {
-    if (seconds === 2) {
+    if (seconds === 5) {
       setIsSticky(false);
       stopTimer();
     }
@@ -104,6 +108,7 @@ const Layout = ({ children }) => {
   }, [seconds]);
 
   const goToTop = () => {
+    history.push(ROUTE_INDEX);
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
