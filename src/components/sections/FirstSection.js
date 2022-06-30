@@ -90,8 +90,14 @@ const FirstSection = () => {
               The Kadena-native Wallet will allow for seamless interactions with all <br /> Kadena’s Network Dapps, through its user-friendly and
               intuitive design.
             </Label>
-            <FlexContainer className="w-100 justify-sb" mobileStyle={{ padding: `0 16px` }}>
-              <FlexContainer gap={24}>
+            <FlexContainer
+              className="w-100"
+              desktopClassName="justify-sb"
+              mobileClassName="justify-sb"
+              tabletClassName="justify-ce"
+              mobileStyle={{ padding: `0 16px` }}
+            >
+              <FlexContainer gap={24} tabletStyle={{ marginRight: 50 }}>
                 <IconContainer
                   onClick={() => {
                     window.open(FOOTER_DOWNLOAD.items[0].href, '_blank', 'noopener,noreferrer');

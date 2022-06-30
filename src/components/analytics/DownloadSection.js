@@ -66,7 +66,6 @@ const DownloadCard = styled(FlexContainer)`
   position: relative;
   background: ${({ backgroundGradient }) => backgroundGradient};
   box-shadow: 0px 0px 99px #20264e99;
-  border-radius: 32px;
   height: 100%;
   justify-content: flex-start;
   align-items: center;
@@ -74,9 +73,15 @@ const DownloadCard = styled(FlexContainer)`
   min-height: 570px;
   @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) and (max-width: 1500px) {
     min-height: 700px;
+    border-radius: 32px;
+  }
+  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
+    min-height: 600px;
+    border-radius: 32px;
   }
   @media (min-width: 1500px) {
     min-height: 1000px;
+    border-radius: 60px;
   }
 `;
 
@@ -84,6 +89,7 @@ const DownloadSection = () => {
   const [width] = useWindowSize();
   return (
     <DownloadSectionContainer
+      id="download"
       className="relative w-100 align-ce justify-ce"
       mobileClassName="column"
       mobileStyle={{ padding: '0px 16px' }}

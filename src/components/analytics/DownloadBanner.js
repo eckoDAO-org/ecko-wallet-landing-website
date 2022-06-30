@@ -4,28 +4,21 @@ import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import gradientBackground from '../../assets/images/backgrounds/gradient-background.png';
 import styled from 'styled-components';
-import { FifteenThousandsDownloadSVG } from '../../assets';
+import { FifteenThousandsDownloadMobileSVG, FifteenThousandsDownloadSVG } from '../../assets';
 import theme from '../../styles/theme';
 
 const DownloadBannerContainer = styled(FlexContainer)`
   @media (min-width: 1500px) {
     padding: 120px 174px 0px;
   }
-
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel + 1}px`}) {
-    svg {
-      height: 100px;
-    }
-  }
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopStyle}px`}) {
-    svg {
-      height: 120px;
-    }
+  svg {
+    width: 100%;
+    height: 100%;
   }
 `;
 
 const DownloadBanner = () => {
-  const [width, height] = useWindowSize();
+  const [width] = useWindowSize();
   return (
     <DownloadBannerContainer
       className="relative column w-100"
@@ -40,15 +33,9 @@ const DownloadBanner = () => {
         alt=""
       />
 
-      <FlexContainer className="justify-ce wrap" style={{ rowGap: 24 }}>
-        <FifteenThousandsDownloadSVG />
-        <Label
-          className="rainbow"
-          size="banner"
-          fontFamily="syncopate"
-          desktopStyle={{ width: 'fit-content' }}
-          gradientColors={['#b766b6', '#f95197', '#f68861']}
-        >
+      <FlexContainer gap={width < theme.mediaQueries.mobilePixel ? 16 : 32} className="justify-ce column align-ce">
+        {width < theme.mediaQueries.mobilePixel ? <FifteenThousandsDownloadMobileSVG /> : <FifteenThousandsDownloadSVG />}
+        <Label className="rainbow" size="banner" fontFamily="syncopate" gradientColors={['#b766b6', '#f95197', '#f68861']}>
           Downloads
         </Label>
       </FlexContainer>

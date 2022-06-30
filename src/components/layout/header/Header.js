@@ -79,10 +79,7 @@ export const CommonHeader = ({ className, isSticky, stopTimer, startTimer }) => 
       )}
       {width < 880 && <Hamburger />}
       {width > 880 && (
-        <GradientContainer
-          onClick={() => window.open(XWALLET_CHROME_DOWNLOAD_LINK, '_blank', 'noopener,noreferrer')}
-          style={{ height: 38, padding: 0, width: 180 }}
-        >
+        <GradientContainer onClick={() => window.open('#download', '_self', 'noopener,noreferrer')} style={{ height: 38, padding: 0, width: 180 }}>
           <Label fontSize={13} className="rainbow" size="small" fontFamily="syncopate">
             Download
           </Label>

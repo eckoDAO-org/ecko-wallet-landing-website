@@ -68,7 +68,7 @@ export const FOOTER_LEARN = {
   items: [
     {
       text: 'Tutorial',
-      href: '/',
+      href: 'https://www.youtube.com/watch?v=829R9FvBAEo',
       target: '_blank',
     },
   ],

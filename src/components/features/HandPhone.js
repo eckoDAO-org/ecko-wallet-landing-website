@@ -8,12 +8,14 @@ const HandPhoneWrapper = styled(FlexContainer)`
 
   .multiply {
     /* mix-blend-mode: multiply; */
+    height: 100%;
+
     @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel - 1}px`}) {
-      max-width: 400px;
-      height: 800px;
+      max-width: 345px;
+      max-height: 800px;
     }
     @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.mobilePixel}px`}) {
-      max-width: 845px;
+      max-width: 756px;
       max-height: 1555px;
     }
 

@@ -19,13 +19,13 @@ const Analytics = () => {
 
   const getGap = (mobile, tablet, desktop) => {
     if (width < 880) return mobile;
-    else if (width > 880 && width < 1500) return tablet;
+    else if (width > 880 && width < 1280) return tablet;
     else return desktop;
   };
   return (
     <BackgroundContainer
       id="analytics"
-      gap={getGap(16, 36, 72)}
+      gap={getGap(36, 36, 72)}
       className="column h-100 w-100 align-ce justify-ce"
       mobileStyle={{ paddingBottom: '130px' }}
       tabletStyle={{ paddingBottom: '130px' }}

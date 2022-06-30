@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components/macro';
 import Header from './header/Header';
 import FooterSection from './footer/FooterSection';
-import { useLocation } from 'react-router-dom';
 import { FlexContainer } from '../shared/Container';
 import { GoTopIcon } from '../../assets';
 
@@ -120,11 +119,10 @@ const Layout = ({ children }) => {
       <FlexContainer className="w-100 h-100 relative z1 column">
         <MainContent>{children}</MainContent>
         <FooterSection />
-
-        <GoTopButton isSticky={isSticky} onClick={goToTop}>
-          <GoTopIcon />
-        </GoTopButton>
       </FlexContainer>
+      <GoTopButton isSticky={isSticky} onClick={goToTop}>
+        <GoTopIcon />
+      </GoTopButton>
     </FlexContainer>
   );
 };
