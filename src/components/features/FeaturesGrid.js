@@ -9,13 +9,9 @@ import { theme } from '../../styles/theme';
 
 const Grid = styled(FlexContainer)`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 0.2fr 0.2fr;
+  grid-template-rows: 0.2fr 0.2fr 0.2fr;
   gap: 0px 0px;
-  grid-template-areas:
-    '. .'
-    '. .'
-    '. .';
 `;
 
 const FeaturesGrid = () => {
@@ -32,10 +28,10 @@ const FeaturesGrid = () => {
         <React.Fragment key={index}>
           <FlexContainer
             key={index}
-            gap={width <= theme.mediaQueries.mobilePixel ? 32 : 56}
+            gap={32}
             className="column"
             desktopStyle={{
-              height: 390,
+              height: 340,
               minWidth: 400,
               padding: '72px 24px',
               borderBottom: index < Object.values(FEATURES).length - 2 && '1px solid #FFFFFF60',

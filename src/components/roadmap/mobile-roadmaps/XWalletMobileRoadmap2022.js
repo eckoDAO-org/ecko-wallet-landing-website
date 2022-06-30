@@ -15,7 +15,7 @@ const Line = styled(FlexContainer)`
     content: '';
     position: absolute;
     width: 3px;
-    height: 64%;
+    height: 58%;
     background: ${({ color }) => getColor(color)};
     top: 0;
     bottom: 0;
@@ -116,13 +116,13 @@ const CONFIGURATION = {
     position: 8,
     text: [{ text: 'Mobile app' }],
     isCompleted: true,
+    isMain: true,
   },
 
   X_WALLET_V2: {
     position: 9,
     text: [{ text: 'X-Wallet v2' }],
-    isCompleted: true,
-    isMain: true,
+    isCompleted: false,
   },
   SWAP_FUNTIONALITY: {
     position: 11,

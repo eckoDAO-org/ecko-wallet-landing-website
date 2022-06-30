@@ -10,7 +10,7 @@ import { FOOTER_DOWNLOAD } from '../../constants/footer';
 const BackgroundContainer = styled(FlexContainer)`
   background: transparent 0% 0% no-repeat padding-box;
   margin-bottom: 64px;
-  height: 100vh;
+  height: calc(100vh - 102px);
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
     height: calc(100vh - 96px);
   }
@@ -20,7 +20,7 @@ const BackgroundXWalletContainer2 = styled(FlexContainer)`
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  height: 100vh;
+  height: calc(100vh - 102px);
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
     height: calc(100vh - 96px);
   }
@@ -28,6 +28,11 @@ const BackgroundXWalletContainer2 = styled(FlexContainer)`
 `;
 
 const IconContainer = styled.div`
+  transition: all 0.3s ease-in-out;
+
+  :hover {
+    transform: scale(1.1);
+  }
   cursor: pointer;
   @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel - 1}px`}) {
     svg {
@@ -61,7 +66,7 @@ const FirstSection = () => {
           desktopClassName="justify-sb"
           mobileClassName="justify-ce"
           tabletClassName="justify-ce"
-          desktopStyle={{ padding: '70px 174px' }}
+          desktopStyle={{ padding: '0px 174px 70px' }}
           mobileStyle={{ padding: '0px 24px' }}
         >
           <Label
@@ -82,14 +87,13 @@ const FirstSection = () => {
             </Label>
             ECOSYSTEM GATEWAY
           </Label>
+          <Label size="small" className="text-center f-wrap" style={{ letterSpacing: '-0.1em' }}>
+            X-Wallet allows seamless interaction with all the Dapps living on the Kadena network
+          </Label>
 
           <img src={frontendXWallet} style={{ width: getWidth() }} alt="" />
 
           <FlexContainer className="column justyfi-ce align-ce">
-            <Label size="small" className="text-center f-wrap" style={{ letterSpacing: '-0.1em', marginBottom: 30 }}>
-              The Kadena-native Wallet will allow for seamless interactions with all <br /> Kadena’s Network Dapps, through its user-friendly and
-              intuitive design.
-            </Label>
             <FlexContainer
               className="w-100"
               desktopClassName="justify-sb"
@@ -97,7 +101,7 @@ const FirstSection = () => {
               tabletClassName="justify-ce"
               mobileStyle={{ padding: `0 16px` }}
             >
-              <FlexContainer gap={24} tabletStyle={{ marginRight: 50 }}>
+              <FlexContainer gap={24} style={{ marginRight: 50 }}>
                 <IconContainer
                   onClick={() => {
                     window.open(FOOTER_DOWNLOAD.items[0].href, '_blank', 'noopener,noreferrer');

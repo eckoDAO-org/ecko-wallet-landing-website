@@ -16,7 +16,7 @@ import useWindowSize from '../../hooks/useWindowSize';
 import theme from '../../styles/theme';
 
 const DownloadSectionContainer = styled(FlexContainer)`
-  @media (min-width: 1500px) {
+  @media (min-width: 1700px) {
     padding: 0px 174px 170px;
   }
 
@@ -35,11 +35,8 @@ const DownloadSectionContainer = styled(FlexContainer)`
       width: 310px;
       height: 370px;
     }
-    @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) and (max-width: 1500px) {
-      height: 400px;
-    }
-    @media (min-width: 1500px) {
-      height: 660px;
+    @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
+      height: 390px;
     }
   }
 
@@ -53,11 +50,8 @@ const DownloadSectionContainer = styled(FlexContainer)`
       width: 410px;
       height: 578px;
     }
-    @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) and (max-width: 1500px) {
+    @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
       height: 80%;
-    }
-    @media (min-width: 1500px) {
-      height: 100%;
     }
   }
 `;
@@ -67,20 +61,24 @@ const DownloadCard = styled(FlexContainer)`
   background: ${({ backgroundGradient }) => backgroundGradient};
   box-shadow: 0px 0px 99px #20264e99;
   height: 100%;
+  border-radius: 32px;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  min-height: 570px;
-  @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) and (max-width: 1500px) {
+  min-height: 580px;
+  @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) and (max-width: ${({ theme: { mediaQueries } }) =>
+      `${mediaQueries.desktopPixel}px`}) {
     min-height: 700px;
     border-radius: 32px;
   }
-  @media (max-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
-    min-height: 600px;
+  @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
+    min-height: 700px;
     border-radius: 32px;
+    border-radius: 60px;
   }
-  @media (min-width: 1500px) {
-    min-height: 1000px;
+  @media (min-width: 1700px) {
+    max-width: 680px;
+    min-height: 700px;
     border-radius: 60px;
   }
 `;
@@ -94,15 +92,15 @@ const DownloadSection = () => {
       mobileClassName="column"
       mobileStyle={{ padding: '0px 16px' }}
       tabletStyle={{ padding: '0px 16px' }}
-      desktopStyle={{ padding: '0px 90px' }}
+      desktopStyle={{ padding: '0px 174px' }}
       gap={width < theme.mediaQueries.mobilePixel ? 50 : 12}
     >
       <DownloadCard
         className="column"
         mobileStyle={{ padding: '32px 16px' }}
-        tabletStyle={{ width: '50%', padding: '32px' }}
-        desktopStyle={{ width: '50%', padding: '64px' }}
-        desktopPixel={1024}
+        tabletStyle={{ width: '60%', padding: '32px' }}
+        desktopStyle={{ width: '30%', padding: '64px' }}
+        desktopPixel={1500}
         gap={24}
         backgroundGradient="transparent linear-gradient(148deg, #8184c4 0%, #c14a9a 100%) 0% 0% no-repeat padding-box"
       >
@@ -154,10 +152,10 @@ const DownloadSection = () => {
         className="column"
         gap={24}
         mobileStyle={{ padding: '32px 16px' }}
-        tabletStyle={{ width: '50%', padding: '32px' }}
-        desktopStyle={{ width: '50%', padding: '64px' }}
+        tabletStyle={{ width: '60%', padding: '32px' }}
+        desktopStyle={{ width: '30%', padding: '64px' }}
         backgroundGradient="transparent linear-gradient(148deg, #F86B7D 0%, #EA9749 100%) 0% 0% no-repeat padding-box"
-        desktopPixel={1024}
+        desktopPixel={1500}
       >
         <Label fontFamily="syncopate" size="big">
           mobile

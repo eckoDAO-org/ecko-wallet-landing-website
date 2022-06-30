@@ -22,14 +22,6 @@ export const FOOTER_ABOUT = {
       text: 'Roadmap',
       href: '/#roadmap',
     },
-    {
-      text: 'Privacy & Policy',
-      href: ROUTE_PRIVACY_POLICY,
-    },
-    {
-      text: 'Terms of use',
-      href: ROUTE_TERMS_OF_USE,
-    },
   ],
 };
 export const FOOTER_DOWNLOAD = {
@@ -70,6 +62,14 @@ export const FOOTER_LEARN = {
       text: 'Tutorial',
       href: 'https://www.youtube.com/watch?v=829R9FvBAEo',
       target: '_blank',
+    },
+    {
+      text: 'Privacy & Policy',
+      href: ROUTE_PRIVACY_POLICY,
+    },
+    {
+      text: 'Terms of use',
+      href: ROUTE_TERMS_OF_USE,
     },
   ],
 };

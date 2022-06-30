@@ -102,10 +102,11 @@ const CONFIGURATION = {
 
       tspan: [
         { x: -68.28, y: 0, text: 'Mobile apps' },
-        { x: -68.28, y: 25, text: 'iOS - Android' },
+        { x: -80, y: 25, text: 'iOS - Android' },
       ],
     },
-    color: theme.colors.primary,
+
+    color: '#FA41A5',
   },
 
   X_WALLET_V2: {
@@ -115,8 +116,7 @@ const CONFIGURATION = {
       y: 446,
       tspan: [{ x: -47.71, y: 0, text: 'X-Wallet V2' }],
     },
-
-    color: '#FA41A5',
+    color: whiteGrey,
   },
   SWAP_FUNTIONALITY: {
     circle: { x: 490, y: 596 },
@@ -171,8 +171,8 @@ const CONFIGURATION = {
   },
 };
 const FLAG = {
-  flag: 'translate(503 354)',
-  shadow: 'translate(485 375)',
+  flag: 'translate(754 354)',
+  shadow: 'translate(735 375)',
 };
 
 const XWalletRoadmap2022 = ({ className }) => {
@@ -231,8 +231,8 @@ const XWalletRoadmap2022 = ({ className }) => {
           <line
             id="Line_585"
             dataName="Line 585"
-            x2="1090"
-            transform="translate(500 397)"
+            x2="840"
+            transform="translate(750  397)"
             fill="none"
             stroke={theme.colors.primary}
             strokeWidth="4"

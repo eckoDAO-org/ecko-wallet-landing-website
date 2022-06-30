@@ -26,7 +26,7 @@ const FeaturesWrapper = styled(FlexContainer)`
 
 const Features = () => {
   return (
-    <FeaturesWrapper gap={50} id="features" mobileClassName="column" tabletClassName="column">
+    <FeaturesWrapper gap={50} id="features" desktopStyle={{ maxHeight: 1280 }} mobileClassName="column" tabletClassName="column">
       <FeaturesGrid />
       <HandPhone />
     </FeaturesWrapper>
