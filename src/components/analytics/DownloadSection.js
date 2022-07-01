@@ -36,7 +36,7 @@ const DownloadSectionContainer = styled(FlexContainer)`
       height: 370px;
     }
     @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel}px`}) {
-      height: 390px;
+      height: 435px;
     }
   }
 
@@ -73,7 +73,6 @@ const DownloadCard = styled(FlexContainer)`
   }
   @media (min-width: ${({ theme: { mediaQueries } }) => `${mediaQueries.desktopPixel + 1}px`}) {
     min-height: 700px;
-    border-radius: 32px;
     border-radius: 60px;
   }
   @media (min-width: 1700px) {
@@ -99,7 +98,7 @@ const DownloadSection = () => {
         className="column"
         mobileStyle={{ padding: '32px 16px' }}
         tabletStyle={{ width: '60%', padding: '32px' }}
-        desktopStyle={{ width: '30%', padding: '64px' }}
+        desktopStyle={{ width: '40%', padding: '64px' }}
         desktopPixel={1500}
         gap={24}
         backgroundGradient="transparent linear-gradient(148deg, #8184c4 0%, #c14a9a 100%) 0% 0% no-repeat padding-box"
@@ -153,7 +152,7 @@ const DownloadSection = () => {
         gap={24}
         mobileStyle={{ padding: '32px 16px' }}
         tabletStyle={{ width: '60%', padding: '32px' }}
-        desktopStyle={{ width: '30%', padding: '64px' }}
+        desktopStyle={{ width: '40%', padding: '64px' }}
         backgroundGradient="transparent linear-gradient(148deg, #F86B7D 0%, #EA9749 100%) 0% 0% no-repeat padding-box"
         desktopPixel={1500}
       >
