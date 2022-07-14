@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="136" height="136" viewBox="0 0 136 136">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_10582" data-name="Rectangle 10582" width="136" height="136" transform="translate(56 1550)" fill="#292b44"/>
+    </clipPath>
+  </defs>
+  
+  <g id="Mask_Group_45" data-name="Mask Group 45" transform="translate(-56 -1550)" clip-path="url(#clip-path)">
+    <g id="stripes" transform="translate(47 1534)">
+      <path id="Path_44784" data-name="Path 44784" d="M153.129,184.287-16.08,15.078-27.731,26.729,141.478,195.938Z" fill="#da3db0"/>
+      <path id="Path_44785" data-name="Path 44785" d="M146.108,200.151-26.35,27.693-38,39.344,134.457,211.8Z" fill="#f4ac3c"/>
+      <path id="Path_44786" data-name="Path 44786" d="M167.9,176.979-16.08-7-27.731,4.651,156.248,188.63Z" fill="#7efbfa"/>
+    <path d="M169.5 175.5L-8.5 0L-38 39L98 175.5H169.5Z" fill="url(#paint0_linear_1855_2695)"/>
+
+    </g>
+    
+  </g>
+  <defs>
+<linearGradient id="paint0_linear_1855_2695" x1="29.5001" y1="-60.5" x2="66.0001" y2="87.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

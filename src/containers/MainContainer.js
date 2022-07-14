@@ -1,39 +1,22 @@
 import React from 'react';
-import styled from 'styled-components/macro';
-import IntroductionSection from './IntroductionSection';
-import BannerContainer from './BannerContainer';
-import UxContainer from './UxContainer';
-import UiContainer from './UiContainer';
-import CommunityTestingContainer from './CommunityTestingContainer';
-import ContactUsContainer from './ContactUsContainer';
-import MultiTokenEcosystemContainer from './MultiTokenEcosystemContainer';
-
-
-const OuterContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 0;
-  @media (max-width: ${({ theme: { mediaQueries } }) =>
-      `${mediaQueries.mobilePixel + 1}px`}) {
-    padding: 0;
-  }
-`;
+import Analytics from '../components/analytics/Analytics';
+import Features from '../components/features/Features';
+import Projects from '../components/projects/Projects';
+import Roadmap from '../components/roadmap/Roadmap';
+import FirstSection from '../components/sections/FirstSection';
+import { FlexContainer } from '../components/shared/Container';
+import VideoSection from '../components/video/VideoSection';
 
 const MainContainer = () => {
   return (
-    <OuterContainer>
-      <IntroductionSection />
-      <UxContainer/>
-      <BannerContainer/>
-      <UiContainer/>
-      <CommunityTestingContainer/>
-      <MultiTokenEcosystemContainer/>
-      <ContactUsContainer />
-    </OuterContainer>
+    <FlexContainer className="column">
+      <FirstSection />
+      <Features />
+      <VideoSection />
+      <Projects />
+      <Analytics />
+      <Roadmap />
+    </FlexContainer>
   );
 };
 

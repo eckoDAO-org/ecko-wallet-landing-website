@@ -1,23 +1,6 @@
-import { DiscordIcon, TwitterIcon } from "../assets";
+export const XWALLET_FILENAME = 'x-wallet-extension-beta.zip';
 
-export const ITEM_LINKS = {
-  TWITTER_KADDEX: {
-    label: "@KaddeXofficial",
-    link: "https://twitter.com/kaddexofficial",
-    icon: <TwitterIcon />,
-  },
-  TWITTER_X_WALLET: {
-    label: "@XWalletOfficial",
-    link: "https://twitter.com/xwalletofficial",
-    icon: <TwitterIcon />,
-  },
-  DISCORD: {
-    label: "Kaddex",
-    link: "https://discord.gg/QSJpHRFDcv",
-    icon: <DiscordIcon />,
-  },
-};
-
-export const XWALLET_FILENAME = "x-wallet-extension-beta.zip";
-
-export const XWALLET_DOWNLOAD_LINK ="https://chrome.google.com/webstore/detail/x-wallet/bofddndhbegljegmpmnlbhcejofmjgbn?hl=en&authuser=1"
+export const XWALLET_CHROME_DOWNLOAD_LINK = 'https://chrome.google.com/webstore/detail/x-wallet/bofddndhbegljegmpmnlbhcejofmjgbn?hl=en&authuser=1';
+export const XWALLET_BRAVE_DOWNLOAD_LINK = 'https://chrome.google.com/webstore/detail/x-wallet/bofddndhbegljegmpmnlbhcejofmjgbn?hl=en&authuser=1';
+export const XWALLET_IOS_DOWNLOAD_LINK = 'https://apps.apple.com/us/app/x-wallet-by-kaddex/id1632056372';
+export const XWALLET_ANDROID_DOWNLOAD_LINK = 'https://play.google.com/store/apps/details?id=com.xwallet.mobile';

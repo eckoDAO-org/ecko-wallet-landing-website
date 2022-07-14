@@ -1,73 +1,47 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components/macro";
-import DesktopHeader from "./header/DesktopHeader";
-import FooterSection from "../../containers/FooterSection";
-import { TopUpIcon } from "../../assets";
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components/macro';
+import Header from './header/Header';
+import FooterSection from './footer/FooterSection';
+import { FlexContainer } from '../shared/Container';
+import { GoTopIcon } from '../../assets';
+import { useHistory, useLocation } from 'react-router-dom';
 
-const MainContainer = styled.div`
-  display: flex;
+const BackgroundGradientContainer = styled(FlexContainer)`
+  background: transparent linear-gradient(42deg, #f3bd2f3c 0%, #fa41a53c 47%, #04c9e452 100%) 0% 0% no-repeat padding-box;
+  background-image: url(./background-first-section.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  filter: blur(50px);
   height: 100%;
   width: 100%;
-`;
-
-const PageContent = styled.div`
-  position: relative;
-
-  .sticky {
-    position: fixed;
-    background-color: rgba(7, 6, 16, 0.5);
-    top: 56;
-    z-index: 50;
-    width: 100%;
-
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    /* background-color: rgba(255, 255, 255, 0.5);  */
-
-    transition: all 0.5s ease;
-    animation: smoothScrollIn 1s forwards;
-  }
-
-  .out {
-    top: -56px;
-    transition: all 0.5s ease;
-    animation: smoothScrollOut 1s forwards;
-  }
-
-  @keyframes smoothScrollIn {
-    0% {
-      transform: translateY(-142px);
-    }
-
-    100% {
-      transform: translateY(0px);
-    }
-  }
-
-  @keyframes smoothScrollOut {
-    0% {
-      transform: translateY(0px);
-    }
-
-    100% {
-      transform: translateY(-142px);
-    }
-  }
+  z-index: 1;
 `;
 
 const MainContent = styled.div`
   height: 100%;
   width: 100%;
+  z-index: 100;
 `;
 
-const GoTopContainer = styled.div`
-  display: ${({ topUpIconIsVisible }) =>
-    topUpIconIsVisible ? "block" : "none"};
+const BackgroundXWalletContainer = styled(FlexContainer)`
+  background: transparent linear-gradient(30deg, #00000070 0%, #20264e 100%) 0% 0% no-repeat padding-box;
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+  z-index: 1;
+`;
+
+const GoTopButton = styled.div`
+  display: ${({ isSticky }) => (isSticky ? 'block' : 'none')};
   position: fixed;
   bottom: 10px;
   right: 10px;
   line-height: 0;
   opacity: 0.8;
+  cursor: pointer;
+  z-index: 100;
 
   transition: all 0.5s ease;
   animation: smoothOut 1s;
@@ -88,103 +62,73 @@ const GoTopContainer = styled.div`
   }
 `;
 
-const ButtonIcon = styled("button")`
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-`;
-
 const Layout = ({ children }) => {
-  const [, setIsFooterVisible] = useState(false);
-  const [IsHeaderVisible, setIsHeaderVisible] = useState(false);
-  const [topUpIconIsVisible, setTopUpIconIsVisible] = useState(false);
+  const history = useHistory();
+  const [seconds, setSeconds] = useState(0);
+  const [intervalId, setIntervalId] = useState(null);
+  const location = useLocation();
 
+  const [isSticky, setIsSticky] = useState(false);
   useEffect(() => {
-    const threshold = 0;
-    let lastScrollY = window.pageYOffset;
-    let ticking = false;
-
-    const updateScrollDir = () => {
-      const scrollY = window.pageYOffset;
-      const ux = document.getElementById("ux").getBoundingClientRect().top;
-      const features = document.getElementById("ux").getBoundingClientRect()
-        .top;
-      if (Math.abs(scrollY - lastScrollY) < threshold) {
-        ticking = false;
-        return;
-      }
-      if (ux >= 0) setIsHeaderVisible(false);
-      else setIsHeaderVisible(scrollY > lastScrollY ? false : true);
-
-      if (features >= 0) setTopUpIconIsVisible(false);
-      else setTopUpIconIsVisible(true);
-
-      lastScrollY = scrollY > 0 ? scrollY : 0;
-      ticking = false;
+    window.addEventListener('scroll', handleIsSticky);
+    return () => {
+      window.removeEventListener('scroll', handleIsSticky);
     };
-
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateScrollDir);
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", onScroll);
-    // console.log(IsHeaderVisible);
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [IsHeaderVisible]);
-
-  useEffect(() => {
-    window.addEventListener("scroll", scrollHandler);
-
-    return () => window.removeEventListener("scroll", scrollHandler);
   }, []);
 
-  const scrollHandler = () => {
-    if (
-      window.innerHeight >=
-      document.getElementById("footer").getBoundingClientRect().top
-    ) {
-      setIsFooterVisible(true);
-    } else {
-      setIsFooterVisible(false);
-    }
+  const handleIsSticky = () => {
+    const scrollTop = window.scrollY;
+    scrollTop >= 250 ? setIsSticky(true) : setIsSticky(false);
   };
 
+  const startTimer = () => {
+    const interval = setInterval(() => {
+      setSeconds((seconds) => seconds + 1);
+    }, 5000);
+    setIntervalId(interval);
+  };
+
+  const stopTimer = () => {
+    setSeconds(0);
+    clearInterval(intervalId);
+  };
+
+  useEffect(() => {
+    if (isSticky) {
+      startTimer();
+    }
+  }, [isSticky]);
+
+  useEffect(() => {
+    if (seconds === 5) {
+      setIsSticky(false);
+      stopTimer();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [seconds]);
+
   const goToTop = () => {
+    history.push(location.pathname);
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
   return (
-    <MainContainer id="main-container">
-      {/* <CustomParticles /> */}
-      <PageContent>
-        {IsHeaderVisible && (
-          <DesktopHeader
-            // IsHeaderVisible={IsHeaderVisible}
-            className={IsHeaderVisible ? "sticky" : "out"}
-            menuWithMarginBottom
-          />
-        )}
-        <DesktopHeader IsHeaderVisible={IsHeaderVisible} />
-        <MainContent>{children}</MainContent>
-      </PageContent>
-      <GoTopContainer topUpIconIsVisible={topUpIconIsVisible}>
-        <ButtonIcon onClick={goToTop}>
-          <TopUpIcon />
-        </ButtonIcon>
-      </GoTopContainer>
+    <FlexContainer className="w-100 h-100 relative" id="main-container">
+      <Header isSticky={isSticky} stopTimer={stopTimer} startTimer={startTimer} />
 
-      <FooterSection />
-    </MainContainer>
+      <BackgroundGradientContainer className=" absolute"></BackgroundGradientContainer>
+      <BackgroundXWalletContainer className=" absolute"></BackgroundXWalletContainer>
+      <FlexContainer className="w-100 h-100 relative z1 column">
+        <MainContent>{children}</MainContent>
+        <FooterSection />
+      </FlexContainer>
+      <GoTopButton isSticky={isSticky} onClick={goToTop}>
+        <GoTopIcon />
+      </GoTopButton>
+    </FlexContainer>
   );
 };
 
