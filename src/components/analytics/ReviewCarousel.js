@@ -84,10 +84,7 @@ const ReviewCarousel = () => {
           IT HAS A VERY SIMPLE AND NICE DESIGN. IT IS VERY EASY TO USE AND DESIGNED IN A WAY THAT ANYONE CAN USE IT. THE FACT THAT IT IS THE OFFICIAL
           WALLET OF THE KADENA NETWORK IS ANOTHER BEAUTY.
         </Review>
-        <Review>
-          This wallet is built by Kaddex team who are also building Kaddex - a multi-chain DEX on Kadena. Currently I am using this wallet to store my
-          KDX tokens purchased in First token sale of Kaddex.
-        </Review>
+        <Review>Can't wait to use it with Kadena-based blockchain tokens! L1 DeFi!</Review>
         <Review>Super user friendly. Well done KDX team</Review>
         <Review>Amazing this is going to be the go to decentralized wallet for Kadena and its entire ecosystem</Review>
       </Swiper>

@@ -71,42 +71,40 @@ const CONFIGURATION = {
 
     color: theme.colors.primary,
   },
-  FIAT_ON_RAMP: {
+  BAND_REFRESH: {
     circle: { x: 1240, y: 381 },
     text: {
       x: 1200,
       y: 446,
-      tspan: [{ x: 0, y: 0, text: 'Fiat on Ramp' }],
-    },
-    color: theme.colors.primary,
-  },
-
-  BAND_REFRESH: {
-    circle: { x: 990, y: 381 },
-
-    text: {
-      x: 1000,
-      y: 446,
-
-      tspan: [{ x: -63.28, y: 0, text: 'Brand Refresh' }],
+      tspan: [{ x: -10.28, y: 0, text: 'Brand Refresh' }],
     },
     color: theme.colors.primary,
   },
 
   MOBILE_APP: {
+    circle: { x: 990, y: 381 },
+
+    text: {
+      x: 1000,
+      y: 446,
+      tspan: [
+        { x: -50.28, y: 0, text: 'Mobile apps' },
+        { x: -64, y: 25, text: 'iOS - Android' },
+      ],
+    },
+
+    color: '#FA41A5',
+  },
+
+  FIAT_ON_RAMP: {
     circle: { x: 740, y: 381 },
 
     text: {
       x: 770,
       y: 446,
-
-      tspan: [
-        { x: -68.28, y: 0, text: 'Mobile apps' },
-        { x: -80, y: 25, text: 'iOS - Android' },
-      ],
+      tspan: [{ x: -75, y: 0, text: 'Fiat on Ramp' }],
     },
-
-    color: '#FA41A5',
+    color: whiteGrey,
   },
 
   X_WALLET_V2: {
@@ -171,8 +169,8 @@ const CONFIGURATION = {
   },
 };
 const FLAG = {
-  flag: 'translate(754 354)',
-  shadow: 'translate(735 375)',
+  flag: 'translate(1004 354)',
+  shadow: 'translate(985 375)',
 };
 
 const XWalletRoadmap2022 = ({ className }) => {
@@ -231,8 +229,8 @@ const XWalletRoadmap2022 = ({ className }) => {
           <line
             id="Line_585"
             dataName="Line 585"
-            x2="840"
-            transform="translate(750  397)"
+            x2="590"
+            transform="translate(1000  397)"
             fill="none"
             stroke={theme.colors.primary}
             strokeWidth="4"

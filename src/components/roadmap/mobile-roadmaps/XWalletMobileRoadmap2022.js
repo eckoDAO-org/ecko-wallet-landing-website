@@ -15,7 +15,7 @@ const Line = styled(FlexContainer)`
     content: '';
     position: absolute;
     width: 3px;
-    height: 58%;
+    height: 52%;
     background: ${({ color }) => getColor(color)};
     top: 0;
     bottom: 0;
@@ -101,22 +101,23 @@ const CONFIGURATION = {
     text: [{ text: '15,000 Downloads' }],
     isCompleted: true,
   },
-  FIAT_ON_RAMP: {
-    position: 6,
-    text: [{ text: 'Fiat on Ramp' }],
-    isCompleted: true,
-  },
+
   BAND_REFRESH: {
-    position: 7,
+    position: 6,
     text: [{ text: 'Brand Refresh' }],
     isCompleted: true,
   },
 
   MOBILE_APP: {
-    position: 8,
+    position: 7,
     text: [{ text: 'Mobile app' }],
     isCompleted: true,
     isMain: true,
+  },
+  FIAT_ON_RAMP: {
+    position: 8,
+    text: [{ text: 'Fiat on Ramp' }],
+    isCompleted: false,
   },
 
   X_WALLET_V2: {

@@ -37,6 +37,7 @@ export { ReactComponent as RoadmapEllipseShadowIcon } from './images/roadmap/roa
 export { ReactComponent as CrosschainIcon } from './images/features/crosschain.svg';
 export { ReactComponent as DappsIcon } from './images/features/dapps.svg';
 export { ReactComponent as NonCustodialIcon } from './images/features/non-custodial.svg';
+export { ReactComponent as BuySellIcon } from './images/features/buy-sell.svg';
 export { ReactComponent as PrivateIcon } from './images/features/private.svg';
 export { ReactComponent as SecureCompatibleIcon } from './images/features/secure-compatible.svg';
 export { ReactComponent as SendReceiveStoreIcon } from './images/features/send-receive-store.svg';
