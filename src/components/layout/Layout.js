@@ -4,8 +4,7 @@ import Header from './header/Header';
 import FooterSection from './footer/FooterSection';
 import { FlexContainer } from '../shared/Container';
 import { GoTopIcon } from '../../assets';
-import { useHistory } from 'react-router-dom';
-import { ROUTE_INDEX } from '../../router/routes';
+import { useHistory, useLocation } from 'react-router-dom';
 
 const BackgroundGradientContainer = styled(FlexContainer)`
   background: transparent linear-gradient(42deg, #f3bd2f3c 0%, #fa41a53c 47%, #04c9e452 100%) 0% 0% no-repeat padding-box;
@@ -67,6 +66,7 @@ const Layout = ({ children }) => {
   const history = useHistory();
   const [seconds, setSeconds] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
+  const location = useLocation();
 
   const [isSticky, setIsSticky] = useState(false);
   useEffect(() => {
@@ -108,7 +108,7 @@ const Layout = ({ children }) => {
   }, [seconds]);
 
   const goToTop = () => {
-    history.push(ROUTE_INDEX);
+    history.push(location.pathname);
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
