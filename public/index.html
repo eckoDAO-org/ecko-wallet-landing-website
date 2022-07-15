@@ -5,22 +5,22 @@
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
+          dl = l != 'dataLayer' ? '&l=' + l : '';
         j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-T9NRJRT");
+      })(window, document, 'script', 'dataLayer', 'GTM-T9NRJRT');
     </script>
     <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/Kaddex_icon.png" />
+    <link rel="icon" href="%PUBLIC_URL%/Kaddex_icon.png?v=2" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="X-Wallet by Kaddex" content="X-Wallet home page" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/Kaddex_icon.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/Kaddex_icon.png?v=2" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -42,10 +42,7 @@
       content="X-Wallet is a user-friendly and robust Kadena-native wallet designed for
 seamless interaction with Dapps on the Kadena network."
     />
-    <meta
-      property="og:image"
-      content="https://xwallet.kaddex.com/x-wallet.png"
-    />
+    <meta property="og:image" content="https://xwallet.kaddex.com/x-wallet.png?v=2" />
     <meta property="og:url" content="https://xwallet.kaddex.com" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@kaddexofficial" />
@@ -54,12 +51,7 @@ seamless interaction with Dapps on the Kadena network."
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-T9NRJRT"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
+      ><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9NRJRT" height="0" width="0" style="display: none; visibility: hidden"></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -75,10 +67,7 @@ seamless interaction with Dapps on the Kadena network."
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <!-- Cloudflare Web Analytics -->
-    <script
-      defer
-      src="https://static.cloudflareinsights.com/beacon.min.js?token=4bf93a4a85ea4b9d93cf3b83d317fd17&spa=false"
-    ></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js?token=4bf93a4a85ea4b9d93cf3b83d317fd17&spa=false"></script>
     <!-- End Cloudflare Web Analytics -->
   </body>
 </html>
