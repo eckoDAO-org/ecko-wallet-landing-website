@@ -56,6 +56,7 @@ export { ReactComponent as KdswapIcon } from './images/projects/kdswap.svg';
 export { ReactComponent as KongsIcon } from './images/projects/kongs.svg';
 export { ReactComponent as MokIcon } from './images/projects/mok.svg';
 export { ReactComponent as TimpiIcon } from './images/projects/timpi.svg';
+export { ReactComponent as LagoIcon } from './images/projects/lago.svg';
 
 // ANALYTICS
 export { ReactComponent as OpenQuoteIcon } from './images/analytics/quote-open.svg';

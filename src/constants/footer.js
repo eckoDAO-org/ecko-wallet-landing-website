@@ -64,6 +64,11 @@ export const FOOTER_LEARN = {
       target: '_blank',
     },
     {
+      text: 'Documentation',
+      href: 'https://docs.kaddex.com/kaddex-features/getting-started/x-wallet',
+      target: '_blank',
+    },
+    {
       text: 'Privacy & Policy',
       href: ROUTE_PRIVACY_POLICY,
     },

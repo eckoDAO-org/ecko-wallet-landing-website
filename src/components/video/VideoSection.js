@@ -20,7 +20,7 @@ const VideoSection = () => {
       tabletStyle={{ padding: '130px 16px 80px' }}
       desktopStyle={{ padding: '170px 90px 120px' }}
     >
-      <YoutubeEmbed embedId="iGxmqRYynvI" />
+      <YoutubeEmbed embedId="nA6qgtZZe74" />
     </BackgroundContainer>
   );
 };

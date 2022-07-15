@@ -9,6 +9,7 @@ import {
   KdLaunchIcon,
   KdswapIcon,
   KongsIcon,
+  LagoIcon,
   MokIcon,
   TimpiIcon,
 } from '../assets';
@@ -73,5 +74,10 @@ export const PROJECTS = {
     name: 'timpi',
     icon: <TimpiIcon />,
     link: 'https://www.timpi.io/',
+  },
+  LAGO: {
+    name: 'lago',
+    icon: <LagoIcon />,
+    link: 'https://lago.finance/',
   },
 };
