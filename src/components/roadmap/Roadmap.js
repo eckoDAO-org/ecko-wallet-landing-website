@@ -81,18 +81,8 @@ const Roadmap = () => {
   return (
     <RoadmapWrapper id="roadmap" gap={50} className="column scroll-mt relative z1" desktopPixel={1460}>
       <FlexContainer className="w-100 justify-sb">
-        <Label
-          size="big"
-          color="white"
-          fontFamily="syncopate"
-          style={{ marginLeft: 90 }}
-          mobileStyle={{ marginLeft: 50 }}
-          onClick={() => {
-            setTranslateXRoadmap(width + (width >= theme.mediaQueries.desktopPixel ? 90 : 0));
-            setSelectedRoadmapId(R_2022.id);
-          }}
-        >
-          Roadmap 2022
+        <Label size="big" color="white" fontFamily="syncopate" style={{ marginLeft: 90 }} mobileStyle={{ marginLeft: 50 }}>
+          Roadmap
         </Label>
       </FlexContainer>
 
