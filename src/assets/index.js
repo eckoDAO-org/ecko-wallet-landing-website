@@ -65,3 +65,5 @@ export { ReactComponent as MobileDownloadSVG } from './images/analytics/mobile.s
 export { ReactComponent as DesktopDownloadSVG } from './images/analytics/desktop.svg';
 export { ReactComponent as FifteenThousandsDownloadSVG } from './images/analytics/15k+.svg';
 export { ReactComponent as FifteenThousandsDownloadMobileSVG } from './images/analytics/15k-mobile.svg';
+export { ReactComponent as TwentyThousandsDownloadSVG } from './images/analytics/20k+.svg';
+export { ReactComponent as TwentyThousandsDownloadMobileSVG } from './images/analytics/20k-mobile.svg';
