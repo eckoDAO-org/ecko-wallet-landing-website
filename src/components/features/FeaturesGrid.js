@@ -5,7 +5,7 @@ import { FEATURES } from '../../constants/features';
 import useWindowSize from '../../hooks/useWindowSize';
 import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
-import { theme } from '../../styles/theme';
+import { getColor, theme } from '../../styles/theme';
 
 const Grid = styled(FlexContainer)`
   display: grid;
@@ -41,9 +41,18 @@ const FeaturesGrid = () => {
             mobileStyle={{ padding: '24px 0px' }}
           >
             {item.icon}
-            <Label fontFamily="syncopate" fontSize={20} customColor={item.color}>
-              {item.title}
-            </Label>
+            <FlexContainer className="flex w-100 align-ce" gap={16}>
+              <Label fontFamily="syncopate" fontSize={20} customColor={item.color}>
+                {item.title}
+              </Label>
+              {item.alert && (
+                <div className="flex align-ce justify-ce" style={{ backgroundColor: '#F3BD2F', padding: '6px 8px', borderRadius: 250 }}>
+                  <Label fontFamily="syncopate" color="white" fontSize={10}>
+                    {item.alert}
+                  </Label>
+                </div>
+              )}
+            </FlexContainer>
             <Label fontSize={12}>{item.description}</Label>
           </FlexContainer>
           {width < theme.mediaQueries.desktopPixel && index !== Object.values(FEATURES).length - 1 && (

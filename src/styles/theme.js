@@ -12,6 +12,8 @@ export const getColor = (color) => {
       return theme.colors.yellow;
     case 'grey':
       return theme.colors.grey;
+    case 'red':
+      return theme.colors.red;
     case 'background':
       return theme.colors.background;
     default:
@@ -77,6 +79,7 @@ export const theme = {
     pink: '#DA3DB0',
     yellow: '#F4AC3C',
     grey: '#879BA8',
+    red: '#C61a09',
     background: '#20264E',
   },
   fontFamily: {

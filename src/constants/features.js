@@ -24,7 +24,8 @@ export const FEATURES = {
   BUY_SELL: {
     icon: <BuySellIcon />,
     title: 'BUY & SELL',
-    description: 'Fiat ramps to easily buy (live) and sell (upcoming) KDA directly from your bank account.',
+    description: 'Fiat ramps to easily buy and sell KDA directly from your bank account.',
+    alert: 'upcoming',
     color: '#F3BD2F',
   },
   PRIVATE: {
