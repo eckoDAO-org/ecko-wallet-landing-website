@@ -96,38 +96,43 @@ const CONFIGURATION = {
     text: [{ text: 'KDLaunch integration' }],
     isCompleted: true,
   },
-  DOWNLOADS: {
-    position: 5,
-    text: [{ text: '15,000 Downloads' }],
-    isCompleted: true,
-  },
 
   BAND_REFRESH: {
-    position: 6,
+    position: 5,
     text: [{ text: 'Brand Refresh' }],
     isCompleted: true,
   },
 
   MOBILE_APP: {
-    position: 7,
+    position: 6,
     text: [{ text: 'Mobile app' }],
+    isCompleted: true,
+  },
+  DOWNLOADS: {
+    position: 7,
+    text: [{ text: '30,000 Downloads' }],
+    isCompleted: true,
+  },
+  X_WALLET_V2: {
+    position: 8,
+    text: [{ text: 'X-Wallet v2' }],
     isCompleted: true,
     isMain: true,
   },
-  FIAT_ON_RAMP: {
-    position: 8,
-    text: [{ text: 'Fiat on Ramp' }],
+  SWAP_FUNTIONALITY: {
+    position: 9,
+    text: [{ text: 'Swap Functionality' }],
+    isCompleted: false,
+  },
+  AUDITING: {
+    position: 10,
+    text: [{ text: 'Auditing' }],
     isCompleted: false,
   },
 
-  X_WALLET_V2: {
-    position: 9,
-    text: [{ text: 'X-Wallet v2' }],
-    isCompleted: false,
-  },
-  SWAP_FUNTIONALITY: {
+  FIAT_ON_RAMP: {
     position: 11,
-    text: [{ text: 'Swap Functionality' }],
+    text: [{ text: 'Fiat on Ramp' }],
     isCompleted: false,
   },
 
@@ -145,12 +150,6 @@ const CONFIGURATION = {
     position: 14,
     text: [{ text: 'Fiat off Ramp' }],
 
-    isCompleted: false,
-  },
-
-  AUDITING: {
-    position: 15,
-    text: [{ text: 'Auditing' }],
     isCompleted: false,
   },
 };

@@ -52,20 +52,19 @@ const Projects = () => {
               <ProjectButton token={PROJECTS.KADDEX} />
               <ProjectButton token={PROJECTS.MOK} />
               <ProjectButton token={PROJECTS.HYPE} />
-              <ProjectButton token={PROJECTS.LAGO} />
+              <ProjectButton token={PROJECTS.KDSWAP} />
             </FlexRow>
             <FlexRow gap={10}>
-              <ProjectButton token={PROJECTS.KDSWAP} />
               <ProjectButton token={PROJECTS.KDLAUNCH} />
               <ProjectButton token={PROJECTS.GALLINAS} />
+              <ProjectButton token={PROJECTS.KADENA_BULLS} />
             </FlexRow>
             <FlexRow gap={10}>
-              <ProjectButton token={PROJECTS.KADENA_BULLS} />
               <ProjectButton token={PROJECTS.KONGS} />
               <ProjectButton token={PROJECTS.BABENA} />
+              <ProjectButton token={PROJECTS.ASWAP} />
             </FlexRow>
             <FlexRow gap={10}>
-              <ProjectButton token={PROJECTS.ASWAP} />
               <ProjectButton token={PROJECTS.DOCUSHIELD} />
               <ProjectButton token={PROJECTS.TIMPI} />
             </FlexRow>
@@ -76,17 +75,16 @@ const Projects = () => {
               <ProjectButton token={PROJECTS.KADDEX} />
               <ProjectButton token={PROJECTS.MOK} />
               <ProjectButton token={PROJECTS.HYPE} />
-              <ProjectButton token={PROJECTS.LAGO} />
               <ProjectButton token={PROJECTS.KDSWAP} />
+              <ProjectButton token={PROJECTS.KDLAUNCH} />
             </FlexRow>
             <FlexRow gap={10}>
-              <ProjectButton token={PROJECTS.KDLAUNCH} />
               <ProjectButton token={PROJECTS.GALLINAS} />
               <ProjectButton token={PROJECTS.KADENA_BULLS} />
               <ProjectButton token={PROJECTS.KONGS} />
+              <ProjectButton token={PROJECTS.BABENA} />
             </FlexRow>
             <FlexRow gap={10}>
-              <ProjectButton token={PROJECTS.BABENA} />
               <ProjectButton token={PROJECTS.ASWAP} />
               <ProjectButton token={PROJECTS.DOCUSHIELD} />
               <ProjectButton token={PROJECTS.TIMPI} />

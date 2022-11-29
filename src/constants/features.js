@@ -1,4 +1,4 @@
-import { BuySellIcon, CrosschainIcon, DappsIcon, NonCustodialIcon, PrivateIcon, SecureCompatibleIcon, SendReceiveStoreIcon } from '../assets';
+import { BuySellIcon, CrosschainIcon, DappsIcon, PrivateIcon, SecureCompatibleIcon, SendReceiveStoreIcon } from '../assets';
 
 export const FEATURES = {
   DAPPS: {

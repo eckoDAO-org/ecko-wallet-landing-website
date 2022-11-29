@@ -5,7 +5,7 @@ import { FEATURES } from '../../constants/features';
 import useWindowSize from '../../hooks/useWindowSize';
 import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
-import { getColor, theme } from '../../styles/theme';
+import { theme } from '../../styles/theme';
 
 const Grid = styled(FlexContainer)`
   display: grid;

@@ -61,20 +61,11 @@ const CONFIGURATION = {
     },
     color: theme.colors.primary,
   },
-  DOWNLOADS: {
+
+  BAND_REFRESH: {
     circle: { x: 1490, y: 381 },
     text: {
-      x: 1499,
-      y: 446,
-      tspan: [{ x: -68.09, y: 0, text: '15,000 Downloads' }],
-    },
-
-    color: theme.colors.primary,
-  },
-  BAND_REFRESH: {
-    circle: { x: 1240, y: 381 },
-    text: {
-      x: 1200,
+      x: 1454,
       y: 446,
       tspan: [{ x: -10.28, y: 0, text: 'Brand Refresh' }],
     },
@@ -82,10 +73,10 @@ const CONFIGURATION = {
   },
 
   MOBILE_APP: {
-    circle: { x: 990, y: 381 },
+    circle: { x: 1240, y: 381 },
 
     text: {
-      x: 1000,
+      x: 1250,
       y: 446,
       tspan: [
         { x: -50.28, y: 0, text: 'Mobile apps' },
@@ -93,43 +84,66 @@ const CONFIGURATION = {
       ],
     },
 
-    color: '#FA41A5',
+    color: theme.colors.primary,
   },
 
-  FIAT_ON_RAMP: {
-    circle: { x: 740, y: 381 },
-
+  DOWNLOADS: {
+    circle: { x: 990, y: 381 },
     text: {
-      x: 770,
+      x: 990,
       y: 446,
-      tspan: [{ x: -75, y: 0, text: 'Fiat on Ramp' }],
+      tspan: [{ x: -68.09, y: 0, text: '30,000 Downloads' }],
     },
-    color: whiteGrey,
+
+    color: theme.colors.primary,
   },
 
   X_WALLET_V2: {
+    circle: { x: 740, y: 381 },
+    text: {
+      x: 778,
+      y: 446,
+      tspan: [{ x: -75, y: 0, text: 'X-Wallet V2' }],
+    },
+    color: '#FA41A5',
+  },
+
+  SWAP_FUNTIONALITY: {
     circle: { x: 490, y: 381 },
     text: {
-      x: 500,
+      x: 510,
       y: 446,
-      tspan: [{ x: -47.71, y: 0, text: 'X-Wallet V2' }],
-    },
-    color: whiteGrey,
-  },
-  SWAP_FUNTIONALITY: {
-    circle: { x: 490, y: 596 },
-    text: {
-      x: 500,
-      y: 662,
       tspan: [{ x: -95.47, y: 0, text: 'Swap Functionality' }],
     },
     color: whiteGrey,
   },
 
-  SDK_EASY_INTEGRATION_KIT: {
-    circle: { x: 740, y: 596 },
+  AUDITING: {
+    circle: { x: 490, y: 596 },
     text: {
-      x: 756,
+      x: 522,
+      y: 662,
+      tspan: [{ x: -60.61, y: 0, text: 'Auditing' }],
+    },
+
+    color: whiteGrey,
+  },
+
+  FIAT_ON_RAMP: {
+    circle: { x: 740, y: 596 },
+
+    text: {
+      x: 750,
+      y: 662,
+      tspan: [{ x: -47.71, y: 0, text: 'Fiat on Ramp' }],
+    },
+    color: whiteGrey,
+  },
+
+  SDK_EASY_INTEGRATION_KIT: {
+    circle: { x: 990, y: 596 },
+    text: {
+      x: 1010,
       y: 662,
       tspan: [
         { x: -45.61, y: 0, text: 'SDK easy' },
@@ -139,38 +153,28 @@ const CONFIGURATION = {
     color: whiteGrey,
   },
   NFTs_INTEGRATION: {
-    circle: { x: 990, y: 596 },
+    circle: { x: 1240, y: 596 },
     text: {
-      x: 950,
+      x: 1205,
       y: 662,
       tspan: [{ x: -25, y: 0, text: 'NFTs integration' }],
     },
     color: whiteGrey,
   },
   FIAT_OFF_RAMP: {
-    circle: { x: 1240, y: 596 },
+    circle: { x: 1490, y: 596 },
     text: {
-      x: 1270,
+      x: 1514,
       y: 662,
       tspan: [{ x: -70.61, y: 0, text: 'Fiat off Ramp' }],
     },
 
     color: whiteGrey,
   },
-  AUDITING: {
-    circle: { x: 1490, y: 596 },
-    text: {
-      x: 1520,
-      y: 662,
-      tspan: [{ x: -60.61, y: 0, text: 'Auditing' }],
-    },
-
-    color: whiteGrey,
-  },
 };
 const FLAG = {
-  flag: 'translate(1004 354)',
-  shadow: 'translate(985 375)',
+  flag: 'translate(754 354)',
+  shadow: 'translate(736 375)',
 };
 
 const XWalletRoadmap2022 = ({ className }) => {
@@ -229,8 +233,8 @@ const XWalletRoadmap2022 = ({ className }) => {
           <line
             id="Line_585"
             dataName="Line 585"
-            x2="590"
-            transform="translate(1000  397)"
+            x2="839"
+            transform="translate(755  397)"
             fill="none"
             stroke={theme.colors.primary}
             strokeWidth="4"

@@ -4,7 +4,7 @@ import { FlexContainer } from '../shared/Container';
 import Label from '../shared/Label';
 import gradientBackground from '../../assets/images/backgrounds/gradient-background.png';
 import styled from 'styled-components';
-import { TwentyThousandsDownloadMobileSVG, TwentyThousandsDownloadSVG } from '../../assets';
+import { ThirtyThousandsDownloadMobileSVG, ThirtyThousandsDownloadSVG } from '../../assets';
 import theme from '../../styles/theme';
 
 const DownloadBannerContainer = styled(FlexContainer)`
@@ -34,7 +34,7 @@ const DownloadBanner = () => {
       />
 
       <FlexContainer gap={width < theme.mediaQueries.mobilePixel ? 16 : 32} className="justify-ce column align-ce">
-        {width < theme.mediaQueries.mobilePixel ? <TwentyThousandsDownloadMobileSVG /> : <TwentyThousandsDownloadSVG />}
+        {width < theme.mediaQueries.mobilePixel ? <ThirtyThousandsDownloadMobileSVG /> : <ThirtyThousandsDownloadSVG />}
         <Label className="rainbow" size="banner" fontFamily="syncopate" gradientColors={['#b766b6', '#f95197', '#f68861']}>
           Downloads
         </Label>
