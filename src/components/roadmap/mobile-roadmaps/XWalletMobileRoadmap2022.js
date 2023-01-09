@@ -15,7 +15,7 @@ const Line = styled(FlexContainer)`
     content: '';
     position: absolute;
     width: 3px;
-    height: 52%;
+    height: 70%;
     background: ${({ color }) => getColor(color)};
     top: 0;
     bottom: 0;
@@ -117,17 +117,17 @@ const CONFIGURATION = {
     position: 8,
     text: [{ text: 'X-Wallet v2' }],
     isCompleted: true,
-    isMain: true,
   },
   SWAP_FUNTIONALITY: {
     position: 9,
     text: [{ text: 'Swap Functionality' }],
-    isCompleted: false,
+    isCompleted: true,
   },
-  AUDITING: {
+  AUDIT: {
     position: 10,
-    text: [{ text: 'Auditing' }],
-    isCompleted: false,
+    text: [{ text: 'Audit' }],
+    isCompleted: true,
+    isMain: true,
   },
 
   FIAT_ON_RAMP: {
