@@ -29,11 +29,33 @@ const NavigationItems = ({ fontSize, color, onClick, disableHover, hideKaddex })
         Roadmap
       </NavigationItem>
 
+      <NavigationItem
+        href="https://blog.ecko.finance"
+        target="_blank"
+        fontSize={fontSize}
+        color={color}
+        onClick={onClick}
+        disableHover={disableHover}
+      >
+        Blog
+      </NavigationItem>
+
       {!hideKaddex && (
-        <NavigationItem href="https://kaddex.com" target="_blank" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
-          Kaddex
+        <NavigationItem
+          href="https://dex.ecko.finance"
+          target="_blank"
+          fontSize={fontSize}
+          color={color}
+          onClick={onClick}
+          disableHover={disableHover}
+        >
+          eckoDEX
         </NavigationItem>
       )}
+
+      <NavigationItem href="https://dao.ecko.finance" target="_blank" fontSize={fontSize} color={color} onClick={onClick} disableHover={disableHover}>
+        eckoDAO
+      </NavigationItem>
     </>
   );
 };
@@ -52,7 +74,7 @@ export const NavigationItem = ({ id, className, href, children, fontSize, color,
       onMouseLeave={() => setHover(false)}
     >
       <>
-        <Label className="capitalize" size="small" color={color} fontSize={fontSize}>
+        <Label size="small" color={color} fontSize={fontSize}>
           {children}
         </Label>
         {!disableHover && <div className="underline"></div>}

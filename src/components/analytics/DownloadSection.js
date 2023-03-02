@@ -145,7 +145,7 @@ const DownloadSection = () => {
             </CustomButton>
           </div>
         </div>
-        <img src={desktopAppImage} className="desktop-image" style={{ position: 'absolute', bottom: 0, left: 0 }} alt="x-wallet-desktop" />
+        <img src={desktopAppImage} className="desktop-image" style={{ position: 'absolute', bottom: 0, left: 0 }} alt="eckoWALLET-desktop" />
       </DownloadCard>
       <DownloadCard
         className="column"
@@ -180,7 +180,7 @@ const DownloadSection = () => {
             <AndroidIcon className="scale-svg" />
           </div>
         </div>
-        <img src={mobileAppImage} className="mobile-image" style={{ position: 'absolute', bottom: 0 }} alt="x-wallet-desktop" />
+        <img src={mobileAppImage} className="mobile-image" style={{ position: 'absolute', bottom: 0 }} alt="eckoWALLET-desktop" />
       </DownloadCard>
     </DownloadSectionContainer>
   );

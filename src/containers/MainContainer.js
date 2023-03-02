@@ -5,14 +5,14 @@ import Projects from '../components/projects/Projects';
 import Roadmap from '../components/roadmap/Roadmap';
 import FirstSection from '../components/sections/FirstSection';
 import { FlexContainer } from '../components/shared/Container';
-import VideoSection from '../components/video/VideoSection';
+/* import VideoSection from '../components/video/VideoSection'; */
 
 const MainContainer = () => {
   return (
     <FlexContainer className="column">
       <FirstSection />
       <Features />
-      <VideoSection />
+      {/* <VideoSection /> */}
       <Projects />
       <Analytics />
       <Roadmap />

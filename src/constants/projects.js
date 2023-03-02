@@ -16,9 +16,9 @@ import {
 
 export const PROJECTS = {
   KADDEX: {
-    name: 'kaddex',
+    name: 'eckoDEX',
     icon: <KaddexIcon />,
-    link: 'https://kaddex.com',
+    link: 'https://dex.ecko.finance',
   },
   ASWAP: {
     name: 'aswap',

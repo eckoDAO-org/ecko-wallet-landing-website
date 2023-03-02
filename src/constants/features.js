@@ -5,7 +5,7 @@ export const FEATURES = {
     icon: <DappsIcon />,
     title: 'ACCESS YOUR DAPPS',
     description:
-      'X-Wallet is integrated with most NFT and DeFi Kadena dApps and the Kaddex DEX so you can swap, stake and provide liquidity with your tokens!',
+      'eckoWALLET is integrated with the majority of NFT and Kadena dApps, as well as eckoDEX, enabling users to exchange, stake, and add liquidity with their tokens.',
     color: '#F3BD2F',
   },
   CROSSCHAIN: {
@@ -17,8 +17,8 @@ export const FEATURES = {
 
   SEND: {
     icon: <SendReceiveStoreIcon />,
-    title: 'SEND, RECEIVE & STORE',
-    description: 'Freely Send, Store and Receive k:assets at any time and unmatched speed.',
+    title: 'SEND, SWAP, RECEIVE & STORE',
+    description: 'Freely Send, Swap, Store and Receive k:assets at any time and unmatched speed.',
     color: '#04C9E4',
   },
   BUY_SELL: {
@@ -31,13 +31,13 @@ export const FEATURES = {
   PRIVATE: {
     icon: <PrivateIcon />,
     title: 'NON-CUSTODIAL & PRIVATE',
-    description: 'X-Wallet will not have access to any of your personal data, address, or private keys.',
+    description: 'eckoWALLET will not have access to any of your personal data, address, or private keys.',
     color: '#FA41A5',
   },
   SECURE: {
     icon: <SecureCompatibleIcon />,
     title: 'SECURE & COMPATIBLE',
-    description: 'All generated accounts are k:accounts by default. X-Wallet is compatible with both iOS and Android, Chrome and Brave.',
+    description: 'All generated accounts are k:accounts by default. eckoWALLET is compatible with both iOS and Android, Chrome and Brave.',
     color: '#04C9E4',
   },
 };

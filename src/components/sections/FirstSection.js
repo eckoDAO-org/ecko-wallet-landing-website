@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlexContainer } from '../shared/Container';
-import xWalletBackground from '../../assets/images/backgrounds/x-background.svg';
-import frontendXWallet from '../../assets/images/first-section/frontend-x-wallet.png';
+import eckoBackground from '../../assets/images/backgrounds/ecko_background.svg';
+import frontendXWallet from '../../assets/images/first-section/frontend-eckoWallet.png';
 import Label from '../shared/Label';
 import useWindowSize from '../../hooks/useWindowSize';
 import styled from 'styled-components';
@@ -16,7 +16,7 @@ const BackgroundContainer = styled(FlexContainer)`
   }
 `;
 const BackgroundXWalletContainer2 = styled(FlexContainer)`
-  background-image: ${`url(${xWalletBackground})`};
+  background-image: ${`url(${eckoBackground})`};
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -88,7 +88,7 @@ const FirstSection = () => {
             ECOSYSTEM GATEWAY
           </Label>
           <Label size="small" className="text-center f-wrap" style={{ letterSpacing: '-0.1em' }}>
-            X-Wallet allows seamless interaction with all the Dapps living on the Kadena network
+            eckoWALLET allows seamless interaction with all the Dapps living on the Kadena network
           </Label>
 
           <img src={frontendXWallet} style={{ width: getWidth() }} alt="" />

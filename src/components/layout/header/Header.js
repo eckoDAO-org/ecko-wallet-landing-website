@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components/macro';
-import { XWalletHeaderLogo } from '../../../assets';
+import { EckoWalletHeaderLogo } from '../../../assets';
 import useWindowSize from '../../../hooks/useWindowSize';
 import { ROUTE_INDEX } from '../../../router/routes';
 import GradientContainer from '../../shared/GradientContainer';
@@ -70,7 +70,7 @@ export const CommonHeader = ({ className, isSticky, stopTimer, startTimer }) => 
       onMouseEnter={stopTimer}
       onMouseLeave={startTimer}
     >
-      <XWalletHeaderLogo className="kaddex-logo" onClick={goToTop} />
+      <EckoWalletHeaderLogo className="kaddex-logo" onClick={goToTop} style={{ height: '24px', width: '182px' }} />
       {width >= 880 && (
         <FlexContainer className="align-ce" gap={24}>
           <NavigationItems />

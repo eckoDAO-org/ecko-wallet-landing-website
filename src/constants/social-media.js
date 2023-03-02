@@ -1,42 +1,36 @@
-import { DiscordIcon, GithubIcon, MediumIcon, TelegramIcon, TwitterIcon, YoutubeIcon } from '../assets';
+import { DiscordIcon, GithubIcon, TelegramIcon, TwitterIcon, YoutubeIcon } from '../assets';
 
 export const TWITTER_KADDEX_OFFICIAL = {
-  name: '@kaddexofficial',
-  link: 'https://twitter.com/kaddexofficial',
+  name: '@eckoDAO',
+  link: 'https://twitter.com/eckoDAO',
 };
 
 export const TWITTER = {
-  name: '@XWalletOfficial',
-  link: 'https://twitter.com/xwalletofficial',
+  name: '@eckoWALLET',
+  link: 'http://twitter.com/eckoWALLET',
   icon: <TwitterIcon />,
 };
 export const DISCORD = {
   name: 'Discord',
-  link: 'https://discord.gg/QSJpHRFDcv',
+  link: 'https://discord.com/invite/eckodao',
   icon: <DiscordIcon />,
-};
-
-const MEDIUM = {
-  name: 'Medium',
-  link: 'https://medium.com/kaddex',
-  icon: <MediumIcon />,
 };
 
 const GITHUB = {
   name: 'Github',
-  link: 'https://github.com/kaddex-org/x-wallet',
+  link: 'https://github.com/eckoDAO-org/ecko-wallet-landing-website',
   icon: <GithubIcon />,
 };
 
 const TELEGRAM = {
   name: 'Telegram',
-  link: 'https://t.me/KaddeXofficial',
+  link: 'https://t.me/eckoDAO',
   icon: <TelegramIcon />,
 };
 const YOUTUBE = {
   name: 'Youtube',
-  link: 'https://www.youtube.com/channel/UCqne8XRfTGTQMr_9BXyfHBg',
+  link: 'https://www.youtube.com/@eckodao',
   icon: <YoutubeIcon />,
 };
 
-export const SOCIAL_MEDIA = [TWITTER, DISCORD, YOUTUBE, TELEGRAM, MEDIUM, GITHUB];
+export const SOCIAL_MEDIA = [TWITTER, DISCORD, YOUTUBE, TELEGRAM, GITHUB];

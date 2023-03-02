@@ -9,7 +9,7 @@ const STYAlertBetaContainer = styled(STYRowContainer)`
   top: 0;
   width: auto;
   justify-content: center;
-  z-index:100;
+  z-index: 100;
   background-color: ${({ theme: { colors } }) => colors.white};
 
   padding: 8px;
@@ -35,13 +35,13 @@ const AlertBetaTest = () => {
   return (
     <STYAlertBetaContainer>
       <NotificationCaution className="mobile-none" />
-      <Label inverted fontFamily="medium" fontSize={13} labelStyle={{ display: 'inline-block'}}>
-     X-Wallet is currently in{' '}
-        <Label inverted fontSize={18} labelStyle={{ display: 'inline-block'}}>
+      <Label inverted fontFamily="medium" fontSize={13} labelStyle={{ display: 'inline-block' }}>
+        eckoWALLET is currently in{' '}
+        <Label inverted fontSize={18} labelStyle={{ display: 'inline-block' }}>
           BETA
         </Label>{' '}
-        testing      
-        </Label>
+        testing
+      </Label>
     </STYAlertBetaContainer>
   );
 };

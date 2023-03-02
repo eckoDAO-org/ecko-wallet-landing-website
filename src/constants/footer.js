@@ -22,6 +22,11 @@ export const FOOTER_ABOUT = {
       text: 'Roadmap',
       href: '/#roadmap',
     },
+    {
+      text: 'Blog',
+      href: 'https://blog.ecko.finance',
+      target: '_blank',
+    },
   ],
 };
 export const FOOTER_DOWNLOAD = {
@@ -52,20 +57,31 @@ export const FOOTER_DOWNLOAD = {
       target: '_blank',
       icon: <BraveIcon />,
     },
+
+    {
+      text: 'eckoDEX',
+      href: 'https://dex.ecko.finance',
+      target: '_blank',
+    },
+    {
+      text: 'eckoDAO',
+      href: 'https://dao.ecko.finance',
+      target: '_blank',
+    },
   ],
 };
 export const FOOTER_LEARN = {
   title: 'LEARN',
   color: 'pink',
   items: [
-    {
+    /* {
       text: 'Tutorial',
       href: 'https://www.youtube.com/watch?v=829R9FvBAEo',
       target: '_blank',
-    },
+    }, */
     {
       text: 'Documentation',
-      href: 'https://docs.kaddex.com/kaddex-features/getting-started/x-wallet',
+      href: 'https://docs.ecko.finance/eckodex/getting-started/eckowallet',
       target: '_blank',
     },
     {
