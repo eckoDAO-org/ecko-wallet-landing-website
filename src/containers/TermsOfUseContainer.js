@@ -16,8 +16,8 @@ const TermsOfUseContainer = () => {
   return (
     <TermsOfUseWrapper className="justify-ce align-ce column w-100 h-100 margin-auto">
       <EckoWalletFooterLogo style={{ marginBottom: 32 }} />
-      <FlexContainer className="column align-ce justify-ce margin-auto" gap={40} style={{ marginBottom: 172 }}>
-        <Label fontSize={48} fontFamily="syncopate">
+      <FlexContainer className="w-100 column align-ce justify-ce margin-auto" gap={40} style={{ marginBottom: 172 }}>
+        <Label fontSize={48} mobileStyle={{ fontSize: 32 }} fontFamily="syncopate">
           eckoWALLET TERMS OF USE
         </Label>
         <Label fontSize={22} fontFamily="medium">
@@ -27,7 +27,7 @@ const TermsOfUseContainer = () => {
         <Label fontSize={32} fontFamily="medium">
           Acceptance of the Terms of Use
         </Label>
-        <Label fontSize={20} fontFamily="medium">
+        <Label fontSize={20} style={{ wordBreak: 'break-word' }} fontFamily="medium">
           These terms of use are entered into by and between you and eckoDAO, a Swiss non-profit association (collectively, the “Company,” “we,” or
           “us”) and eckoHUB DMCC, a UAE LLC which hosts eckoWALLET IP for the association. The following terms and conditions, together with any
           documents they expressly incorporate by reference (collectively, “Terms of Use”), govern your access to and use of www.wallet.ecko.finance

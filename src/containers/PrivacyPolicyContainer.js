@@ -17,7 +17,7 @@ const PrivacyPolicyContainer = () => {
     <PrivacyPolicyWrapper className="justify-ce align-ce column w-100 h-100 margin-auto">
       <EckoWalletFooterLogo style={{ marginBottom: 32 }} />
       <FlexContainer className="column align-ce justify-ce margin-auto" gap={40} style={{ marginBottom: 172 }}>
-        <Label fontSize={48} fontFamily="syncopate">
+        <Label fontSize={48} mobileStyle={{ fontSize: 32 }} fontFamily="syncopate">
           eckoWALLET Privacy Policy
         </Label>
         <Label fontSize={22} fontFamily="medium">
