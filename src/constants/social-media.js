@@ -24,7 +24,7 @@ const GITHUB = {
 
 const TELEGRAM = {
   name: 'Telegram',
-  link: 'https://t.me/eckoDAO',
+  link: 'https://t.me/eckofinance',
   icon: <TelegramIcon />,
 };
 const YOUTUBE = {
