@@ -5,7 +5,7 @@ export const FEATURES = {
     icon: <DappsIcon />,
     title: 'ACCESS YOUR DAPPS',
     description:
-      'eckoWALLET is integrated with the majority of NFT and Kadena dApps, as well as eckoDEX, enabling users to exchange, stake, and add liquidity with their tokens.',
+      'eckoWALLET is integrated with the majority of NFT and Kadena dApps, as well as eckoDEX, enabling users to exchange, add liquidity and participate in Governance Mining with their tokens.',
     color: '#F3BD2F',
   },
   CROSSCHAIN: {
