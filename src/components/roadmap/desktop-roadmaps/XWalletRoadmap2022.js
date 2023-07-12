@@ -126,7 +126,7 @@ const CONFIGURATION = {
       tspan: [{ x: -44.61, y: 0, text: 'Audit' }],
     },
 
-    color: '#FA41A5',
+    color: theme.colors.primary,
   },
 
   FIAT_ON_RAMP: {
@@ -137,27 +137,28 @@ const CONFIGURATION = {
       y: 662,
       tspan: [{ x: -47.71, y: 0, text: 'Fiat on Ramp' }],
     },
-    color: whiteGrey,
+    color: theme.colors.primary,
   },
 
-  SDK_EASY_INTEGRATION_KIT: {
+  NFTs_INTEGRATION: {
     circle: { x: 990, y: 596 },
     text: {
       x: 1010,
       y: 662,
-      tspan: [
-        { x: -45.61, y: 0, text: 'SDK easy' },
-        { x: -78.85, y: 25, text: 'integration kit' },
-      ],
+      tspan: [{ x: -85, y: 0, text: 'NFTs integration' }],
     },
-    color: whiteGrey,
+    color: '#FA41A5',
   },
-  NFTs_INTEGRATION: {
+
+  SDK_EASY_INTEGRATION_KIT: {
     circle: { x: 1240, y: 596 },
     text: {
       x: 1205,
       y: 662,
-      tspan: [{ x: -25, y: 0, text: 'NFTs integration' }],
+      tspan: [
+        { x: 10, y: 0, text: 'SDK easy' },
+        { x: -26, y: 25, text: 'integration kit' },
+      ],
     },
     color: whiteGrey,
   },
@@ -173,8 +174,8 @@ const CONFIGURATION = {
   },
 };
 const FLAG = {
-  flag: 'translate(504 568)',
-  shadow: 'translate(486 590)',
+  flag: 'translate(1004 568)',
+  shadow: 'translate(984 590)',
 };
 
 const XWalletRoadmap2022 = ({ className }) => {
@@ -262,7 +263,7 @@ const XWalletRoadmap2022 = ({ className }) => {
           </g>
 
           {/* blue line */}
-          <line id="Line_585" dataName="Line 585" x2="135" transform="translate(369 611)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
+          <line id="Line_585" dataName="Line 585" x2="635" transform="translate(369 611)" fill="none" stroke={theme.colors.primary} strokeWidth="4" />
 
           {Object.keys(CONFIGURATION).map((config, i) => {
             const nodeConfig = CONFIGURATION[config];

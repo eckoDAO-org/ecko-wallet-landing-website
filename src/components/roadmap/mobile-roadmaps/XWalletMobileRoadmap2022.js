@@ -15,7 +15,7 @@ const Line = styled(FlexContainer)`
     content: '';
     position: absolute;
     width: 3px;
-    height: 70%;
+    height: 82%;
     background: ${({ color }) => getColor(color)};
     top: 0;
     bottom: 0;
@@ -127,25 +127,25 @@ const CONFIGURATION = {
     position: 10,
     text: [{ text: 'Audit' }],
     isCompleted: true,
-    isMain: true,
   },
 
   FIAT_ON_RAMP: {
     position: 11,
     text: [{ text: 'Fiat on Ramp' }],
-    isCompleted: false,
+    isCompleted: true,
   },
-
-  SDK_EASY_INTEGRATION_KIT: {
+  NFTs_INTEGRATION: {
     position: 12,
+    text: [{ text: 'NFTs integration' }],
+    isCompleted: true,
+    isMain: true,
+  },
+  SDK_EASY_INTEGRATION_KIT: {
+    position: 13,
     text: [{ text: 'SDK easy integration kit' }],
     isCompleted: false,
   },
-  NFTs_INTEGRATION: {
-    position: 13,
-    text: [{ text: 'NFTs integration' }],
-    isCompleted: false,
-  },
+
   FIAT_OFF_RAMP: {
     position: 14,
     text: [{ text: 'Fiat off Ramp' }],
