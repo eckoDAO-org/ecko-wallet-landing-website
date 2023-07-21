@@ -69,5 +69,24 @@ seamless interaction with Dapps on the Kadena network."
     <!-- Cloudflare Web Analytics -->
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js?token=4bf93a4a85ea4b9d93cf3b83d317fd17&spa=false"></script>
     <!-- End Cloudflare Web Analytics -->
+
+
+        <div id="my-chat"></div>
+
+<!-- Bonfire Chatbot Widget -->
+  <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+
+  <script>
+    window.chatOrganization = "ecko"; // Set the organization variable
+  </script>
+
+  <!-- Run the script with the import statement -->
+  <script src="https://unpkg.com/@bonfire-labs/bonfire-ai@latest/dist/bundle.js" type="module">;
+    ReactDOM.render(React.createElement(BonfireAI.Chat, { organization: 'ecko' }), document.getElementById('my-chat'));
+  </script>
+<!-- End Bonfire Chatbot Widget -->
+
+
   </body>
 </html>
