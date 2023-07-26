@@ -42,6 +42,7 @@ const GoTopButton = styled.div`
   opacity: 0.8;
   cursor: pointer;
   z-index: 100;
+  margin-right: 60px;
 
   transition: all 0.5s ease;
   animation: smoothOut 1s;
@@ -125,7 +126,7 @@ const Layout = ({ children }) => {
         <MainContent>{children}</MainContent>
         <FooterSection />
       </FlexContainer>
-      <GoTopButton isSticky={isSticky} onClick={goToTop}>
+      <GoTopButton   isSticky={isSticky} onClick={goToTop}>
         <GoTopIcon />
       </GoTopButton>
     </FlexContainer>
