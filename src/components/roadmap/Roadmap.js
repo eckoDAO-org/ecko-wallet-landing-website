@@ -58,9 +58,11 @@ const Roadmap = () => {
   const [width] = useWindowSize();
   const TRANSLATE_X_OFFSET = width <= theme.mediaQueries.mobilePixel ? 50 : 64;
   const [, setTranslateX] = useState(`${TRANSLATE_X_OFFSET}px`);
-  const [translateXRoadmap, setTranslateXRoadmap] = useState(0);
+  // const [translateXRoadmap, setTranslateXRoadmap] = useState(0);
+  const translateXRoadmap = 0;
 
-  const [selectedRoadmapId, setSelectedRoadmapId] = useState(R_2022.id);
+  // const [selectedRoadmapId, setSelectedRoadmapId] = useState(R_2022.id);
+  const selectedRoadmapId = R_2022.id;
 
   const roadmapsContainer = document.getElementById('roadmaps-container');
   useEffect(() => {

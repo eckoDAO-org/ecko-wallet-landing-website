@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { Button as SUIButton } from 'semantic-ui-react';
 
-const STYStyledButton = styled(SUIButton)`
+const STYStyledButton = styled(({ hoverColor, ...props }) => <SUIButton {...props} />)`
   cursor: ${({ disabled }) => (disabled ? 'default !important' : 'pointer')};
   display: flex !important;
   justify-content: center;
