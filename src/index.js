@@ -12,6 +12,17 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+window.chatOrganization = "echo";
+document.addEventListener('bonfireReady', function() {
+  ReactDOM.render(
+    React.createElement(
+      window.BonfireAI.Chat,
+      { organization: 'ecko' }
+    ),
+    document.getElementById('my-chat')
+  );
+});
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

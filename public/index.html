@@ -2,18 +2,8 @@
 <html lang="en">
   <head>
     <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-T9NRJRT');
-    </script>
+    <script src="/gtm.js"></script>
+    <link rel="stylesheet" href="/style.css" />
     <!-- End Google Tag Manager -->
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/icon_eckoWALLET.svg?v=2" />
@@ -50,9 +40,9 @@ seamless interaction with Dapps on the Kadena network."
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9NRJRT" height="0" width="0" style="display: none; visibility: hidden"></iframe
-    ></noscript>
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9NRJRT" height="0" width="0" id="gtm-noscript"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
@@ -70,21 +60,12 @@ seamless interaction with Dapps on the Kadena network."
     <script defer src="https://static.cloudflareinsights.com/beacon.min.js?token=4bf93a4a85ea4b9d93cf3b83d317fd17&spa=false"></script>
     <!-- End Cloudflare Web Analytics -->
 
+    <!-- Bonfire Chatbot Widget -->
+    <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
 
-<!-- Bonfire Chatbot Widget -->
-  <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
-
-  <script>
-    window.chatOrganization = "ecko"; // Set the organization variable
-  </script>
-
-  <!-- Run the script with the import statement -->
-  <script src="https://unpkg.com/@bonfire-labs/bonfire-ai@latest/dist/bundle.js" type="module">;
-    ReactDOM.render(React.createElement(BonfireAI.Chat, { organization: 'ecko' }), document.getElementById('my-chat'));
-  </script>
-<!-- End Bonfire Chatbot Widget -->
-
-
+    <!-- Run the script with the import statement -->
+    <script src="https://unpkg.com/@bonfire-labs/bonfire-ai@latest/dist/bundle.js" type="module"></script>
+    <!-- End Bonfire Chatbot Widget -->
   </body>
 </html>
