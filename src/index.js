@@ -12,7 +12,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-window.chatOrganization = "echo";
+window.chatOrganization = "ecko";
 document.addEventListener('bonfireReady', function() {
   ReactDOM.render(
     React.createElement(
