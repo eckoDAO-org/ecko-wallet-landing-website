@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Swiper from 'react-id-swiper';
-import 'swiper/swiper-bundle.css';
+import 'swiper/css';
 import SwiperCore, { Autoplay } from 'swiper';
 
 import { FlexContainer } from '../shared/Container';
