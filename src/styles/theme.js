@@ -44,6 +44,7 @@ export const configuration = {
     nano: { desktop: 0, tablet: 0, mobile: 0 },
   },
   lineHeight: {
+    banner: { desktop: 104, tablet: 64, mobile: 32 },
     huge: { desktop: 70, tablet: 50, mobile: 31.25 },
     big: { desktop: 50, tablet: 30, mobile: 25 },
     large: { desktop: 42.5, tablet: 36, mobile: 33 },
