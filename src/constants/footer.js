@@ -4,7 +4,7 @@ import { ROUTE_PRIVACY_POLICY, ROUTE_TERMS_OF_USE } from '../router/routes';
 
 export const FOOTER_ABOUT = {
   title: 'ABOUT',
-  color: 'yellow',
+  color: 'grey',
   items: [
     {
       text: 'Features',
@@ -31,7 +31,7 @@ export const FOOTER_ABOUT = {
 };
 export const FOOTER_DOWNLOAD = {
   title: 'PRODUCT',
-  color: 'primary',
+  color: 'grey',
   items: [
     {
       text: 'iOS App',
@@ -72,7 +72,7 @@ export const FOOTER_DOWNLOAD = {
 };
 export const FOOTER_LEARN = {
   title: 'LEARN',
-  color: 'pink',
+  color: 'grey',
   items: [
     /* {
       text: 'Tutorial',
@@ -81,7 +81,7 @@ export const FOOTER_LEARN = {
     }, */
     {
       text: 'Documentation',
-      href: 'https://docs.ecko.finance/eckodex/getting-started/eckowallet',
+      href: 'https://docs.ecko.finance/eckodao/getting-started/eckowallet',
       target: '_blank',
     },
     {

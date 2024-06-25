@@ -7,14 +7,11 @@ import { GoTopIcon } from '../../assets';
 import { useHistory, useLocation } from 'react-router-dom';
 
 const BackgroundGradientContainer = styled(FlexContainer)`
-  background: transparent linear-gradient(42deg, #f3bd2f3c 0%, #fa41a53c 47%, #04c9e452 100%) 0% 0% no-repeat padding-box;
-  background-image: url(./background-first-section.png);
+  background: transparent linear-gradient(36deg, #00000070 0%, #20264e 100%) 0% 0% no-repeat padding-box;
+  /* background: #20264e; */
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  filter: blur(50px);
-  height: 100%;
+  position: fixed;
+  height: 100vh;
   width: 100%;
   z-index: 1;
 `;
@@ -126,7 +123,7 @@ const Layout = ({ children }) => {
         <MainContent>{children}</MainContent>
         <FooterSection />
       </FlexContainer>
-      <GoTopButton   isSticky={isSticky} onClick={goToTop}>
+      <GoTopButton isSticky={isSticky} onClick={goToTop}>
         <GoTopIcon />
       </GoTopButton>
     </FlexContainer>

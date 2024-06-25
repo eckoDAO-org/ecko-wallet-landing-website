@@ -44,7 +44,6 @@ const FooterSection = () => {
           <Copyrights />
         </FlexContainer>
       )}
-      <Stripes iconStyle={{ height: 112, width: 115 }} />
     </FlexContainer>
   );
 };

@@ -76,13 +76,7 @@ const FirstSection = () => {
             style={{ letterSpacing: '-0.05em', textAlign: 'center', whiteSpace: 'wrap' }}
           >
             THE
-            <Label
-              className="rainbow"
-              gradientColors={['#FFA900', '#f9b317', '#F3BD2F']}
-              fontFamily="syncopate"
-              size="huge"
-              style={{ margin: '0px 16px' }}
-            >
+            <Label className="rainbow" gradientColors={['#FFC600', '#FF00B8']} fontFamily="syncopate" size="huge" style={{ margin: '0px 16px' }}>
               KADENA
             </Label>
             ECOSYSTEM GATEWAY
