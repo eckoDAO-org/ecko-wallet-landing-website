@@ -93,7 +93,7 @@ const Roadmap = () => {
           {width >= theme.mediaQueries.mobilePixel ? (
             <XWalletRoadmap2022 className="roadmap-desktop" />
           ) : (
-            <XWalletMobileRoadmap2022 color="primary" />
+            <XWalletMobileRoadmap2022 color="light-yellow" />
           )}
         </KaddexRoadmapContainer>
       </RoadmapContainer>

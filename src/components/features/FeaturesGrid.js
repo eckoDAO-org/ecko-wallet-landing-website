@@ -47,7 +47,7 @@ const FeaturesGrid = () => {
               </Label>
               {item.alert && (
                 <div className="flex align-ce justify-ce" style={{ backgroundColor: '#F3BD2F', padding: '6px 8px', borderRadius: 250 }}>
-                  <Label fontFamily="syncopate" color="white" fontSize={10}>
+                  <Label fontFamily="syncopate" color="background" fontSize={10}>
                     {item.alert}
                   </Label>
                 </div>

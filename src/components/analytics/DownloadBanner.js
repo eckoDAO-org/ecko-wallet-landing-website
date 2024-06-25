@@ -29,13 +29,13 @@ const DownloadBanner = () => {
     >
       <img
         src={gradientBackground}
-        style={{ position: 'absolute', height: 400, width: '100%', left: 0, top: width <= theme.mediaQueries.mobilePixel && -100 }}
+        style={{ position: 'absolute', width: '100%', left: 0, top: width <= theme.mediaQueries.mobilePixel ? -100 : -200 }}
         alt=""
       />
 
       <FlexContainer gap={width < theme.mediaQueries.mobilePixel ? 16 : 32} className="justify-ce column align-ce">
         {width < theme.mediaQueries.mobilePixel ? <ThirtyFiveThousandsDownloadMobileSVG /> : <ThirtyFiveThousandsDownloadSVG />}
-        <Label className="rainbow" size="banner" fontFamily="syncopate" gradientColors={['#b766b6', '#f95197', '#f68861']}>
+        <Label className="rainbow" size="banner" fontFamily="syncopate" gradientColors={['#FFC600', '#FF00B8']}>
           Downloads
         </Label>
       </FlexContainer>

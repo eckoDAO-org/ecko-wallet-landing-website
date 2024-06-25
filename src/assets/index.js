@@ -1,20 +1,14 @@
-export { ReactComponent as KaddexLogo } from './images/header/kaddex_logo.svg';
 export { ReactComponent as HamburgerIcon } from './images/header/hamburger.svg';
 export { ReactComponent as ArrowDownIcon } from './images/shared/arrow-down.svg';
 export { ReactComponent as TopUpIcon } from './images/shared/go_top.svg';
 export { ReactComponent as GoTopIcon } from './images/layout/go-top.svg';
 export { ReactComponent as CloseIcon } from './images/shared/close-icon.svg';
 export { ReactComponent as NotificationCaution } from './images/shared/ic_caution.svg';
-export { ReactComponent as KaddexLetterLogo } from './images/header/kaddex-letter-logo.svg';
 
 export { ReactComponent as EckoWalletHeaderLogo } from './images/header/eckoWALLET.svg';
 
 export { ReactComponent as EckoWalletFooterLogo } from './images/layout/eckoWALLET_footer.svg';
-export { ReactComponent as XWalletLetterLogo } from './images/shared/x-wallet-letter.svg';
-export { ReactComponent as XWalletLogo } from './images/shared/x-wallet-logo.svg';
 
-export { ReactComponent as KaddexLogoFooterIcon } from './images/shared/kaddex-logo-footer.svg';
-export { ReactComponent as KaddexFooterIcon } from './images/shared/kaddex-footer.svg';
 export { ReactComponent as StripesIcon } from './images/shared/stripes.svg';
 
 // FIRST SECTION
