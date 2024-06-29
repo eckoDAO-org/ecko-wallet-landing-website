@@ -1,5 +1,4 @@
 import React from 'react';
-import Stripes from '../../shared/Stripes';
 import FooterItemsList from './FooterItemsList';
 import { FOOTER_ABOUT, FOOTER_DOWNLOAD, FOOTER_LEARN } from '../../../constants/footer';
 import useWindowSize from '../../../hooks/useWindowSize';

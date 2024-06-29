@@ -180,6 +180,13 @@ const DownloadSection = () => {
             <AndroidIcon className="scale-svg" />
           </div>
         </div>
+        <a
+          download
+          style={{ textDecoration: 'underline', fontSize: '0.85rem', color: 'white', zIndex: 999 }}
+          href={`${process.env.PUBLIC_URL}/eckoWALLET.apk`}
+        >
+          Download Android version
+        </a>
         <img src={mobileAppImage} className="mobile-image" style={{ position: 'absolute', bottom: 0 }} alt="eckoWALLET-desktop" />
       </DownloadCard>
     </DownloadSectionContainer>
