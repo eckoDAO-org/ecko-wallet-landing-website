@@ -12,7 +12,7 @@ export const TWITTER = {
 };
 export const DISCORD = {
   name: 'Discord',
-  link: 'https://discord.com/invite/eckodao',
+  link: '',
   icon: <DiscordIcon />,
 };
 
@@ -24,12 +24,12 @@ const GITHUB = {
 
 const TELEGRAM = {
   name: 'Telegram',
-  link: 'https://t.me/eckofinance',
+  link: '',
   icon: <TelegramIcon />,
 };
 const YOUTUBE = {
   name: 'Youtube',
-  link: 'https://www.youtube.com/@eckodao',
+  link: '',
   icon: <YoutubeIcon />,
 };
 
